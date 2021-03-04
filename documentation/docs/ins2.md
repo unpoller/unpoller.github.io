@@ -50,7 +50,7 @@ services:
   influxdb:
     container_name: up_influxdb
     restart: unless-stopped
-    image: influxdb:latest
+    image: influxdb:1.8
     ports:
       - '8086:8086'
     volumes:
