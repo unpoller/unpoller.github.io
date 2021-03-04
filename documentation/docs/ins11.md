@@ -118,4 +118,4 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9130']
 ```
-The standard /metrics path that the above snippet uses returns metrics for all configured controllers.
+The standard ``/metrics`` path that the above snippet uses returns metrics for all configured controllers.

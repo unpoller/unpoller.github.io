@@ -12,6 +12,8 @@ Make sure you have set up a user on your controller for Unifi Poller to use
 
 It is assumed that you have working (and supported) versions of Grafana (though see the Plugins section below) and at least one of InfluxDB/Prometheus
 
+(If you don't have then, brief instructions on installing InfluxDB and Grafana are given on [InfluxDB and Grafana Installation](id13))
+
 ## FreeBSD
 
 Install compiled binary from ports run:
