@@ -40,8 +40,8 @@ If you are using another controller type (eg an older Cloudkey, a VM controller)
 ## Next steps
 
 At this point you need to decide whether to use
-- Docker - using `docker-compose`
-- Docker - using command line (this assumes that you have access to Grafana and InfluxDB/Prometheus)
+- [Docker](ins2.md) - using `docker-compose`
+- [Docker](ins3.md) - using command line (this assumes that you have access to Grafana and InfluxDB/Prometheus)
 - Bare metal or a NAS - see the appropriate page (this assumes that you have access to Grafana and InfluxDB/Prometheus)
 
 :::info

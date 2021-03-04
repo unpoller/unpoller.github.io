@@ -9,7 +9,7 @@ This page provides simple instructions on how to install and maintain InfluxDB a
 ## InfluxDB
 
 Most of the production use of this software is with InfluxDB 1.7.7 = this version is well tested. Many users have reported missing data and empty graphs when using versions of InfluxDB prior to 1.7.x.
-Linux
+Linux. Do not use 2.0 or greater at this time.
 
 ### CentOS 7
 
