@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Unifi Poller',
   tagline: 'Showing you the info that you want to see from your Unifi controller',
-  url: 'https://piansom.github.io',
+  url: 'https://unifi-poller.github.io',
   baseUrl: '/pollerdox/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
