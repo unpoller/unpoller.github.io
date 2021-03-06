@@ -36,7 +36,7 @@ Download the [example](https://github.com/unifi-poller/unifi-poller/blob/master/
 Alternatively, if you choose to use a configuration file
 - Copy the example [config file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
 - Edit it as necessary (in particular ensure that the `[unifi]`/`user` and `pass` variables are set)
-- In the `[influxdb]` section change ``url  = "http://127.0.0.1:8086"``` to become ``url  = "http://THE_IP_OF_YOUR_DOCKER_HOST:8086"``
+- In the `[influxdb]` section change ``url  = "http://127.0.0.1:8086"`` to become ``url  = "http://THE_IP_OF_YOUR_DOCKER_HOST:8086"``
 - Save it as `unifi-poller.conf` in the local location you use for Docker storage in a folder called `unifi-poller`
 
 :::important
