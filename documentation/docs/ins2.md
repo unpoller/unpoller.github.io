@@ -97,6 +97,11 @@ unifi-poller    | 2020/06/18 12:08:50 [INFO] UniFi Metrics Recorded. Sites: 1, C
 ```
 If you don't see this then go back and check what you have done so far
 
+:::tip
+You can see the logs for a container with `docker logs CONTAINER_NAME` (eg `docker logs unifi_poller`) at a command prompt 
+:::
+
+
 Finally, start the containers in a daemonised fashion, just stop the `docker-compose` and run `docker-compose up -d`
 
 ## Next steps
