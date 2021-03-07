@@ -12,8 +12,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Unifi Poller was designed from the ground up to be flexibly installed and
-        used to get easy access your Unifi data
+        UniFi Poller was designed from the ground up to be flexibly installed.
+        It's a simpe tool that provides a wealth of valuable data.
       </>
     ),
   },
@@ -22,7 +22,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Unifi Poller lets you concentrate on what is happening in your network in an intuitive and visual way
+        UniFi Poller lets you concentrate on what is happening in your network
+        in an intuitive and visual way.
       </>
     ),
   },
@@ -31,11 +32,21 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Built using powerful tools like Golang, with data stored in InfluxDB or Prometheus and
-        presented using pre-made Grafana dashboards
+        Built using powerful tools like Golang, with data stored in InfluxDB or
+        Prometheus and presented using ready-to-go Grafana dashboards!
       </>
     ),
   },
+/*  {
+    title: 'Compatibility',
+    imageUrl: 'img/?.svg',
+    description: (
+      <>
+        UniFi Poller can be installed on Linux, FreeBSD, macOS, Windows, Docker,
+        and you can even run it right from your home folder.
+      </>
+    ),
+  }, */
 ];
 
 function Feature({imageUrl, title, description}) {
@@ -58,8 +69,8 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Go Lift: ${siteConfig.title}`}
+      description="Telemetry and Observability for your UniFi Network">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -70,7 +81,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/up1')}>
+              to={useBaseUrl('docs/introduction')}>
               Get Started
             </Link>
           </div>

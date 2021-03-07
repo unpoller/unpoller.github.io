@@ -1,5 +1,5 @@
 ---
-id: up2
+id: howitworks
 title: How it works
 ---
 
@@ -29,6 +29,5 @@ If you already have an instance of a suitable database or Grafana in use you wil
 
 ## I'm convinced! How do I start?
 
-Have a look at the [Getting Started](ins1.md) page.
-
-(Or, for an easy step-by-step, have a look at [this](up4.md) page.)
+Have a look at the [Getting Started](gettingstarted.md) page.
+Or, for an easy step-by-step on Raspberry Pi, have a look at [this](rpi.md) page.

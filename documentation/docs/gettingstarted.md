@@ -1,5 +1,5 @@
 ---
-id: ins1
+id: gettingstarted
 title: Getting started
 ---
 
@@ -29,7 +29,7 @@ The first of these is to set up the controller correctly
 
 The only requirement of the controller is that UniFi Poller can log in to it and extract data. For this purpose go ahead and create a new user now. Make a note of the username and password you have chosen
 
-If your controller is on a UDM or UDM-Pro or UCK running UnifiOS then it is recommended that a Limited Admin user is created with Read-Only rights to the Unifi Network app
+If your controller is on a UDM or UDM-Pro or UCK running UnifiOS then it is recommended that a Limited Admin user is created with Read-Only rights to the UniFi Network app
 
 For example, here the username chosen is `unifipoller` (which is the default, and one which will be used throughout these docs):
 
@@ -40,8 +40,8 @@ If you are using another controller type (eg an older Cloudkey, a VM controller)
 ## Next steps
 
 At this point you need to decide whether to use
-- [Docker](ins2.md) - using `docker-compose`
-- [Docker](ins3.md) - using command line (this assumes that you have access to Grafana and InfluxDB/Prometheus)
+- [Docker](install_dockercompose.md) - using `docker-compose`
+- [Docker](install_docker.md) - using command line (this assumes that you have access to Grafana and InfluxDB/Prometheus)
 - Bare metal or a NAS - see the appropriate page (this assumes that you have access to Grafana and InfluxDB/Prometheus)
 
 :::info
@@ -49,4 +49,4 @@ Although it is a matter of choice, new users may find it easiest to use `docker_
 :::
 
 
-Finish up by looking at the [Final steps](ins10.md) page to do the post-install commissioning
+Finish up by looking at the [Final steps](install_finish.md) page to do the post-install commissioning

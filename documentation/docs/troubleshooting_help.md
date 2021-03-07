@@ -1,5 +1,5 @@
 ---
-id: tro2
+id: troubleshooting_help
 title: Getting help
 ---
 

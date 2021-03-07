@@ -1,5 +1,5 @@
 ---
-id: ins4
+id: install_docker_faq
 title: Docker - FAQs
 ---
 

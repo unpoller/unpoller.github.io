@@ -1,5 +1,5 @@
 ---
-id: ins2
+id: install_dockercompose
 title: Docker - using docker-compose
 ---
 
@@ -17,7 +17,7 @@ Make sure you have set up a user on your controller for UniFi Poller to use
 
 Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place (albeit a hidden file, and one where all information is available to all containers). The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
 
-There is a detailed description of the configuration parameters in [Config file and Environment variables] (ins9.md) below.
+There is a detailed description of the configuration parameters in [Config file and Environment variables] (configuration.md) below.
 
 Both of the alternatives described here will pull containers not just for UniFi Poller, but also for InfluxDB and Grafana. If you wish to use existing instances then amend the files as necessary.
 
@@ -106,4 +106,4 @@ Finally, start the containers in a daemonised fashion, just stop the `docker-com
 
 ## Next steps
 
-Go to the section [Final steps](ins10.md)
+Go to the section [Final steps](install_finish.md)

@@ -1,5 +1,5 @@
 ---
-id: ins7
+id: install_windows
 title: Bare metal - Windows
 ---
 

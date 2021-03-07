@@ -1,5 +1,5 @@
 ---
-id: ins12
+id: install_loki
 title: Loki
 ---
 

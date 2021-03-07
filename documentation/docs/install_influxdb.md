@@ -1,5 +1,5 @@
 ---
-id: ins13
+id: install_influxdb
 title: InfluxDB and Grafana Installation
 ---
 

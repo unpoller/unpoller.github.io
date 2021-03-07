@@ -1,5 +1,5 @@
 ---
-id: ins6
+id: install_linux_macos
 title: Bare metal - Linux/MacOS
 ---
 
@@ -12,7 +12,7 @@ Make sure you have set up a user on your controller for UniFi Poller to use
 
 It is assumed that you have working (and supported) versions of Grafana (though see the Plugins section below) and at least one of InfluxDB/Prometheus
 
-(If you don't have then, brief instructions on installing InfluxDB and Grafana are given on [InfluxDB and Grafana Installation](ins13.md))
+(If you don't have then, brief instructions on installing InfluxDB and Grafana are given on [InfluxDB and Grafana Installation](install_influxdb.md))
 
 ## Linux
 
@@ -61,7 +61,7 @@ If you have another distro, try one of these ^ (they're all the same).
 
 1. Install [Homebrew](https://brew.sh/)
 2. `brew install golift/mugs/unifi-poller`
-3. Edit the config file after installing the brew. See the page [Config file and Environment variables](ins9.md) for more information
+3. Edit the config file after installing the brew. See the page [Config file and Environment variables](configuration.md) for more information
 ```
 nano /usr/local/etc/unifi-poller/up.conf
 ```
@@ -116,7 +116,7 @@ make rpm deb
 
 ## Linux post-install
 
-See the [Config file and Environment variables](ins9.md) page and the example config file for additional post-install configuration information.
+See the [Config file and Environment variables](configuration.md) page and the example config file for additional post-install configuration information.
 
 - Edit the config file after installing the package, and correct the authentication information for your setup:
 ```
@@ -159,4 +159,4 @@ GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-pan
 ```
 ## Next steps
 
-Go to the section [Final steps](ins10.md)
+Go to the section [Final steps](install_finish.md)

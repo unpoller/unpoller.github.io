@@ -1,5 +1,5 @@
 ---
-id: ins9
+id: configuration
 title: Config file and Environment variables
 ---
 
@@ -13,7 +13,7 @@ Which to use is a matter of personal choice. The environmental path has the adva
 
 The variables to be set can be split into three categories:
 1. Configuration of UniFi Poller iteslf
-2. Configuration of the Unifi and the controller(s) (multiple controllers are permitted for different sites)
+2. Configuration of the UniFi and the controller(s) (multiple controllers are permitted for different sites)
 3. Configuration of the output database(s) (UniFi Poller will output to both InfluxDB and Prometheus if desired)
 
 More documentation on the configuration options is included in the [sample configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) on the repo

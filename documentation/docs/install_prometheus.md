@@ -1,5 +1,5 @@
 ---
-id: ins11
+id: install_prometheus
 title: Prometheus support
 ---
 
@@ -10,7 +10,7 @@ This page explains how to configure Prometheus and UniFi-Poller. For help instal
 
 ## Single Controller
 
-Lets make the first example look a lot like the old v1.x way of doing things. Configure a single controller in up.conf (or using environment variables). See [Config file and Environment variables](ins9.md) and the example config file for help with that.
+Lets make the first example look a lot like the old v1.x way of doing things. Configure a single controller in up.conf (or using environment variables). See [Config file and Environment variables](configuration.md) and the example config file for help with that.
 
 Then you simply point prometheus at unifi-poller using a config like this:
 ```

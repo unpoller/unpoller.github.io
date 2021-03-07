@@ -1,9 +1,33 @@
 module.exports = {
   someSidebar: {
-    UnifiPoller: ['up1', 'up2', 'up3', 'up4'],
-    Installation: ['ins1', 'ins2', 'ins3', 'ins4', 'ins5','ins6', 'ins7','ins8',
-    'ins9', `ins10`, 'ins11', 'ins12', `ins13`, 'ins14'],
-    Troubleshooting: ['tro1', 'tro2'],
-    Thanks: ['thx1']
+    UnifiPoller: [
+      'introduction',
+      'howitworks',
+      'faq',
+      'rpi',
+    ],
+    Installation: [
+      'gettingstarted',
+      'install_dockercompose',
+      'install_docker',
+      'install_docker_faq',
+      'install_freebsd',
+      'install_linux_macos',
+      'install_windows',
+      'install_synology',
+      'configuration',
+      'install_finish',
+      'install_prometheus',
+      'install_loki',
+      'install_influxdb',
+      'install_webserver',
+    ],
+    Troubleshooting: [
+      'troubleshooting_common',
+      'troubleshooting_help',
+    ],
+    Thanks: [
+      'thx1',
+    ]
   },
 };

@@ -1,5 +1,5 @@
 ---
-id: tro1
+id: troubleshooting_common
 title: Common solutions
 ---
 

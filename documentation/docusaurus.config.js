@@ -17,14 +17,14 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/up1',
+          to: 'docs/introduction',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
         },
         {
           href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          label: 'Docusaurus',
           position: 'right',
         },
       ],

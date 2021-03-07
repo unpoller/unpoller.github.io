@@ -1,5 +1,5 @@
 ---
-id: ins3
+id: install_docker
 title: Docker - using command line
 ---
 
@@ -18,12 +18,12 @@ First pull the image from Docker Hub using
 docker pull golift/unifi-poller
 ```
 
-Details of tags available are described in [Docker - FAQs](ins4.md) below.
+Details of tags available are described in [Docker - FAQs](install_docker_faq.md) below.
 
 
 ## Configuring and starting the container
 
-See [Config file and Environment variables](ins9.md)
+See [Config file and Environment variables](configuration.md)
 
 A decision should be made which method of configuration to use.
 
@@ -78,4 +78,4 @@ GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-pan
 
 ## Next steps
 
-Go to the section [Final steps](ins10.md)
+Go to the section [Final steps](install_finish.md)

@@ -1,5 +1,5 @@
 ---
-id: ins8
+id: install_synology
 title: NAS - Synology
 ---
 
@@ -211,4 +211,4 @@ You will be prompted to change the default password, do so.
 
 ## Next steps
 
-Go to the section [Final steps](ins10.md)
+Go to the section [Final steps](install_finish.md)

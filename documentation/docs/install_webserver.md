@@ -1,5 +1,5 @@
 ---
-id: ins14
+id: install_webserver
 title: Web server
 ---
 

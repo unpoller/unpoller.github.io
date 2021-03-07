@@ -7,6 +7,8 @@ Many thanks to [mabunixda](https://github.com/mabunixda) for helping begin our D
 
 The Docker Compose file and example environment variable configuration were graciously provided [@jonbloom](https://github.com/jonbloom).
 
+Sir [@PianSom](https://github.com/PianSom) spent many painstaking weeks putting this
+incredible website together. The community loves you for this!
 
 ### Integrations
 
