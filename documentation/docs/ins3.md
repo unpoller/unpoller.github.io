@@ -3,11 +3,11 @@ id: ins3
 title: Docker - using command line
 ---
 
-This page assumes that you have decided to start Unifi Poller with Docker using the command line
+This page assumes that you have decided to start UniFi Poller with Docker using the command line
 
 ## Before this
 
-Make sure you have set up a user on your controller for Unifi Poller to use
+Make sure you have set up a user on your controller for UniFi Poller to use
 
 It is assumed that you have working (and supported) versions of Grafana (though see the Grafana plugins section below) and at least one of InfluxDB/Prometheus
 
@@ -48,7 +48,7 @@ docker run -v /your-local-location/unifi-poller.conf:/config/unifi-poller.conf g
 ```
 
 :::note
-Make sure that Unifi Poller is actively writing to the database before going any further
+Make sure that UniFi Poller is actively writing to the database before going any further
 :::
 
 In both alternatives, if all has worked then you should start seeing lines like

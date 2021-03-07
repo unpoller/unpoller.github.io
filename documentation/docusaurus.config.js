@@ -1,16 +1,16 @@
 module.exports = {
-  title: 'Unifi Poller',
-  tagline: 'Showing you the info that you want to see from your Unifi controller',
-  url: 'https://unifi-poller.github.io',
-  baseUrl: '/pollerdox/',
+  title: 'UniFi Poller',
+  tagline: 'Telemetry and Observability for your UniFi Network',
+  url: 'https://unifipoller.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'PianSom', // Usually your GitHub org/user name.
-  projectName: 'pollerdox', // Usually your repo name.
+  organizationName: 'unifi-poller', // Usually your GitHub org/user name.
+  projectName: 'unifi-poller.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Unifi Poller',
+      title: 'UniFi Poller',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -37,16 +37,16 @@ module.exports = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/XNQSYwYH',
+              href: 'https://golift.io/discord',
             },
           ],
         },
         {
-          title: 'Project home',
+          title: 'UniFi Poller',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/unifi-poller/unifi-poller',
+              href: 'https://golift.io/unifi-poller',
             },
           ],
         },

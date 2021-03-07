@@ -3,7 +3,7 @@ id: up1
 title: Introduction
 ---
 
-Unifi Poller allows you to collect data from your Unifi network controller, save it to a database, and then display it on pre-supplied attractive and data-rich Grafana dashboards
+UniFi Poller allows you to collect data from your Unifi network controller, save it to a database, and then display it on pre-supplied attractive and data-rich Grafana dashboards
 
 ## Main attractions
 
@@ -29,7 +29,7 @@ I found a simple piece of code on GitHub that sorta did what I needed; we all kn
 I've been trying to get my UAP data into Grafana. Sure, google search that. You'll find this. What if you don't want to deal with SNMP? Well, here you go. I've replicated 400% of what you see on those SNMP-powered dashboards with this Go app running on the same mac as my UniFi controller. All without enabling SNMP nor trying to understand those OIDs. Mad props to waterside for making this dashboard; it gave me a fantastic start to making my own dashboards.
 
 ## Examples
-Here are a couple of samples of the dashboards that Unifi Poller can produce (the ones shown are from InfluxDB) -
+Here are a couple of samples of the dashboards that UniFi Poller can produce (the ones shown are from InfluxDB) -
 
 This the USG dashboard
 ![img](../static/img/USG_dashboard.jpg)

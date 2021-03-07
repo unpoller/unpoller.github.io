@@ -3,23 +3,23 @@ id: ins2
 title: Docker - using docker-compose
 ---
 
-This page assumes that you have decided to start Unifi Poller using `docker-compose`. The setup detailed below will install containers for Unifi Poller, Grafana and InfluxDB
+This page assumes that you have decided to start UniFi Poller using `docker-compose`. The setup detailed below will install containers for UniFi Poller, Grafana and InfluxDB
 
 ## Before this
 
-Make sure you have set up a user on your controller for Unifi Poller to use
+Make sure you have set up a user on your controller for UniFi Poller to use
 
-## Installing the Unifi Poller package for Docker
+## Installing the UniFi Poller package for Docker
 
- Unifi Poller's Docker container can be configured for use in two ways:
+ UniFi Poller's Docker container can be configured for use in two ways:
  - by using environment variables or
  - via a configuration file
 
-Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place (albeit a hidden file, and one where all information is available to all containers). The config file method has the advantage that Unifi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
+Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place (albeit a hidden file, and one where all information is available to all containers). The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
 
 There is a detailed description of the configuration parameters in [Config file and Environment variables] (ins9.md) below.
 
-Both of the alternatives described here will pull containers not just for Unifi Poller, but also for InfluxDB and Grafana. If you wish to use existing instances then amend the files as necessary.
+Both of the alternatives described here will pull containers not just for UniFi Poller, but also for InfluxDB and Grafana. If you wish to use existing instances then amend the files as necessary.
 
 #### Alternative 1 - Using environment variables
 
@@ -98,7 +98,7 @@ unifi-poller    | 2020/06/18 12:08:50 [INFO] UniFi Metrics Recorded. Sites: 1, C
 If you don't see this then go back and check what you have done so far
 
 :::tip
-You can see the logs for a container with `docker logs CONTAINER_NAME` (eg `docker logs unifi_poller`) at a command prompt 
+You can see the logs for a container with `docker logs CONTAINER_NAME` (eg `docker logs unifi_poller`) at a command prompt
 :::
 
 

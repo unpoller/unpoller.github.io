@@ -3,22 +3,22 @@ id: ins9
 title: Config file and Environment variables
 ---
 
-This page describes the two methods for configuring Unifi Poller.
+This page describes the two methods for configuring UniFi Poller.
 
-Unifi Poller can be configured for use in two ways:
+UniFi Poller can be configured for use in two ways:
    - by using environment variables (often used in a Docker) or
     - via a configuration file
 
-Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place. The config file method has the advantage that Unifi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
+Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place. The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
 
 The variables to be set can be split into three categories:
-1. Configuration of Unifi Poller iteslf
+1. Configuration of UniFi Poller iteslf
 2. Configuration of the Unifi and the controller(s) (multiple controllers are permitted for different sites)
-3. Configuration of the output database(s) (Unifi Poller will output to both InfluxDB and Prometheus if desired)
+3. Configuration of the output database(s) (UniFi Poller will output to both InfluxDB and Prometheus if desired)
 
 More documentation on the configuration options is included in the [sample configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) on the repo
 
-#### 1 Unifi Poller
+#### 1 UniFi Poller
 
 The poller section begins with the `[poller]` header and has the parameters below. These control overall behavior of the application.
 

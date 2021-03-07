@@ -4,11 +4,11 @@ title: Bare metal - FreeBSD
 ---
 
 
-This page assumes that you have decided to install Unifi Poller on to an existing operating system
+This page assumes that you have decided to install UniFi Poller on to an existing operating system
 
 ## Before this
 
-Make sure you have set up a user on your controller for Unifi Poller to use
+Make sure you have set up a user on your controller for UniFi Poller to use
 
 It is assumed that you have working (and supported) versions of Grafana (though see the Plugins section below) and at least one of InfluxDB/Prometheus
 

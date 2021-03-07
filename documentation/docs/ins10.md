@@ -3,13 +3,13 @@ id: ins10
 title: Final steps
 ---
 
-This page assume that you have successfully completed the installation of Unifi Poller, Grafana and either InfluxDB or Prometheus.
+This page assume that you have successfully completed the installation of UniFi Poller, Grafana and either InfluxDB or Prometheus.
 
 There are just a few remaining steps to complete the installation
 
 ## Before this
 
-You should have installed Unifi Poller, either InfluxDB or Prometheus, and Grafana
+You should have installed UniFi Poller, either InfluxDB or Prometheus, and Grafana
 
 
 ## 1 - For some InfluxDB users

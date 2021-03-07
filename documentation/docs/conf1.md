@@ -3,11 +3,11 @@ id: conf1
 title: Final steps
 ---
 
-This page assume that you have successfully completed the installation of Unifi Poller, Grafana and either InfluxDB or Prometheus.
+This page assume that you have successfully completed the installation of UniFi Poller, Grafana and either InfluxDB or Prometheus.
 
 ## Before this
 
-You should have seen log entries showing that data has been collected by Unifi Poller, and should be able to see that data is arriving in the database.
+You should have seen log entries showing that data has been collected by UniFi Poller, and should be able to see that data is arriving in the database.
 
 There are just a few remaining steps to complete the installation
 
