@@ -37,3 +37,37 @@ interval   = "2m"
 timeout    = "10s"
 ```
 You can set a user and pass if your Loki instance requires auth. This currently only supports Basic Auth. Please open an [Issue](https://github.com/unifi-poller/unifi-poller/issues/) if you need support for something else. Alternatively you can pass the Tenant ID header directly by setting `tenant_id`. If your Loki instance is using/behind an SSL proxy that has a valid SSL cert you may set `verify_ssl` to true. The recommended interval is `2m` but anything from `1m` to `15m` should work fine. The timeout is `10s`, adjust it if you get timeout errors.
+
+###
+
+The `docker-compose` example below (using Loki and Prometheus) was kindly provided by a community member. The Loki Docker logging driver if you don't have it installed.
+
+```
+version: '3.0'
+services:
+  unifi-poller:
+    container_name: unifi-poller
+    environment:
+      UP_INFLUXDB_DISABLE: "true"
+      UP_LOKI_URL: http://log01.tylephony.com:3100
+      UP_POLLER_DEBUG: "false"
+      UP_PROMETHEUS_HTTP_LISTEN: 0.0.0.0:9130
+      UP_PROMETHEUS_NAMESPACE: unifipoller
+      UP_UNIFI_DEFAULT_PASS: password
+      UP_UNIFI_DEFAULT_SAVE_ALARMS: "true"
+      UP_UNIFI_DEFAULT_SAVE_ANOMALIES: "true"
+      UP_UNIFI_DEFAULT_SAVE_DPI: "true"
+      UP_UNIFI_DEFAULT_SAVE_EVENTS: "true"
+      UP_UNIFI_DEFAULT_SAVE_IDS: "true"
+      UP_UNIFI_DEFAULT_SAVE_SITES: "true"
+      UP_UNIFI_DEFAULT_URL: https://unifi.tylephony.com:443
+      UP_UNIFI_DEFAULT_USER: unifipoller
+    image: golift/unifi-poller:2.0.2-beta1
+    logging:
+      driver: loki
+      options:
+        loki-url: http://log01.tylephony.com:3100/loki/api/v1/push
+    ports:
+    - 9130:9130/tcp
+    restart: always
+```
