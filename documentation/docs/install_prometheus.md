@@ -23,6 +23,11 @@ scrape_configs:
 
 If you have other scrape configs, leave them there. Just add a new one for unifipoller. Replace localhost with the IP of the host running unifi-poller. That's it! Restart prometheus and it should begin to scrape data from your controller.
 
+:::note
+UniFi Poller needs to be accessible via port 9031
+:::
+
+
 ## Multiple Controllers
 
 You can either configure the controllers in unifi-poller or poll them unconfigured. When polling unconfigured, you must enable dynamic. You can scrape multiple controllers in several ways. Here is a list of options:

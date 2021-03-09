@@ -6,8 +6,8 @@ title: How it works
 ## Overview
 
 UniFi Poller pulls data from a controller every 30 seconds with an API, and then either
-- posts it to an InfluxDB database, or
-- converts it in to a Prometheus export
+- pushes it to an InfluxDB database, or
+- converts it in to a Prometheus export for pulling
 
 Once it is in a database, Grafana is used to pull information and display it graphically.
 

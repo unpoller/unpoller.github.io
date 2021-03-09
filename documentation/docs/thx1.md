@@ -9,6 +9,8 @@ The Docker Compose file and example environment variable configuration were grac
 
 Thanks to [@lux4rd0](https://github.com/lux4rd0) for the Loki Docker compose example.
 
+Thanks to [@camprr](https://github.com/camprr) for the work on installing UniFi Poller on a Cloud Key.
+
 Sir [@PianSom](https://github.com/PianSom) spent many painstaking weeks putting this
 incredible website together. The community loves you for this!
 
