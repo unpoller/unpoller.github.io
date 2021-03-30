@@ -1,6 +1,6 @@
 ---
-id: install_freebsd
-title: Bare metal - FreeBSD
+id: freebsd
+title: FreeBSD
 ---
 
 
@@ -8,11 +8,9 @@ This page assumes that you have decided to install UniFi Poller on to an existin
 
 ## Before this
 
-Make sure you have set up a user on your controller for UniFi Poller to use
-
-It is assumed that you have working (and supported) versions of Grafana (though see the Plugins section below) and at least one of InfluxDB/Prometheus
-
-(If you don't have then, brief instructions on installing InfluxDB and Grafana are given on [InfluxDB and Grafana Installation](install_influxdb.md))
+Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
+a working (and supported) version of Grafana (though see the Plugins section below) and at
+least one of InfluxDB or Prometheus. If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
 ## FreeBSD
 
@@ -73,4 +71,4 @@ GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-pan
 ```
 ## Next steps
 
-Go to the section [Final steps](install_finish.md)
+Go to the section [Final Steps](../install/finish).

@@ -12,14 +12,14 @@ module.exports = {
     navbar: {
       title: 'UniFi Poller',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'UniFi Poller Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          to: 'docs/introduction',
+          to: 'docs/poller/introduction',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Documentation',
           position: 'left',
         },
         {
@@ -33,25 +33,50 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Community',
+          title: 'Support',
           items: [
             {
-              label: 'Discord',
+              label: 'Go Lift Discord',
               href: 'https://golift.io/discord',
+            },
+            {
+              label: 'Open GitHub Issue',
+              href: 'https://golift.io/unifi-poller/issues/new',
             },
           ],
         },
         {
-          title: 'UniFi Poller',
+          title: 'Community',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://golift.io/unifi-poller',
+              label: 'Ubiquiti Forums',
+              href: 'https://community.ui.com/questions/Unifi-Poller-Store-Unifi-Controller-Metrics-in-InfluxDB-without-SNMP/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1',
+            },
+            {
+              label: 'Ubiquiti Discord',
+              href: 'https://discord.gg/KnyKYt2',
+            },
+          ],
+        },
+        {
+          title: 'Information',
+          items: [
+            {
+              label: 'Contact Us',
+              href: 'mailto:code@golift.io',
+            },
+            {
+              label: 'Software License',
+              href: '/docs/poller/license',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()}`,
+      copyright: `<div class="row"><div class="col footer__col">
+      <a href="https://hub.docker.com/r/golift/unifi-poller">&#9733; THIS PROJECT ON DOCKERHUB</a>
+      </div><div class="col footer__col" style="text-align:left;">
+      Copyright © 2018-${new Date().getFullYear()} David Newhall II
+      </div><div class="col footer__col"><img src="https://docs.golift.io/integrations/golift.png"></div></div>`,
     },
   },
   presets: [

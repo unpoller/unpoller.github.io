@@ -1,6 +1,6 @@
 ---
-id: install_prometheus
-title: Prometheus support
+id: prometheus
+title: Prometheus
 ---
 
 
@@ -10,7 +10,7 @@ This page explains how to configure Prometheus and UniFi-Poller. For help instal
 
 ## Single Controller
 
-Lets make the first example look a lot like the old v1.x way of doing things. Configure a single controller in up.conf (or using environment variables). See [Config file and Environment variables](configuration.md) and the example config file for help with that.
+Lets make the first example look a lot like the old v1.x way of doing things. Configure a single controller in up.conf (or using environment variables). See [Config file and Environment variables](../install/configuration) and the example config file for help with that.
 
 Then you simply point prometheus at unifi-poller using a config like this:
 ```
@@ -21,10 +21,11 @@ scrape_configs:
     - targets: ['localhost:9130']
 ```
 
-If you have other scrape configs, leave them there. Just add a new one for unifipoller. Replace localhost with the IP of the host running unifi-poller. That's it! Restart prometheus and it should begin to scrape data from your controller.
+If you have other scrape configs, leave them there. Just add a new one for `unifipoller`. Replace localhost with the IP of the host running Poller. That's it! Restart Prometheus and it should begin to scrape data from your controller through Poller.
 
 :::note
-UniFi Poller needs to be accessible via port 9031
+UniFi Poller needs to be accessible on TCP port 9130.
+This may require exposing ports or modifying firewalls.
 :::
 
 

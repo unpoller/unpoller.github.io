@@ -1,5 +1,5 @@
 ---
-id: install_loki
+id: loki
 title: Loki
 ---
 

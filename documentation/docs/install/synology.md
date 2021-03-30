@@ -1,6 +1,6 @@
 ---
-id: install_synology
-title: NAS - Synology
+id: synology
+title: Synology
 ---
 
 ## Introduction
@@ -211,4 +211,4 @@ You will be prompted to change the default password, do so.
 
 ## Next steps
 
-Go to the section [Final steps](install_finish.md)
+Go to the section [Final Steps](../install/finish).

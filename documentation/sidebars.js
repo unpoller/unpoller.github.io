@@ -1,33 +1,37 @@
 module.exports = {
   someSidebar: {
-    UnifiPoller: [
-      'introduction',
-      'howitworks',
-      'faq',
-      'rpi',
+    "Poller": [
+      'poller/introduction',
+      'poller/examples',
+      'poller/howitworks',
+      'poller/faq',
+      'poller/otherguides',
+      'poller/thx1',
     ],
-    Installation: [
-      'gettingstarted',
-      'install_dockercompose',
-      'install_docker',
-      'install_docker_faq',
-      'install_freebsd',
-      'install_linux_macos',
-      'install_windows',
-      'install_synology',
-      'configuration',
-      'install_finish',
-      'install_prometheus',
-      'install_loki',
-      'install_influxdb',
-      'install_webserver',
+    "Installation": [
+      'install/gettingstarted',
+      'install/docker',
+      'install/dockercompose',
+      'install/docker_faq',
+      'install/freebsd',
+      'install/macos',
+      'install/linux',
+      'install/windows',
+      'install/cloudkey',
+      'install/synology',
+      'install/configuration',
+      'install/finish',
+      'install/webserver',
     ],
-    Troubleshooting: [
-      'troubleshooting_common',
-      'troubleshooting_help',
+    "Dependencies": [
+      'dependencies/grafana',
+      'dependencies/prometheus',
+      'dependencies/loki',
+      'dependencies/influxdb',
     ],
-    Thanks: [
-      'thx1',
-    ]
+    "Troubleshooting": [
+      'troubleshooting/common',
+      'troubleshooting/help',
+    ],
   },
 };

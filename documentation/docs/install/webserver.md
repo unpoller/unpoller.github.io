@@ -1,6 +1,6 @@
 ---
-id: install_webserver
-title: Web server
+id: webserver
+title: Webserver
 ---
 
 

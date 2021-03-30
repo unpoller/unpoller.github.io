@@ -1,20 +1,13 @@
 ---
-id: install_finish
-title: Final steps
+id: finish
+title: Final Steps
 ---
 
-This page assume that you have successfully completed the installation of UniFi Poller, Grafana and either InfluxDB or Prometheus.
-
-There are just a few remaining steps to complete the installation
-
-## Before this
-
-You should have installed UniFi Poller, either InfluxDB or Prometheus, and Grafana
-
+This page assumes that you have successfully completed the installation of UniFi Poller, Grafana and either InfluxDB or Prometheus. There are just a few remaining steps to complete the installation.
 
 ## 1 - For some InfluxDB users
 
-Although InfluxDB is up and running, you may need to set up the database which was referenced in the configuration. (This shouldn't be needed if you followed the [Docker - using docker-compose](install_dockercompose.md) instructions. However, you may wish to add in the retention policy, as shown below.)
+Although InfluxDB is up and running, you may need to set up the database which was referenced in the configuration. This shouldn't be needed if you followed the [Docker Compose](../install/dockercompose) instructions; however, you may wish to add in the retention policy as shown below.
 
 Get shell access to wherever it is and run the command `influx`
 
@@ -26,13 +19,12 @@ CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
 GRANT ALL ON unifi TO unifipoller
 ```
 
-Optionally - and this is a very sensible idea - set limits on how much data you wish to retain by implementing a retention policy. For example, to hold data for 32 days add the command
+Optionally - and this is a very sensible idea - set limits on how much data you wish to retain by implementing a retention policy. For example, to hold data for 32 days add the command:
 ```
 CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
 ```
 
-(If ever you need to reset the database it can be deleted by the command `DROP DATABASE unifi` and then recreated using the commands above.)
-
+If ever you need to reset the database it can be deleted by the command `DROP DATABASE unifi` and then recreated using the commands above.
 
 ## 2 - Configuring Grafana Datasource
 
@@ -53,9 +45,9 @@ Grafana needs to be set up to use the database that Poller is writing to as a so
 
 ## 3 - Import Grafana Dashboards
 
-This project provides a few pre-built Grafana dashboards. They are available on [Grafana.com](https://grafana.com/grafana/dashboards).
+This project provides a few pre-built Grafana dashboards. They are available on [Grafana.com](https://grafana.com/grafana/dashboards?search=unifi-poller).
 
-Keep in mind these dashboards are just examples. You should make a single dedicated folder in Grafana to keep all of them in, and copy the graphs to new dashboards that you want to maintain. From time to time I will release new features (like multi-site support and multi-controller support) that brings new benefits to the existing dashboards. When that happens I update them. Keeping an example set allows you to update too, inspect the changes, and apply them to your own custom dashboards.
+Keep in mind these dashboards are just examples. You should make a single dedicated folder in Grafana to keep all of them in, and copy the graphs to new dashboards that you want to maintain. From time to time we release new features that bring new benefits to the existing dashboards. When that happens they are updated. Keeping an example set allows you to update too, inspect the changes, and apply them to your own custom dashboards.
 
 ### Recommendations
 

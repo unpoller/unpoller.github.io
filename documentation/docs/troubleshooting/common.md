@@ -1,6 +1,6 @@
 ---
-id: troubleshooting_common
-title: Common solutions
+id: common
+title: Common Solutions
 ---
 
 Below are some common solutions and possible symptoms.

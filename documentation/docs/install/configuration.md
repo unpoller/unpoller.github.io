@@ -1,24 +1,29 @@
 ---
 id: configuration
-title: Config file and Environment variables
+title: Application Configuration
 ---
+
+## Overview
 
 This page describes the two methods for configuring UniFi Poller.
 
 UniFi Poller can be configured for use in two ways:
-   - by using environment variables (often used in a Docker) or
-    - via a configuration file
+   - Using environment variables (often used in a Docker).
+   - With a configuration file.
+   - Both may be used simultaneously; env variables win in case of duplicate settings.
 
 Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place. The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
 
 The variables to be set can be split into three categories:
-1. Configuration of UniFi Poller iteslf
-2. Configuration of the UniFi and the controller(s) (multiple controllers are permitted for different sites)
-3. Configuration of the output database(s) (UniFi Poller will output to both InfluxDB and Prometheus if desired)
+1. Configuration of UniFi Poller itself.
+1. Configuration of the UniFi controller.
+   -   Multiple controllers are permitted for different sites.
+1. Configuration of the output databases.
+   -   UniFi Poller may output to both InfluxDB and Prometheus simultaenously.
 
-More documentation on the configuration options is included in the [sample configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) on the repo
+More documentation on the configuration options is included in the [sample configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) in the main Github repo.
 
-#### 1 UniFi Poller
+## UniFi Poller
 
 The poller section begins with the `[poller]` header and has the parameters below. These control overall behavior of the application.
 
@@ -29,7 +34,7 @@ The poller section begins with the `[poller]` header and has the parameters belo
 | UP_POLLER_PLUGINS_0 |	plugins |	file list - `empty`;	advanced! plugin file, use _1, _2, etc to add more|
 
 
-#### 2 Unifi and controller
+## UniFi Controller
 
 The unifi section begins with the `[unifi]` header and has the following parameters:
 
@@ -50,8 +55,9 @@ UP_UNIFI_DEFAULT_SAVE_DPI |	unifi.defaults.save_dpi 	|`false`
 UP_UNIFI_DEFAULT_VERIFY_SSL |	unifi.defaults.verify_ssl |	`false`
 UP_UNIFI_DEFAULT_SITE_0 |	unifi.defaults.site.0 |	``["all"]`` specify more sites with _1, _2, etc.
 
+---
 :::important
-Whichever alternative you choose make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios` (that is, a UDM-Pro, UDM, or Ckoudkey with modern firmware)
+Whichever alternative you choose make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. That is, a UDM-Pro, UDM, or CkoudKey.
 :::
 
 You can configure a single controller by setting the `UP_UNIFI_DEFAULT` variables above, but you can also configure a single, or multiple controllers by setting the variables below. These, like most, are optional.
@@ -75,13 +81,16 @@ Like any configured list, you may configure controllers with a file or env vars,
 |UP_UNIFI_CONTROLLER_0_VERIFY_SSL |	unifi.controller.verify_ssl |	`false` Verify controller SSL certificate
 |UP_UNIFI_CONTROLLER_0_SITE_0 |	unifi.controller.site.0 	|``["all"]`` specify more sites with _1, _2, etc
 
-#### 3 Output
+## Output
 
-##### Prometheus
+### Prometheus
 
-This section begins with ``[prometheus]`` and configures an HTTP listener where a scrape daemon, such as Prometheus may obtain metrics. See the Prometheus wiki page for Prometheus configuration instructions.
+This section begins with ``[prometheus]`` and configures an HTTP listener where a scrape
+daemon, such as Prometheus or InfluxDB 2.0 may obtain metrics. See the Prometheus wiki
+page for Prometheus configuration instructions.
 
-While Prometheus provides some configuration parameters, you shouldn't change them. If you don't use Prometheus, set `disable` to `true`.
+While Prometheus provides some configuration parameters, you shouldn't change them.
+If you don't use Prometheus, set `disable` to `true`.
 
 | **ENV**          |  **config** 	|  **default and explanation**  |
 | ---------------- | -----------  | -------------------------------- |
@@ -91,9 +100,9 @@ While Prometheus provides some configuration parameters, you shouldn't change th
 |UP_PROMETHEUS_REPORT_ERRORS |	prometheus.report_errors |	`false`
 |UP_PROMETHEUS_BUFFER |	prometheus.buffer 	|`50`
 
-##### InfluxDB
+### InfluxDB
 
-This section begins with ``[influxdb]`` and configures a single influxdb output destination.
+This section begins with ``[influxdb]`` and configures a single InfluxDB write destination.
 
 | **ENV**          |  **config** 	|  **default and explanation**  |
 | ---------------- | -----------  | --------------------------------- |

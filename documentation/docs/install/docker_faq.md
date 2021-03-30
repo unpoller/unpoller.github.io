@@ -1,6 +1,6 @@
 ---
-id: install_docker_faq
-title: Docker - FAQs
+id: docker_faq
+title: Docker FAQ
 ---
 
 ### Where are the Docker images?
