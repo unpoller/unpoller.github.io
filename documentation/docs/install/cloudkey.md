@@ -78,7 +78,7 @@ aware of any use implementing UniFi Poller  using this method, but it should be 
 The config file is located at `/etc/unifi-poller/up.conf` and
 it is explained on the [Application Configuration](../install/configuration) page.
 
-## Next steps
+## Next Steps
 
 1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
 1. Finish [Setting-up Grafana](../install/grafana).

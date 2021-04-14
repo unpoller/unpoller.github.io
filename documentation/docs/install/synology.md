@@ -244,6 +244,6 @@ and you should see the Grafana logon (the default is admin:admin)
 
 You will be prompted to change the default password, do so.
 
-## Next steps
+## Next Steps
 
 1. Finish [Setting-up Grafana](../install/grafana).

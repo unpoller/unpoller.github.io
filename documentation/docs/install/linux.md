@@ -5,15 +5,17 @@ title: Linux
 
 This page assumes that you have decided to install UniFi Poller on to an existing Linux operating system.
 
-## Before this
+## First
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
-If you don't have then, follow these instructions for installing
+If you don't have them, follow these instructions for installing
 [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
-## Linux
+---
+
+## Installation
 
 Linux repository hosting provided by
 [![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
@@ -32,7 +34,7 @@ Install the Go Lift package repo and UniFi Poller with this command:
 curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
 ```
 
-## Linux post-install
+## Maintenance
 
 See [Application Configuration](../install/configuration) and the
 [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
@@ -42,7 +44,7 @@ file for additional post-install configuration information.
   information for your setup:
   ```shell
   sudo nano /etc/unifi-poller/up.conf
-  # or  
+  # or
   sudo vi /etc/unifi-poller/up.conf
   ```
 
@@ -60,7 +62,7 @@ controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with
   tail -f -n100  /var/log/syslog /var/log/messages | grep unifi-poller
   ```
 
-## Next steps
+## Next Steps
 
 1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
 1. Finish [Setting-up Grafana](../install/grafana).

@@ -35,7 +35,7 @@ More documentation on the configuration options is included in the
 in the main Github repo.
 
 The following sections break down the various configuration options available
-for the three main categories mentions previously.
+for the three main categories mentioned previously.
 
 ## Poller
 
@@ -61,7 +61,7 @@ Docker Example:
 docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unifi-poller
 ```
 
-## Controllers
+## UniFi Controller
 
 The unifi section begins with the `[unifi]` header and has the following parameters:
 

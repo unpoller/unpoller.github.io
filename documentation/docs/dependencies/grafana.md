@@ -4,10 +4,11 @@ title: Grafana
 ---
 
 This page provides simple instructions on how to install Grafana.
+Configuration is documented in [another page](../install/grafana).
 
-You can find official instructions in the [Grafana Docs](https://grafana.com/docs/grafana/latest/installation/).
-
+:::tip
 Grafana 7.4.0+ is recommended. Grafana 7.x or newer is required.
+:::
 
 ## Plugins
 
@@ -29,6 +30,10 @@ GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-pan
 ```
 
 ## Installing
+
+:::note
+You can find official instructions in the [Grafana Docs](https://grafana.com/docs/grafana/latest/installation/).
+:::
 
 This will set it up on localhost:3000 with admin/admin login.
 

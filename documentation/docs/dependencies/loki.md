@@ -3,16 +3,22 @@ id: loki
 title: Loki
 ---
 
-Poller provides support for writing UniFi's Events, Anomalies, Alarms and IDS data to Loki.
+Poller optionally provides support for writing UniFi's Events, Anomalies, Alarms and IDS data to Loki.
 There are no dashboards for this data, but it's pretty simple. Just add a "Logs" panel.
-You can also use this data as an Annotation source. Loki support was added in UniFi Poller v2.0.2.
+You can also use this data as an Annotation source.
 
-### Installation
+:::note
+Loki support was added in UniFi Poller v2.0.2.
+:::
+
+---
+
+## Installation
 
 Installation of Loki is documented [here](https://grafana.com/docs/loki/latest/installation/).
 If you're only using Poller, you don't need Promtail.
 
-### Usage
+## Usage
 
 Just add the Loki URL to your poller config to enable this output plugin.
 
@@ -31,7 +37,7 @@ Use the UniFi input plugin settings to choose which logs to collect and save. Ex
   save_anomalies = true
 ```
 
-### Advanced
+## Advanced
 
 The Loki output plugin has a few advanced settings that most folks won't use. These are their default values.
 
@@ -51,7 +57,7 @@ If your Loki instance is using/behind an SSL proxy that has a valid SSL cert you
 The recommended interval is `2m` but anything from `1m` to `15m` should work fine.
 The timeout is `10s`, adjust it if you get timeout errors.
 
-### Examples
+## Examples
 
 The `docker-compose` example below (using Loki and Prometheus) was kindly provided by a community member.
 The Loki Docker logging driver if you don't have it installed.
@@ -85,3 +91,7 @@ services:
     - 9130:9130/tcp
     restart: always
 ```
+
+:::note
+This is a community-provided example.
+:::

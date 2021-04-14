@@ -3,14 +3,18 @@ id: prometheus
 title: Prometheus
 ---
 
-Prometheus support was add in the 1.6 release, but was never very well documented.
+This page explains how to configure Prometheus and UniFi-Poller.
+For help installing Prometheus you'll have to look elsewhere; that's not in this wiki.
+If you need help getting started,
+[InfluxDB](../dependencies/influxdb) is recommended.
+
+:::note
+Prometheus support was added in the 1.6 release, but was not very well documented.
 Release 2.0 brings with it a re-write of the prometheus integration.
 Many changes were made to how one may configure a controller. This page only applies to version 2.0.1+.
+:::
 
-This page explains how to configure Prometheus and UniFi-Poller.
-For help installing Prometheus you'll have to look elsewhere; that's not in this wiki at this time.
-If you need help getting start,
-[InfluxDB](../dependencies/influxdb) is recommended.
+---
 
 ## Single Controller
 
@@ -20,6 +24,7 @@ See [Application Configuration](../install/configuration) and the
 for help with that.
 
 Then you simply point prometheus at unifi-poller using a config like this:
+
 ```yaml
 scrape_configs:
   - job_name: 'unifipoller'
@@ -32,7 +37,7 @@ If you have other scrape configs, leave them there. Just add a new one for `unif
 Replace localhost with the IP of the host running Poller.
 That's it! Restart Prometheus and it should begin to scrape data from your controller through Poller.
 
-:::note
+:::important
 UniFi Poller needs to be accessible on TCP port 9130.
 This may require exposing ports or modifying firewalls.
 :::

@@ -39,7 +39,7 @@ module.exports = {
               href: 'https://golift.io/discord',
             },
             {
-              label: 'Open GitHub Issue',
+              label: 'Send Feedback',
               href: 'https://golift.io/unifi-poller/issues/new',
             },
           ],
@@ -65,7 +65,7 @@ module.exports = {
               href: 'https://packagecloud.io/golift',
             },
             {
-              label: 'GitHub Releases',
+              label: 'Latest Release',
               href: 'https://github.com/unifi-poller/unifi-poller/releases/latest',
             },
           ],

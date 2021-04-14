@@ -5,15 +5,17 @@ title: FreeBSD
 
 This page assumes that you have decided to install UniFi Poller on to an existing FreeBSD operating system.
 
-## Before this
+## First
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
-If you don't have then, follow these instructions for installing
+If you don't have them, follow these instructions for installing
 [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
-## Install
+---
+
+## Installation
 
 Install compiled binary from ports run:
 
@@ -30,7 +32,7 @@ cd /usr/ports/net-mgmt/unifi-poller
 make install clean
 ```
 
-## Maintain
+## Maintenance
 
 See [Application Configuration](../install/configuration) and the
 [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
@@ -66,7 +68,7 @@ service unifi-poller status
 grep unifi-poller /var/log/messages
 ```
 
-## Next steps
+## Next Steps
 
 1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
 1. Finish [Setting-up Grafana](../install/grafana).

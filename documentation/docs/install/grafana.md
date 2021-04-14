@@ -8,6 +8,8 @@ This page assumes that you have successfully completed the installation of UniFi
 [Prometheus](../dependencies/prometheus).
 There are just a few remaining steps to complete the installation.
 
+---
+
 ## Configure Datasource
 
 Grafana needs to be set up to use the database that Poller is writing to as a source.
@@ -79,5 +81,7 @@ This allows you to keep updating the provided dashboards while maintaining your 
 From time to time the dashboards get new features, new graphs, new variables, etc.
 Giving yourself an easy way to import the updated dashboards provided by this project is ideal.
 You're able to inspect the changes and apply them to your dashboards with this method.
+
+---
 
 # CONGRATULATIONS - YOU ARE NOW DONE

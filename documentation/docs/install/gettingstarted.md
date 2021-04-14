@@ -39,7 +39,7 @@ This is the default, will be used throughout these docs.
 
 If you are using another controller type (eg. Cloudkey or Virtual) then create a read-only user.
 
-## Next steps
+## Next Steps
 
 At this point you need to decide whether to use:
 
