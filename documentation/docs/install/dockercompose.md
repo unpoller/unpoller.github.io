@@ -43,6 +43,67 @@ Download the [example](https://github.com/unifi-poller/unifi-poller/blob/master/
 `docker-compose.yml` and add it to your existing one (if you have one; if not just make sure it is
 saved in the same folder as the `.env` file)
 
+#### Prometheus Example
+
+The following example illustrates launching Grafana, Prometheus and UniFi Poller with docker compose.
+This still requires a [configuration for Prometheus](../dependencies/prometheus) to scrape Poller.
+
+:::note
+This is a [community provided](https://github.com/unifi-poller/unifi-poller/issues/309#issuecomment-796870916)
+example.
+:::
+
+```yaml
+version: '3'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    ports:
+      - '9090:9090'
+    volumes:
+      - /root/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    depends_on:
+      - prometheus
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
+  unifi-poller:
+    image: golift/unifi-poller:latest
+    restart: unless-stopped
+    ports:
+      - '9130:9130'
+    container_name: unifi-poller
+    environment:
+      UP_INFLUXDB_DISABLE="true"
+      UP_POLLER_DEBUG="false"
+      UP_UNIFI_DYNAMIC="false"
+      UP_PROMETHEUS_HTTP_LISTEN=0.0.0.0:9130
+      UP_PROMETHEUS_NAMESPACE=unifipoller
+      UP_UNIFI_CONTROLLER_0_PASS=unifipoller123
+      UP_UNIFI_CONTROLLER_0_SAVE_ALARMS="true"
+      UP_UNIFI_CONTROLLER_0_SAVE_ANOMALIES="true"
+      UP_UNIFI_CONTROLLER_0_SAVE_DPI="true"
+      UP_UNIFI_CONTROLLER_0_SAVE_EVENTS="true"
+      UP_UNIFI_CONTROLLER_0_SAVE_IDS="true"
+      UP_UNIFI_CONTROLLER_0_SAVE_SITES="true"
+      UP_UNIFI_CONTROLLER_0_URL=https://192.168.14.250:8443
+      UP_UNIFI_CONTROLLER_0_USER=unifipoller
+
+volumes:
+  grafana-storage:
+  prometheus-data:
+```
+
 ### Using Configuration File
 
 Alternatively, if you choose to use a configuration file:
@@ -61,6 +122,8 @@ if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent fir
 
 Add the following to your `docker-compose.yml` after replacing `YOURLOCALPATH`
 to a local location for Docker storage.
+
+#### InfluxDB Example
 
 ```yaml
 version: "3"
