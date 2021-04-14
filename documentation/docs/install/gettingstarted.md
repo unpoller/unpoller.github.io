@@ -41,15 +41,20 @@ If you are using another controller type (eg. Cloudkey or Virtual) then create a
 
 ## Next Steps
 
+:::tip
+New users may find `docker-compose` (using **InfluxDB**) easiest to use.
+:::
+
 At this point you need to decide whether to use:
 
-- [Docker](../install/dockercompose) - using `docker-compose`.
-- [Docker](../install/docker) - using command line
+1. [Docker](../install/dockercompose) - using `docker-compose`.
+1. [Docker](../install/docker) - using command line
     - This assumes that you have access to Grafana and InfluxDB/Prometheus.
-- Bare metal or a NAS - see the appropriate page
-    - This assumes that you have access to Grafana and InfluxDB/Prometheus.
-- An unRAID Template is also available in the Community Applications.
-
-:::info
-Although it is a matter of choice, new users may find `docker_compose` easiest to use.
-:::
+1. Bare metal or a NAS:
+    - Install [Grafana](../dependencies/grafana).
+    - Install [InfluxDB](../dependencies/influxdb) or [Prometheus](../dependencies/prometheus).
+    - Follow one of these guides: [Linux](linux), [FreeBSD](freebsd), [macOS](macos),
+      [Synology](synology), [Windows](windows).
+1. An unRAID Template is also available in the Community Applications.
+1. You may also install this on a [CloudKey](cloudkey),
+    but that's an advanced setup and not generally recommended.
