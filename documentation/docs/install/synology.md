@@ -62,9 +62,9 @@ helps avoid conflicts with the host or other containers you might have that we c
 
 1. Select `Registry`
 1. Use the search box to find the following:
-    - unifi-poller for golift/unifi-poller:latest https://hub.docker.com/r/golift/unifi-poller/
-    - grafana for grafana/grafana:latest https://hub.docker.com/r/grafana/grafana/
-    - influxdb for influxdb:latest https://hub.docker.com/_/influxdb/
+    - unifi-poller for `golift/unifi-poller:latest` https://hub.docker.com/r/golift/unifi-poller/
+    - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
+    - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
 
 ### Create influxdb container
 
@@ -237,7 +237,7 @@ At this point your containers should have been created, hopefully with no issues
 If so! Start the container. The first time it should take a while to initialize the database.
 Check the logs to make sure you have no file / folder permissions issues.
 If you did you will need to check and make sure you used the right PID and set the
-ownership of the host grafana folder correctly.
+ownership of the host Grafana folder correctly.
 
 From your host browser, access `http://{ip address of your synology}:3000`
 and you should see the Grafana logon (the default is admin:admin)
