@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    imageUrl: 'img/influxdb.png',
     description: (
       <>
         UniFi Poller was designed from the ground up to be flexibly installed.
@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/prometheus.png',
     description: (
       <>
         UniFi Poller lets you concentrate on what is happening in your network
@@ -29,7 +29,7 @@ const features = [
   },
   {
     title: 'Powered by Golang',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    imageUrl: 'img/grafana.png',
     description: (
       <>
         Built using powerful tools like Golang, with data stored in InfluxDB or
@@ -73,7 +73,7 @@ function Home() {
       description="Telemetry and Observability for your UniFi Network">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <h1 className="hero__title"><img alt="UniFi Poller" src="img/logo.png" /></h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link

@@ -12,7 +12,8 @@ UniFi Poller can be configured for use in two ways:
    - With a configuration file.
    - Both may be used simultaneously; env variables win in case of duplicate settings.
 
-Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place. The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data.
+Which to use is a matter of personal choice. The environmental path has the advantage that all settings are in one place. The config file method has the advantage that UniFi Poller specific settings can be saved in the same shared Docker folder as the rest of the app's data. Normally native installs use a
+configuration file and Docker installations use environment variables.
 
 The variables to be set can be split into three categories:
 1. Configuration of UniFi Poller itself.
@@ -21,9 +22,9 @@ The variables to be set can be split into three categories:
 1. Configuration of the output databases.
    -   UniFi Poller may output to both InfluxDB and Prometheus simultaenously.
 
-More documentation on the configuration options is included in the [sample configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) in the main Github repo.
+More documentation on the configuration options is included in the [example configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) in the main Github repo.
 
-## UniFi Poller
+## Poller
 
 The poller section begins with the `[poller]` header and has the parameters below. These control overall behavior of the application.
 
@@ -34,7 +35,7 @@ The poller section begins with the `[poller]` header and has the parameters belo
 | UP_POLLER_PLUGINS_0 |	plugins |	file list - `empty`;	advanced! plugin file, use _1, _2, etc to add more|
 
 
-## UniFi Controller
+## Controllers
 
 The unifi section begins with the `[unifi]` header and has the following parameters:
 
@@ -57,7 +58,7 @@ UP_UNIFI_DEFAULT_SITE_0 |	unifi.defaults.site.0 |	``["all"]`` specify more sites
 
 ---
 :::important
-Whichever alternative you choose make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. That is, a UDM-Pro, UDM, or CkoudKey.
+When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
 You can configure a single controller by setting the `UP_UNIFI_DEFAULT` variables above, but you can also configure a single, or multiple controllers by setting the variables below. These, like most, are optional.
@@ -81,7 +82,7 @@ Like any configured list, you may configure controllers with a file or env vars,
 |UP_UNIFI_CONTROLLER_0_VERIFY_SSL |	unifi.controller.verify_ssl |	`false` Verify controller SSL certificate
 |UP_UNIFI_CONTROLLER_0_SITE_0 |	unifi.controller.site.0 	|``["all"]`` specify more sites with _1, _2, etc
 
-## Output
+## Output Plugins
 
 ### Prometheus
 

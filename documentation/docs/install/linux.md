@@ -8,57 +8,29 @@ This page assumes that you have decided to install UniFi Poller on to an existin
 ## Before this
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
-a working (and supported) version of Grafana (though see the Plugins section below) and at
-least one of InfluxDB or Prometheus. If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+a working (and supported) version of [Grafana](../dependencies/grafana) and at
+least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus). If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
 ## Linux
 
+Linux repository hosting provided by
+[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
+
 :::warning
-JFrog Bintray shut down and package are no longer available from that repo.
-These directions need updating. We are likely moving to packagcloud.
+JFrog Bintray shut down and packages are no longer available from that repo.
+Packages are now on [PackageCloud.io](https://packagecloud.io).
+See below for how to install that repo!
 :::
 
-JFrog Bintray provides package hosting with RedHat, CentOS, Debian and Ubuntu repos.
-Follow these directions to configure the repo and install poller. The same package
-is in all the repos, but you can set the name to match your OS as shown below.
-
-### RedHat variants (CentOS, Fedora)
-
-Create a file at ``/etc/yum.repos.d/golift.repo`` with the following contents. You may replace `centos` with `el`, but they're the same thing either way.
-
+This works on any system with apt or yum. If your system does not use APT or YUM, then download a package from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+Install the Go Lift package repo and UniFi Poller with this command:
 ```
-    [golift]
-    name=Go Lift Awesomeness - Main Repo
-    baseurl=https://dl.bintray.com/golift/centos/main/$basearch/
-    gpgcheck=1
-    repo_gpgcheck=1
-    enabled=1
-    sslverify=1
-    gpgkey=https://golift.io/gpgkey
+curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
 ```
-
-Then install the package: `sudo yum install unifi-poller`
-You'll have to respond `yes` to the prompts to install the Go Lift GPG key.
-
-### Debian variants (Ubuntu, Knoppix)
-
-Install the repo and package using the commands below.
-Replace `ubuntu` with `debian` if you have Debian.
-
-```
-    curl -s https://golift.io/gpgkey | sudo apt-key add -
-    echo deb https://dl.bintray.com/golift/ubuntu bionic main | sudo tee /etc/apt/sources.list.d/golift.list
-    sudo apt update
-    sudo apt install unifi-poller
-```
-
-Supported distributions:
-        `xenial`, `bionic`, `focal`, `jesse`, `stretch`, `buster`, `bullseye`
-If you have another distro, try one of these ^ (they're all the same).
 
 ## Linux post-install
 
-See the [Config file and Environment variables](../install/configuration) page and the example config file for additional post-install configuration information.
+See [Application Configuration](../install/configuration) and the [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) file for additional post-install configuration information.
 
 - Edit the config file after installing the package, and correct the authentication information for your setup:
 ```
@@ -82,18 +54,7 @@ Do **not** include `:8443` on the url of the controller if you are using `unifio
     tail -f -n100  /var/log/syslog /var/log/messages | grep unifi-poller
 ```
 
-## Grafana Plugins
-
-This application uses a few Grafana plugins. Install them:
-
-    Clock, Discrete (InfluxDB only), PieChart, Singlestat (standard), Table (standard)
-
-```
-grafana-cli plugins install grafana-clock-panel
-grafana-cli plugins install natel-discrete-panel
-grafana-cli plugins install grafana-piechart-panel
-```
-
 ## Next steps
 
-Go to the section [Final Steps](../install/finish).
+1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
+1. Go to the section [Final Steps](../install/finish).

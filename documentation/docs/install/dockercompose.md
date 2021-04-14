@@ -40,7 +40,7 @@ Alternatively, if you choose to use a configuration file
 - Save it as `unifi-poller.conf` in the local location you use for Docker storage in a folder called `unifi-poller`
 
 :::important
-Whichever alternative you choose make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios` (that is, a UDM-Pro, UDM, or Ckoudkey with modern firmware)
+When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
 

@@ -14,6 +14,8 @@ InfluxDB 1.7.7 or new is required. Version 1.8.4 is recommended.
 There are no pre-built graphs to display the data it collects.
 :::
 
+## Installation
+
 ### CentOS 7
 
 Provided by community: https://github.com/unifi-poller/unifi-poller/issues/30
@@ -45,4 +47,39 @@ You need Homebrew:
 ```
 brew install influxdb
 brew services restart influxdb
+```
+
+### Docker
+
+Pull the container and run InfluxDB like this:
+
+```
+docker pull influxdb:1.8
+docker run -p 8086:8086 \
+-e INFLUXDB_DB=unifi \
+-e INFLUXDB_ADMIN_USER=unifi \
+-e INFLUXDB_ADMIN_PASSWORD=changeme \
+-v /YOURLOCALPATH/influxdb:/var/lib/influxdb \
+influxdb:1.8
+```
+
+Replace `YOURLOCALPATH` with a location for the data InfluxDB needs to write to disk.
+
+## Post Setup
+
+Although InfluxDB is up and running, you may need to set up the database which was referenced in the configuration. This shouldn't be needed if you followed the [Docker Compose](../install/dockercompose) instructions; however, you may wish to add in the retention policy as shown below.
+
+Get shell access to wherever it is and run the command `influx`
+
+Create the database:
+```
+CREATE DATABASE unifi
+USE unifi
+CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
+GRANT ALL ON unifi TO unifipoller
+```
+
+Optionally - and this is a very sensible idea - set limits on how much data you wish to retain by implementing a retention policy. For example, to hold data for 32 days add the command:
+```
+CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
 ```

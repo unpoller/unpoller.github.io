@@ -3,14 +3,17 @@ id: prometheus
 title: Prometheus
 ---
 
-
 Prometheus support was add in the 1.6 release, but was never very well documented. Release 2.0 brings with it a re-write of the prometheus integration. Many changes were made to how one may configure a controller. This page only applies to version 2.0.1+.
 
-This page explains how to configure Prometheus and UniFi-Poller. For help installing Prometheus you'll have to look elsewhere; that's not in this wiki at this time.
+This page explains how to configure Prometheus and UniFi-Poller. For help installing Prometheus you'll have to look elsewhere; that's not in this wiki at this time. If you need help getting start,
+[InfluxDB](../dependencies/influxdb) is recommended.
 
 ## Single Controller
 
-Lets make the first example look a lot like the old v1.x way of doing things. Configure a single controller in up.conf (or using environment variables). See [Config file and Environment variables](../install/configuration) and the example config file for help with that.
+Configure a single controller in `up.conf` (or using environment variables).
+See [Application Configuration](../install/configuration) and the
+[example config file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+for help with that.
 
 Then you simply point prometheus at unifi-poller using a config like this:
 ```

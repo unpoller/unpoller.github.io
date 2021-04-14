@@ -7,7 +7,9 @@ title: Docker FAQ
 
 Images are available on [Docker Hub](https://hub.docker.com/r/golift/unifi-poller/tags)
 
-Linux images are available for 386, amd64, arm32v6 and arm64v8 architectures. There is no need to specify an architecture tag, docker will pull the correct image automatically with the `latest` tag.
+Linux images are available for `386`, `amd64`, `arm32v6` and `arm64v8` architectures.
+There is no need to specify an architecture tag, docker will pull the correct image
+automatically with the `latest` tag.
 
 ### What Docker tags are available?
 

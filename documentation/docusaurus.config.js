@@ -10,10 +10,9 @@ module.exports = {
   projectName: 'unifi-poller.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'UniFi Poller',
       logo: {
-        alt: 'UniFi Poller Logo',
-        src: 'img/logo.svg',
+        alt: 'UniFi Poller',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -59,6 +58,19 @@ module.exports = {
           ],
         },
         {
+          title: 'Downloads',
+          items: [
+            {
+              label: 'Package Cloud',
+              href: 'https://packagecloud.io/golift',
+            },
+            {
+              label: 'GitHub Releases',
+              href: 'https://github.com/unifi-poller/unifi-poller/releases/latest',
+            },
+          ],
+        },
+        {
           title: 'Information',
           items: [
             {
@@ -75,8 +87,8 @@ module.exports = {
       copyright: `<div class="row"><div class="col footer__col">
       <a href="https://hub.docker.com/r/golift/unifi-poller">&#9733; THIS PROJECT ON DOCKERHUB</a>
       </div><div class="col footer__col" style="text-align:left;">
-      Copyright © 2018-${new Date().getFullYear()} David Newhall II
-      </div><div class="col footer__col"><img src="https://docs.golift.io/integrations/golift.png"></div></div>`,
+      Copyright © 2018-${new Date().getFullYear()} Go Lift
+      </div><div class="col footer__col"><a href="https://golift.io"><img src="https://docs.golift.io/integrations/golift.png" /></a></div></div>`,
     },
   },
   presets: [

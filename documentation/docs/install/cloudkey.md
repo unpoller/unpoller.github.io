@@ -11,11 +11,17 @@ Two methods are available for installation on a CloudKey, CloudKey Gen2 or Cloud
 These solutions are community-supplied and have a limited user base.
 :::
 
-### Installing UnifiPoller on "legacy" firmware
+## Installation
 
+### Legacy Firmware
+
+These directions are for devices not running UnifiOS.
 Referenced from a user page [here](https://www.robertcampbell.dev/2020/07/installing-unifi-poller-influxdb-and.html).
 
-1. Install Grafana (https://grafana.com/docs/grafana/latest/installation/debian/).
+#### Install Grafana
+
+- From: https://grafana.com/docs/grafana/latest/installation/debian/
+
 ```
 curl https://packages.grafana.com/gpg.key | sudo apt-key add -
 apt install -y apt-transport-https
@@ -26,15 +32,16 @@ systemctl start grafana-server
 systemctl enable grafana-server.service
 systemctl status grafana-server
 ```
-2. Install InfluxDB (comes in Xenial).
+
+#### Install InfluxDB
+
 ```
 apt-get update
 apt-get install -y influxdb influxdb-client
 ```
-  -  Add user to influx (https://v2.docs.influxdata.com/v2.0/users/create-user/):
-  :::note
-  For InfluxDB on a CloudKey it is *highly* advisable to add a retention policy to prevent the database from growing in an uncontrolled fashion.
-  :::
+
+Add user to influx; [from here](https://v2.docs.influxdata.com/v2.0/users/create-user/):
+
 ```
 influx -host localhost -port 8086
 CREATE DATABASE unifi
@@ -42,19 +49,31 @@ USE unifi
 CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
 GRANT ALL ON unifi TO unifipoller
 ```
-3. Install unifi-poller (https://github.com/unifi-poller/unifi-poller/wiki/Installation#debian-variants-ubuntu-knoppix).
-:::warning
-JFrog Bintray shut down and these directions no longer work. They need to be updated.
-:::
-```
-curl -s https://golift.io/gpgkey | sudo apt-key add -
-echo deb https://dl.bintray.com/golift/ubuntu bionic main | sudo tee /etc/apt/sources.list.d/golift.list
-apt update
-apt install unifi-poller
-```
-4. Amend your config file `/etc/unifi-poller/up.conf` as set out in [Config file and Environment variables](../install/configuration)
-5. Follow the steps in [Final steps](../install/finish)
 
-### Installing UnifiPoller on `unifios`
+:::note
+For InfluxDB on a CloudKey it is *highly* advisable to add a retention policy to prevent the database from growing in uncontrollably.
+:::
+
+#### Install UniFi Poller
+
+Linux repository hosting provided by
+[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
+
+Install the Go Lift package repo and UniFi Poller with this command:
+
+```
+curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
+```
+
+### Current Firmware: `unifios`
 
 There is an existing suite for installing `podman` containers to run on `unifios` - see [here](https://github.com/boostchicken/udm-utilities). At the time of writing we are not aware of any use implementing UniFi Poller using this method, but it should be straightforward.
+
+## Configuration
+
+The config file is located at `/etc/unifi-poller/up.conf` and
+it is explained on the [Application Configuration](../install/configuration) page.
+## Next steps
+
+1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
+1. Go to the section [Final Steps](../install/finish).

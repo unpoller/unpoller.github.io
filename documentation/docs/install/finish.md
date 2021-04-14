@@ -3,47 +3,30 @@ id: finish
 title: Final Steps
 ---
 
-This page assumes that you have successfully completed the installation of UniFi Poller, Grafana and either InfluxDB or Prometheus. There are just a few remaining steps to complete the installation.
+This page assumes that you have successfully completed the installation of UniFi Poller,
+[Grafana](../dependencies/grafana) and either [InfluxDB](../dependencies/influxdb) or
+[Prometheus](../dependencies/prometheus).
+There are just a few remaining steps to complete the installation.
 
-## 1 - For some InfluxDB users
+## Configure Grafana Datasource
 
-Although InfluxDB is up and running, you may need to set up the database which was referenced in the configuration. This shouldn't be needed if you followed the [Docker Compose](../install/dockercompose) instructions; however, you may wish to add in the retention policy as shown below.
+Grafana needs to be set up to use the database that Poller is writing to as a source.
+The following explains the steps for InfluxDB; the Prometheus steps are very similar.
 
-Get shell access to wherever it is and run the command `influx`
-
-Create the database:
-```
-CREATE DATABASE unifi
-USE unifi
-CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
-GRANT ALL ON unifi TO unifipoller
-```
-
-Optionally - and this is a very sensible idea - set limits on how much data you wish to retain by implementing a retention policy. For example, to hold data for 32 days add the command:
-```
-CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
-```
-
-If ever you need to reset the database it can be deleted by the command `DROP DATABASE unifi` and then recreated using the commands above.
-
-## 2 - Configuring Grafana Datasource
-
-Grafana needs to be set up to use the database that Poller is writing to as a source. Here we set out the steps for InfluxDB; the Prometheus steps are very similar
-
-- Click Add your first data source on the home page you see after logon.
-- Select the influxdb option
+- Click `Add your first data source` on the home page you see after login.
+- Select the InfluxDB option
 - Set the following fields:
         Name = UniFi InfluxDB (or whatever name you want) and set to default
-        URL = http://influxdb1:8086
-        Database = unifi
-        Username = unifipoller
-        Password = unifipoller
+        URL = `http://influxdb1:8086`
+        Database = `unifi`
+        Username = `unifipoller`
+        Password = `unifipoller`
 - No other fields need to be changed or set on this page.
-- Click Save & Test
+- Click `Save & Test`
 - You should get green banner above the save and test that says 'Data Source is Working'
 - To return to the homepage click the icon with 4 squares on the left nav-bar and select home
 
-## 3 - Import Grafana Dashboards
+## Import Grafana Dashboards
 
 This project provides a few pre-built Grafana dashboards. They are available on [Grafana.com](https://grafana.com/grafana/dashboards?search=unifi-poller).
 
@@ -62,7 +45,7 @@ Keep in mind these dashboards are just examples. You should make a single dedica
     + Keeping the original dashboards unedited allows you to continue referencing them, and copying graphs out of them.
     + This also allows you to identify problems with them and open an Issue.
 
-### Import Dashboards
+### Dashboards Instructions
 
 - Simply click the + on the left nav bar in Grafana and click Import.
 - Put in the ID for the dashboard (below) and click the blue Load button.

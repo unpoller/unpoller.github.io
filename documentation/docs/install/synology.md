@@ -97,7 +97,7 @@ I don't recommend you use host network, using the bridge network keeps it self c
    - Click `APPLY`
 
 :::important
-Do **not** include `:8443` on the url of the controller if you are using `unifios` (that is, a UDM-Pro, UDM, or Ckoudkey with modern firmware)
+When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
 ## Check that poller and influx are working
@@ -106,6 +106,7 @@ Do **not** include `:8443` on the url of the controller if you are using `unifio
 2. Double click `golift-unifi-poller1`
 3. Select the `Log` tab
 4. After a couple of minutes you should see an entry like the following, if you do then everything is working ok:
+
 ```
     2019/09/14 22:43:09 [INFO] UniFi Measurements Recorded. Sites: 1, Clients: 78, Wireless APs: 6, Gateways: 1, Switches: 6, Points: 193, Fields: 7398
 ```
@@ -128,6 +129,7 @@ Options:
 - Disadvantages - you have to create a user account, delete the container, and re-run the docker command each time you want to update the base image.
 
 ### Method 1 - Recommended
+
 #### Method 1 Preparation
 
 1. SSH into your Synology

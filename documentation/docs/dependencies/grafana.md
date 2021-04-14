@@ -10,7 +10,26 @@ You can find official instructions in the [Grafana Docs](https://grafana.com/doc
 
 Grafana 7.4.0+ is recommended. Grafana 7.x or newer is required.
 
-### Installing
+## Plugins
+
+This application uses a few Grafana plugins. Install them. Grafana must be installed first, see below.
+
+- Clock
+- Discrete (InfluxDB only)
+- PieChart
+
+```
+grafana-cli plugins install grafana-clock-panel
+grafana-cli plugins install natel-discrete-panel
+grafana-cli plugins install grafana-piechart-panel
+```
+
+If you're running Grafana in Docker, pass this environment variable/value to Grafana to install the plugins:
+```
+GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
+```
+
+## Installing
 
 This will set it up on localhost:3000 with admin/admin login.
 
@@ -33,7 +52,7 @@ sudo systemctl enable grafana-server.service
 sudo systemctl status grafana-server
 ```
 
-#### macOS
+### macOS
 
 You need Homebrew:
 ```
@@ -44,3 +63,22 @@ brew install grafana
 brew services restart grafana
 brew services list
 ```
+
+### Docker
+
+Pull the container and run Grafana like this:
+
+```
+docker pull grafana/grafana
+docker run -p 3000:3000 \
+-v /YOURLOCALPATH/grafana:/var/lib/grafana \
+-e GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel \
+grafana/grafana
+```
+
+Replace `YOURLOCALPATH` with a location for the data Grafana needs to write to disk.
+
+## Configuring
+
+To configure Grafana, you need to add a data source and import the dashboards.
+Learn how to do that in the [Final Steps](../install/finish).

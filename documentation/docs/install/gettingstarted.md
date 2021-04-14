@@ -45,6 +45,3 @@ At this point you need to decide whether to use
 :::info
 Although it is a matter of choice, new users may find `docker_compose` easiest to use.
 :::
-
-
-Finish up by following the [Final Steps](../install/finish) page.

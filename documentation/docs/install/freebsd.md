@@ -3,16 +3,15 @@ id: freebsd
 title: FreeBSD
 ---
 
-
-This page assumes that you have decided to install UniFi Poller on to an existing operating system
+This page assumes that you have decided to install UniFi Poller on to an existing FreeBSD operating system.
 
 ## Before this
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
-a working (and supported) version of Grafana (though see the Plugins section below) and at
-least one of InfluxDB or Prometheus. If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+a working (and supported) version of [Grafana](../dependencies/grafana) and at
+least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus). If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
-## FreeBSD
+## Install
 
 Install compiled binary from ports run:
 
@@ -20,13 +19,25 @@ Install compiled binary from ports run:
 pkg install net/unifi-poller
 ```
 
+## Compile
+
 To build and install from ports run:
+
 ```
 cd /usr/ports/net-mgmt/unifi-poller
 make install clean
 ```
 
+## Maintain
+
+See [Application Configuration](../install/configuration) and the [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) file for additional post-install configuration information.
+
+:::important
+When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+:::
+
 Use these commands to maintain the service:
+
 ```
 # View manual.
 man unifi-poller
@@ -49,26 +60,8 @@ service unifi-poller status
 # Logs should wind up in this file, but your syslog may differ.
 grep unifi-poller /var/log/messages
 ```
-:::important
-When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios` (that is, a UDM-Pro, UDM, or Ckoudkey with modern firmware)
-:::
 
-## Grafana Plugins
-
-This application uses a few Grafana plugins. Install them:
-
-    Clock, Discrete (InfluxDB only), PieChart, Singlestat (standard), Table (standard)
-
-```
-grafana-cli plugins install grafana-clock-panel
-grafana-cli plugins install natel-discrete-panel
-grafana-cli plugins install grafana-piechart-panel
-```
-
-If you're running Grafana in Docker, pass this environment variable/value to Grafana to install the plugins:
-```
-GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
-```
 ## Next steps
 
-Go to the section [Final Steps](../install/finish).
+1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
+1. Go to the section [Final Steps](../install/finish).

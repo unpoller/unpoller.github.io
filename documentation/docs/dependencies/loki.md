@@ -8,7 +8,8 @@ Poller provides support for writing UniFi's Events, Anomalies, Alarms and IDS da
 
 ### Installation
 
-Installation of Loki is documented [here](https://grafana.com/docs/loki/latest/installation/). If you're only using Poller, you don't need Promtail.
+Installation of Loki is documented [here](https://grafana.com/docs/loki/latest/installation/).
+If you're only using Poller, you don't need Promtail.
 
 ### Usage
 
@@ -38,7 +39,7 @@ timeout    = "10s"
 ```
 You can set a user and pass if your Loki instance requires auth. This currently only supports Basic Auth. Please open an [Issue](https://github.com/unifi-poller/unifi-poller/issues/) if you need support for something else. Alternatively you can pass the Tenant ID header directly by setting `tenant_id`. If your Loki instance is using/behind an SSL proxy that has a valid SSL cert you may set `verify_ssl` to true. The recommended interval is `2m` but anything from `1m` to `15m` should work fine. The timeout is `10s`, adjust it if you get timeout errors.
 
-###
+### Examples
 
 The `docker-compose` example below (using Loki and Prometheus) was kindly provided by a community member. The Loki Docker logging driver if you don't have it installed.
 
