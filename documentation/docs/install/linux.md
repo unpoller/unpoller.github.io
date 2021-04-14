@@ -42,7 +42,7 @@ file for additional post-install configuration information.
   information for your setup:
   ```shell
   sudo nano /etc/unifi-poller/up.conf
-  # or
+  # or  
   sudo vi /etc/unifi-poller/up.conf
   ```
 
