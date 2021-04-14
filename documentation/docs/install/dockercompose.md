@@ -112,7 +112,7 @@ Whichever alternative you chose, all that is need to pull the containers and sta
 If all has worked then after it has downloaded and started you should start seeing lines like
 
 ```none
-unifi-poller    | 2020/06/18 12:08:50 [INFO] UniFi Metrics Recorded. Sites: 1, Clients: 67, UAP: 6, USG/UDM: 1, USW: 5, IDS Events: 0, Points: 1837, Fields: 11307, Errs: 0, Elapsed: 599ms
+[INFO] UniFi Metrics Recorded. Sites: 1, Clients: 67, UAP: 6, USG/UDM: 1, USW: 5, IDS Events: 0, Points: 1837, Fields: 11307, Errs: 0, Elapsed: 599ms
 ```
 
 If you don't see this then go back and check what you have done so far.

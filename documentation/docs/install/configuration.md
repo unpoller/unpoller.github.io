@@ -22,9 +22,9 @@ The variables to be set can be split into three categories:
 
 1. Configuration of UniFi Poller itself.
 1. Configuration of the UniFi controller.
-  - Multiple controllers are permitted for different sites.
+    - Multiple controllers are permitted for different sites.
 1. Configuration of the output databases.
-  - UniFi Poller may output to both InfluxDB and Prometheus simultaneously.
+    - UniFi Poller may output to both InfluxDB and Prometheus simultaneously.
 
 More documentation on the configuration options is included in the
 [example configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
@@ -37,9 +37,9 @@ These control overall behavior of the application.
 
 |**ENV**|**config**|**default and explanation**|
 |---|---|---|
-| UP_POLLER_DEBUG  | debug           |  `false`  turns on debug messages |
-| UP_POLLER_QUIET  |    quiet |    `false`    turns off timer messages|
-| UP_POLLER_PLUGINS_0 |    plugins |    file list - `empty`;    advanced! plugin file, use _1, _2, etc to add more|
+|UP_POLLER_DEBUG|debug|`false` turns on debug messages |
+|UP_POLLER_QUIET|quiet|`false` turns off timer messages|
+|UP_POLLER_PLUGINS_0|plugins |file list - `empty`; advanced! plugin file, use _1, _2, etc to add more|
 
 ## Controllers
 
@@ -47,20 +47,20 @@ The unifi section begins with the `[unifi]` header and has the following paramet
 
 |**ENV**|**config**|**default and explanation**|
 |---|---|---|
-| UP_UNIFI_DISABLE |    disable |    `false`  turns off this input. don't do that! |
-| UP_UNIFI_DYNAMIC |    dynamic |    `false`  enables dynamic lookups (from prometheus) |
-| UP_UNIFI_DEFAULT_ROLE |    unifi.defaults.role |    `URL` allows grouping controllers |
-| UP_UNIFI_DEFAULT_URL     |unifi.defaults.url     |`"https://127.0.0.1:8443"` only applies if no controllers are defined (next section) |
-| UP_UNIFI_DEFAULT_USER |    unifi.defaults.user |    `"unifipoller"` default applies to any controller without a username |
-| UP_UNIFI_DEFAULT_PASS |    unifi.defaults.pass |    ``""`` default applies to any controller without a password |
-| UP_UNIFI_DEFAULT_SAVE_SITES |    unifi.defaults.save_sites |    `true`  |
-|UP_UNIFI_DEFAULT_SAVE_IDS |    unifi.defaults.save_ids |    `false` Only works with InfluxDB / Loki|
-|UP_UNIFI_DEFAULT_SAVE_EVENTS |    unifi.defaults.save_events |    `false` Only works with InfluxDB / Loki, added in v2.0.2|
-|UP_UNIFI_DEFAULT_SAVE_ALARMS |    unifi.defaults.save_alarms |    `false` Only works with InfluxDB / Loki, added in v2.0.2|
-|UP_UNIFI_DEFAULT_SAVE_ANOMALIES |    unifi.defaults.save_anomalies |    `false` Only works with InfluxDB / Loki, added in v2.0.2|
-|UP_UNIFI_DEFAULT_SAVE_DPI |    unifi.defaults.save_dpi     |`false`|
-|UP_UNIFI_DEFAULT_VERIFY_SSL |    unifi.defaults.verify_ssl |    `false`|
-|UP_UNIFI_DEFAULT_SITE_0 |    unifi.defaults.site.0 |    ``["all"]`` specify more sites with _1, _2, etc.|
+|UP_UNIFI_DISABLE |disable |`false`  turns off this input. don't do that! |
+|UP_UNIFI_DYNAMIC |dynamic |`false`  enables dynamic lookups (from prometheus) |
+|UP_UNIFI_DEFAULT_ROLE |unifi.defaults.role |`URL` allows grouping controllers |
+|UP_UNIFI_DEFAULT_URL|unifi.defaults.url|`"https://127.0.0.1:8443"` only applies if no controllers are defined (next section) |
+|UP_UNIFI_DEFAULT_USER |unifi.defaults.user |`"unifipoller"` default applies to any controller without a username |
+|UP_UNIFI_DEFAULT_PASS |unifi.defaults.pass |`""` default applies to any controller without a password |
+|UP_UNIFI_DEFAULT_SAVE_SITES |unifi.defaults.save_sites |`true`  |
+|UP_UNIFI_DEFAULT_SAVE_IDS |unifi.defaults.save_ids |`false` Only works with InfluxDB / Loki|
+|UP_UNIFI_DEFAULT_SAVE_EVENTS |unifi.defaults.save_events |`false` Only works with InfluxDB / Loki, added in v2.0.2|
+|UP_UNIFI_DEFAULT_SAVE_ALARMS |unifi.defaults.save_alarms |`false` Only works with InfluxDB / Loki, added in v2.0.2|
+|UP_UNIFI_DEFAULT_SAVE_ANOMALIES |unifi.defaults.save_anomalies |    `false` Only works with InfluxDB / Loki, added in v2.0.2|
+|UP_UNIFI_DEFAULT_SAVE_DPI |unifi.defaults.save_dpi|`false`|
+|UP_UNIFI_DEFAULT_VERIFY_SSL |unifi.defaults.verify_ssl |`false`|
+|UP_UNIFI_DEFAULT_SITE_0 |unifi.defaults.site.0 |`["all"]` specify more sites with _1, _2, etc.|
 
 ---
 

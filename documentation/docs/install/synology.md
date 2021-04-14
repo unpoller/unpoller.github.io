@@ -125,7 +125,7 @@ if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent fir
   if you do then everything is working ok:
 
 ```none
-    2019/09/14 22:43:09 [INFO] UniFi Measurements Recorded. Sites: 1, Clients: 78, Wireless APs: 6, Gateways: 1, Switches: 6, Points: 193, Fields: 7398
+[INFO] UniFi Measurements Recorded. Sites: 1, Clients: 78, Wireless APs: 6, Gateways: 1, Switches: 6, Points: 193, Fields: 7398
 ```
 
 ## Grafana Container

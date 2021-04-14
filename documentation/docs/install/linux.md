@@ -40,13 +40,11 @@ file for additional post-install configuration information.
 
 - Edit the config file after installing the package, and correct the authentication
   information for your setup:
-```shell
-sudo nano /etc/unifi-poller/up.conf
-```
-or
-```shell
-    sudo vi /etc/unifi-poller/up.conf
-```
+  ```shell
+  sudo nano /etc/unifi-poller/up.conf
+  # or
+  sudo vi /etc/unifi-poller/up.conf
+  ```
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the

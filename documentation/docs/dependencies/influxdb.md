@@ -41,9 +41,10 @@ Start: `sudo systemctl start influxdb`
 
 ### macOS
 
-You need Homebrew:
+You need [Homebrew](https://brew.sh):
+
 ```shell
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 ```shell
 brew install influxdb
