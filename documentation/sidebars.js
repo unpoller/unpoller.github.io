@@ -7,6 +7,7 @@ module.exports = {
       'poller/faq',
       'poller/otherguides',
       'poller/contributors',
+      'poller/changelog',
     ],
     "Installation": [
       'install/gettingstarted',
@@ -20,13 +21,16 @@ module.exports = {
       'install/synology',
       'install/configuration',
       'install/finish',
-      'install/webserver',
     ],
     "Dependencies": [
       'dependencies/grafana',
       'dependencies/prometheus',
       'dependencies/loki',
       'dependencies/influxdb',
+    ],
+    "Advanced": [
+      "advanced/webserver",
+      "advanced/api",
     ],
     "Troubleshooting": [
       'troubleshooting/common',

@@ -3,7 +3,6 @@ id: grafana
 title: Grafana
 ---
 
-
 This page provides simple instructions on how to install Grafana.
 
 You can find official instructions in the [Grafana Docs](https://grafana.com/docs/grafana/latest/installation/).
@@ -18,14 +17,14 @@ This application uses a few Grafana plugins. Install them. Grafana must be insta
 - Discrete (InfluxDB only)
 - PieChart
 
-```
+```shell
 grafana-cli plugins install grafana-clock-panel
 grafana-cli plugins install natel-discrete-panel
 grafana-cli plugins install grafana-piechart-panel
 ```
 
 If you're running Grafana in Docker, pass this environment variable/value to Grafana to install the plugins:
-```
+```shell
 GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
 ```
 
@@ -40,7 +39,8 @@ This will set it up on localhost:3000 with admin/admin login.
 Get an RPM. https://grafana.com/docs/installation/rpm/
 
 #### Ubuntu 18.04
-```
+
+```shell
 curl https://packages.grafana.com/gpg.key | sudo apt-key add -
 sudo apt install -y apt-transport-https
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
@@ -55,10 +55,10 @@ sudo systemctl status grafana-server
 ### macOS
 
 You need Homebrew:
-```
+```shell
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-```
+```shell
 brew install grafana
 brew services restart grafana
 brew services list
@@ -68,7 +68,7 @@ brew services list
 
 Pull the container and run Grafana like this:
 
-```
+```shell
 docker pull grafana/grafana
 docker run -p 3000:3000 \
 -v /YOURLOCALPATH/grafana:/var/lib/grafana \

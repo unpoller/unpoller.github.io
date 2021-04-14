@@ -69,7 +69,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Go Lift: ${siteConfig.title}`}
+      title={`Go Lift`}
       description="Telemetry and Observability for your UniFi Network">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">

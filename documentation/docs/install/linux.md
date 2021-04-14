@@ -9,7 +9,9 @@ This page assumes that you have decided to install UniFi Poller on to an existin
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
-least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus). If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
+If you don't have then, follow these instructions for installing
+[InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
 ## Linux
 
@@ -22,37 +24,43 @@ Packages are now on [PackageCloud.io](https://packagecloud.io).
 See below for how to install that repo!
 :::
 
-This works on any system with apt or yum. If your system does not use APT or YUM, then download a package from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+This works on any system with apt or yum. If your system does not use APT or YUM,
+then download a package from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
 Install the Go Lift package repo and UniFi Poller with this command:
-```
+
+```shell
 curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
 ```
 
 ## Linux post-install
 
-See [Application Configuration](../install/configuration) and the [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) file for additional post-install configuration information.
+See [Application Configuration](../install/configuration) and the
+[example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+file for additional post-install configuration information.
 
-- Edit the config file after installing the package, and correct the authentication information for your setup:
-```
-    sudo nano /etc/unifi-poller/up.conf
+- Edit the config file after installing the package, and correct the authentication
+  information for your setup:
+```shell
+sudo nano /etc/unifi-poller/up.conf
 ```
 or
-```
+```shell
     sudo vi /etc/unifi-poller/up.conf
 ```
 
 :::important
-Do **not** include `:8443` on the url of the controller if you are using `unifios` (that is, a UDM-Pro, UDM, or Ckoudkey with modern firmware)
+When configuring make sure that you do **not** include `:8443` on the url of the
+controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
 - Restart the service:
-```
-    sudo systemctl restart unifi-poller
-```
+  ```shell
+  sudo systemctl restart unifi-poller
+  ```
 - Check the log:
-```
-    tail -f -n100  /var/log/syslog /var/log/messages | grep unifi-poller
-```
+  ```shell
+  tail -f -n100  /var/log/syslog /var/log/messages | grep unifi-poller
+  ```
 
 ## Next steps
 

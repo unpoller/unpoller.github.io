@@ -9,13 +9,15 @@ This page assumes that you have decided to install UniFi Poller on to an existin
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
-least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus). If you don't have then, follow these instructions for installing [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
+If you don't have then, follow these instructions for installing
+[InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
 ## Install
 
 Install compiled binary from ports run:
 
-```
+```shell
 pkg install net/unifi-poller
 ```
 
@@ -23,22 +25,25 @@ pkg install net/unifi-poller
 
 To build and install from ports run:
 
-```
+```shell
 cd /usr/ports/net-mgmt/unifi-poller
 make install clean
 ```
 
 ## Maintain
 
-See [Application Configuration](../install/configuration) and the [example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example) file for additional post-install configuration information.
+See [Application Configuration](../install/configuration) and the
+[example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+file for additional post-install configuration information.
 
 :::important
-When configuring make sure that you do **not** include `:8443` on the url of the controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+When configuring make sure that you do **not** include `:8443` on the url of the controller
+if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
 Use these commands to maintain the service:
 
-```
+```shell
 # View manual.
 man unifi-poller
 

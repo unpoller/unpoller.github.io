@@ -1,6 +1,6 @@
 ## UniFi Poller
 
-```
+```text
 MIT LICENSE.
 Copyright (c) 2018-2020 David Newhall II
 Copyright (c) 2020-2021 Go Lift
