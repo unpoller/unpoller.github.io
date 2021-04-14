@@ -41,4 +41,4 @@ If you don't have then, follow these instructions for installing
 ## Next steps
 
 1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
-1. Go to the section [Final Steps](../install/finish).
+1. Finish [Setting-up Grafana](../install/grafana).

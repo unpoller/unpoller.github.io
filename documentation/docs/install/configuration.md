@@ -6,29 +6,36 @@ title: Application Configuration
 ## Overview
 
 This page describes the two methods for configuring UniFi Poller.
+It also describes most of the common configuration values and the
+environment variable alternative.
 
 UniFi Poller can be configured for use in two ways:
 
-- Using environment variables (often used in a Docker).
+- Using environment variables (often used in Docker).
 - With a configuration file.
 - Both may be used simultaneously; env variables win in case of duplicate settings.
 
-Which to use is a matter of personal choice. The environmental path has the advantage
-that all settings are in one place. The config file method has the advantage that UniFi Poller
-specific settings can be saved in the same shared Docker folder as the rest of the app's data.
-Normally native installs use a configuration file and Docker installations use environment variables.
+Which to use is a matter of personal choice. Environment variables have the advantage
+that all settings (referring to Docker) are in one place. The config file method has
+the advantage that UniFi Poller specific settings can be saved in the same shared
+Docker folder as other app's data. **Normally native installs use a
+configuration file and Docker installations use environment variables.**
 
 The variables to be set can be split into three categories:
 
 1. Configuration of UniFi Poller itself.
 1. Configuration of the UniFi controller.
     - Multiple controllers are permitted for different sites.
-1. Configuration of the output databases.
+1. Configuration of the output databases (plugins).
     - UniFi Poller may output to both InfluxDB and Prometheus simultaneously.
+    - Other outputs plugins can be created, but none exist currently.
 
 More documentation on the configuration options is included in the
 [example configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
 in the main Github repo.
+
+The following sections break down the various configuration options available
+for the three main categories mentions previously.
 
 ## Poller
 
@@ -40,6 +47,19 @@ These control overall behavior of the application.
 |UP_POLLER_DEBUG|debug|`false` turns on debug messages |
 |UP_POLLER_QUIET|quiet|`false` turns off timer messages|
 |UP_POLLER_PLUGINS_0|plugins |file list - `empty`; advanced! plugin file, use _1, _2, etc to add more|
+
+Example:
+
+```toml
+quiet = true
+debug = false
+```
+
+Docker Example:
+
+```shell
+docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unifi-poller
+```
 
 ## Controllers
 
@@ -69,9 +89,43 @@ When configuring make sure that you do **not** include `:8443` on the url of the
 if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
 :::
 
+Most `unifi` configuration will look like this:
+
+```toml
+[unifi]
+  url = "http://192.168.2.2"
+  user = "unifipoller"
+  pass = "unifip4assw0rd"
+  save_sites = true
+  save_ids = false
+  save_events = false
+  save_alarms = false
+  save_dpi = false
+  sites = [ "default" ]
+```
+
+Same example, but for Docker:
+
+```shell
+docker run
+  -e "UP_UNIFI_DEFAULT_URL=http://127.0.0.1:8086" \
+  -e "UP_UNIFI_DEFAULT_PASS=unifip4assw0rd" \
+  -e "UP_UNIFI_DEFAULT_SAVE_SITES=true" \
+  -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd" \
+  -e "UP_UNIFI_DEFAULT_SITE_0=default" \
+  golift/unifi-poller
+```
+
+### Multiple Controllers
+
 You can configure a single controller by setting the `UP_UNIFI_DEFAULT` variables above,
 but you can also configure a single, or multiple controllers by setting the variables below.
-These, like most, are optional.
+
+:::tip
+If you only have one controller, use the `default` variables described above.
+
+**Do not use the variables described below, if you only have 1 controller.**
+:::
 
 You may repeat the ``[[unifi.controller]]`` section as many times as you want to add more controllers.
 If you're configuring controllers using env variables, start at `_0` and change `_0` to `_1`
@@ -113,6 +167,8 @@ If you don't use Prometheus, set `disable` to `true`.
 |UP_PROMETHEUS_REPORT_ERRORS |    prometheus.report_errors |    `false`
 |UP_PROMETHEUS_BUFFER |    prometheus.buffer     |`50`
 
+The [Prometheus](../dependencies/prometheus) page has a full explanation of how to configure Poller.
+
 ### InfluxDB
 
 This section begins with ``[influxdb]`` and configures a single InfluxDB write destination.
@@ -124,3 +180,26 @@ This section begins with ``[influxdb]`` and configures a single InfluxDB write d
 |UP_INFLUXDB_USER |influxdb.user|`"unifipoller"` username with access to database|
 |UP_INFLUXDB_PASS |influxdb.pass |`"unifipoller"` password for username|
 |UP_INFLUXDB_INTERVAL |influxdb.interval|`"30s"` how often to poll and collect metrics, ie "1m" or "90s"|
+
+InfluxDB is very easy to use with UniFi Poller, and it's recommend if this whole
+metrics ecosystem is new to you. All you do is add a small configuration like you
+see below and poller sends all your glorious data into the database.
+
+```toml
+[influxdb]
+  url = "http://127.0.0.1:8086"
+  db = "unifi"
+  interval="60s"
+```
+
+Using Docker it may look like this:
+
+```shell
+docker run
+  -e "UP_INFLUXDB_URL=http://127.0.0.1:8086" \
+  -e "UP_INFLUXDB_DB=unifi" \
+  -e "UP_INFLUXDB_INTEVAL=60s" \
+  -e "UP_UNIFI_DEFAULT_URL=https://192.168.1.2"
+  -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd"
+  golift/unifi-poller
+```

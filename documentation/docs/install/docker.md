@@ -22,7 +22,7 @@ docker pull golift/unifi-poller
 ```
 
 :::info
-Details of tags available are described in [Docker - FAQ](../install/docker_faq).
+Details of tags available are described in [Docker - FAQ](../help/docker_faq).
 :::
 
 ## Configuring and starting the container
@@ -75,4 +75,4 @@ If you do then you can stop the container, and then start it again daemonised by
 
 1. Install [Grafana and Plugins](../dependencies/grafana.md).
 1. Install [InfluxDB](../dependencies/influxdb.md) or [Prometheus](../dependencies/prometheus.md).
-1. Go to the section [Final Steps](../install/finish).
+1. Finish [Setting-up Grafana](../install/grafana).

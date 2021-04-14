@@ -20,7 +20,7 @@ module.exports = {
       'install/cloudkey',
       'install/synology',
       'install/configuration',
-      'install/finish',
+      'install/grafana',
     ],
     "Dependencies": [
       'dependencies/grafana',
@@ -32,9 +32,10 @@ module.exports = {
       "advanced/webserver",
       "advanced/api",
     ],
-    "Troubleshooting": [
-      'troubleshooting/common',
-      'troubleshooting/help',
+    "Help": [
+      'help/common',
+      'help/help',
+      'help/docker_faq',
     ],
   },
 };

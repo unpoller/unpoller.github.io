@@ -246,4 +246,4 @@ You will be prompted to change the default password, do so.
 
 ## Next steps
 
-Go to the section [Final Steps](../install/finish).
+1. Finish [Setting-up Grafana](../install/grafana).

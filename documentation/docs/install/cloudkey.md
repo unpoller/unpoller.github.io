@@ -81,4 +81,4 @@ it is explained on the [Application Configuration](../install/configuration) pag
 ## Next steps
 
 1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
-1. Go to the section [Final Steps](../install/finish).
+1. Finish [Setting-up Grafana](../install/grafana).

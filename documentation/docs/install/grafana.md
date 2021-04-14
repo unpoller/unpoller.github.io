@@ -1,6 +1,6 @@
 ---
-id: finish
-title: Final Steps
+id: grafana
+title: Setup Grafana
 ---
 
 This page assumes that you have successfully completed the installation of UniFi Poller,
@@ -8,7 +8,7 @@ This page assumes that you have successfully completed the installation of UniFi
 [Prometheus](../dependencies/prometheus).
 There are just a few remaining steps to complete the installation.
 
-## Configure Grafana Datasource
+## Configure Datasource
 
 Grafana needs to be set up to use the database that Poller is writing to as a source.
 The following explains the steps for InfluxDB; the Prometheus steps are very similar.
@@ -26,7 +26,7 @@ The following explains the steps for InfluxDB; the Prometheus steps are very sim
 - You should get green banner above the save and test that says 'Data Source is Working'
 - To return to the homepage click the icon with 4 squares on the left nav-bar and select home
 
-## Import Grafana Dashboards
+## Import Dashboards
 
 This project provides a few pre-built Grafana dashboards.
 They are available on [Grafana.com](https://grafana.com/grafana/dashboards?search=unifi-poller).
@@ -62,13 +62,13 @@ Repeat this for each dashboard you want. The IDs for each database platform are 
 You only need Prometheus or Influx, not both. Unless you really want both.
 
 | App | Prometheus ID | Influx ID | Get this if you... |
-| --- | ------------- | --------- | ------------------ |
-Client DPI | [11310](https://grafana.com/grafana/dashboards/11310) | [10419](https://grafana.com/grafana/dashboards/10419) | ...enabled `save_dpi` in the config
-Sites | [11311](https://grafana.com/grafana/dashboards/11311) |    [10414](https://grafana.com/grafana/dashboards/10414) | ...enabled `save_sites`
-USW | [11312](https://grafana.com/grafana/dashboards/11312) |    [10417](https://grafana.com/grafana/dashboards/10417) | ...have UniFi Switches
-USG | [11313](https://grafana.com/grafana/dashboards/11313) |    [10416](https://grafana.com/grafana/dashboards/10416) | ...have a UniFi gateway (UDM-P, UDM, USG, ...)
-UAP | [11314](https://grafana.com/grafana/dashboards/11314) |    [10415](https://grafana.com/grafana/dashboards/10416) | ...have UniFi Access Points
-Clients | [11315](https://grafana.com/grafana/dashboards/11315) |    [10418](https://grafana.com/grafana/dashboards/10418) | ...love nano
+| --- | --- | --- | --- |
+Client DPI|[11310](https://grafana.com/grafana/dashboards/11310)|[10419](https://grafana.com/grafana/dashboards/10419)|...enabled `save_dpi` in the config
+Sites|[11311](https://grafana.com/grafana/dashboards/11311)|[10414](https://grafana.com/grafana/dashboards/10414)|...enabled `save_sites`
+USW|[11312](https://grafana.com/grafana/dashboards/11312)|[10417](https://grafana.com/grafana/dashboards/10417)|...have UniFi Switches
+USG|[11313](https://grafana.com/grafana/dashboards/11313)|[10416](https://grafana.com/grafana/dashboards/10416)|...have a UniFi gateway (UDM-P, UDM, USG, ...)
+UAP|[11314](https://grafana.com/grafana/dashboards/11314)|[10415](https://grafana.com/grafana/dashboards/10416)|...have UniFi Access Points
+Clients|[11315](https://grafana.com/grafana/dashboards/11315)|[10418](https://grafana.com/grafana/dashboards/10418)| ..love nano
 
 #### Dashboard Update Notes
 

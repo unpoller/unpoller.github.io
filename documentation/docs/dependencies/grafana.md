@@ -82,4 +82,4 @@ Replace `YOURLOCALPATH` with a location for the data Grafana needs to write to d
 ## Configuring
 
 To configure Grafana, you need to add a data source and import the dashboards.
-Learn how to do that in the [Final Steps](../install/finish).
+Learn how to do that in [Grafana Setup](../install/grafana).
