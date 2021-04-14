@@ -61,7 +61,7 @@ module.exports = {
           title: 'Downloads',
           items: [
             {
-              label: 'Package Cloud',
+              label: 'Packagecloud',
               href: 'https://packagecloud.io/golift',
             },
             {
