@@ -18,7 +18,7 @@ If you don't have them, follow these instructions for installing
 ## Install
 
 As it is now, a pre-compiled windows binary (.exe) is provided on the
-[Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+[Releases](https://github.com/unifi-poller/unifi-poller/releases) page.
 Combine this with a valid config file and you can run this on Windows.
 Please contact us on [Discord](https://golift.io/discord) if you need any help.
 

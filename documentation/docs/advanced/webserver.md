@@ -7,7 +7,9 @@ Poller has a built-in and **disabled by default** web server.
 The web server provides some very basic information about your UniFi environment, devices and clients.
 At the time of this writing it is [only an API](API), but a simple human interface (read-only) is planned.
 
-    The web server was added in UniFi Poller v2.0.2.
+:::note
+The web server was added in UniFi Poller v2.0.2.
+:::
 
 ## Usage
 
@@ -74,8 +76,8 @@ These are the advanced settings and their default values.
 ```
 
 The default HTML path is installed by any package or the Official Golift Docker image.
-This usually does not need to be changed. Exception are BSD and macOS.
-The HTML path on these OSes is /usr/local/lib/unifi-poller/web.
+This usually does not need to be changed. Exceptions are BSD and macOS systems.
+The HTML path on these OSes is `/usr/local/lib/unifi-poller/web`, and you need to set it.
 
 An SSL listener may be enabled instead of standard HTTP by providing an SSL Cert File and Key File paths.
 

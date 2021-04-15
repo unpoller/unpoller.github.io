@@ -37,10 +37,12 @@ Use the UniFi input plugin settings to choose which logs to collect and save. Ex
   save_anomalies = true
 ```
 
-You'll also need to add Loki as a data source to Grafana, and create panels or annotations with that data.
-Grafana documents [Loki with Grafana usage here](https://grafana.com/docs/grafana/latest/datasources/loki/).
-Here's a [bonus blog post](https://grafana.com/blog/2020/04/08/loki-quick-tip-how-to-create-a-grafana-dashboard-for-searching-logs-using-loki-and-prometheus/)
+:::important
+Loki must be added as a data source to Grafana, and panels or annotations should be created with that data.
+Grafana Labs documents **[Loki with Grafana usage](https://grafana.com/docs/grafana/latest/datasources/loki/)**.
+Here's a **[bonus blog post](https://grafana.com/blog/2020/04/08/loki-quick-tip-how-to-create-a-grafana-dashboard-for-searching-logs-using-loki-and-prometheus/)**
 about using Loki with Grafana.
+:::
 
 ## Advanced
 
@@ -98,5 +100,5 @@ services:
 ```
 
 :::note
-This is a community-provided example.
+The above is a community-provided example.
 :::

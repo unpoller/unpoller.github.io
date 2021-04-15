@@ -27,7 +27,7 @@ See below for how to install that repo!
 :::
 
 This works on any system with apt or yum. If your system does not use APT or YUM,
-then download a package from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+then download a package from the [Releases](https://github.com/unifi-poller/unifi-poller/releases) page.
 Install the Go Lift package repo and UniFi Poller with this command:
 
 ```shell
