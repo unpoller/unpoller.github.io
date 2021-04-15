@@ -37,6 +37,9 @@ Use the UniFi input plugin settings to choose which logs to collect and save. Ex
   save_anomalies = true
 ```
 
+You'll also need to add Loki as a data source to Grafana, and create panels or annotations with that data.
+Grafana documents [Loki with Grafana usage here](https://grafana.com/docs/grafana/latest/datasources/loki/).
+
 ## Advanced
 
 The Loki output plugin has a few advanced settings that most folks won't use. These are their default values.
