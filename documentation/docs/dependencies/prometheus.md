@@ -4,7 +4,7 @@ title: Prometheus
 ---
 
 This page explains how to configure Prometheus and UniFi-Poller.
-For help installing Prometheus you'll have to look elsewhere; that's not in this wiki.
+For help installing Prometheus you'll have to look elsewhere; that's not in this document.
 If you need help getting started,
 [InfluxDB](../dependencies/influxdb) is recommended.
 

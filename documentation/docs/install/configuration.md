@@ -153,8 +153,8 @@ Like any configured list, you may configure controllers with a file or env vars,
 ### Prometheus
 
 This section begins with ``[prometheus]`` and configures an HTTP listener where a scrape
-daemon, such as Prometheus or InfluxDB 2.0 may obtain metrics. See the Prometheus wiki
-page for Prometheus configuration instructions.
+daemon, such as Prometheus or InfluxDB 2.0 may obtain metrics. See the
+[Prometheus](../dependencies/prometheus) page for Prometheus configuration instructions.
 
 While Prometheus provides some configuration parameters, you shouldn't change them.
 If you don't use Prometheus, set `disable` to `true`.
@@ -167,7 +167,9 @@ If you don't use Prometheus, set `disable` to `true`.
 |UP_PROMETHEUS_REPORT_ERRORS |    prometheus.report_errors |    `false`
 |UP_PROMETHEUS_BUFFER |    prometheus.buffer     |`50`
 
+:::tip
 The [Prometheus](../dependencies/prometheus) page has a full explanation of how to configure Poller.
+:::
 
 ### InfluxDB
 
