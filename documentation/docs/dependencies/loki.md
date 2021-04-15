@@ -39,6 +39,8 @@ Use the UniFi input plugin settings to choose which logs to collect and save. Ex
 
 You'll also need to add Loki as a data source to Grafana, and create panels or annotations with that data.
 Grafana documents [Loki with Grafana usage here](https://grafana.com/docs/grafana/latest/datasources/loki/).
+Here's a [bonus blog post](https://grafana.com/blog/2020/04/08/loki-quick-tip-how-to-create-a-grafana-dashboard-for-searching-logs-using-loki-and-prometheus/)
+about using Loki with Grafana.
 
 ## Advanced
 
