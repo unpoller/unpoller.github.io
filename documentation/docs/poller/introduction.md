@@ -46,9 +46,10 @@ if Garrett hadn't written the original code I started with. Many props my man.
 The original code pulled only the client data. This app now pulls data for clients, access
 points, security gateways, dream machines and switches.
 
-I've been trying to get my UAP data into Grafana. Sure, google search that. You'll find this.
+I've been trying to get my UAP data into Grafana. Sure, google search that.
+You'll find [this](https://community.ubnt.com/t5/UniFi-Wireless/Grafana-dashboard-for-UniFi-APs-now-available/td-p/1833532).
 What if you don't want to deal with SNMP? Well, here you go. I've replicated 400% of what
 you see on those SNMP-powered dashboards with this Go app running on the same mac as my
 UniFi controller. All without enabling SNMP nor trying to understand those OIDs.
-Mad props to waterside for making this dashboard; it gave me a fantastic start to making
- my own dashboards.
+Mad props to [waterside](https://community.ubnt.com/t5/user/viewprofilepage/user-id/303058)
+for making this dashboard; it gave me a fantastic start to making my own dashboards.

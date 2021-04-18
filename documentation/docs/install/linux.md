@@ -50,7 +50,7 @@ file for additional post-install configuration information.
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the
-controller if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+controller if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
 :::
 
 - Restart the service:

@@ -16,7 +16,7 @@ It must be enabled in both the poller config and in your UniFi controller. Two s
 ### Check the port used to connect to the controller
 
 It should be `8443` if you are using a non-unifios interface (eg the original Cloudkey with
-  old firmware) and `443` (or just omitted) if you are using a unifios device (UDM-Pro, UDM, etc)
+  old firmware) and `443` (or just omitted) if you are using a unifios device (UDM-Pro, UDM, UXG, etc)
 
 ### Run Updated Components
 

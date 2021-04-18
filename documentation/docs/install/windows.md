@@ -28,7 +28,7 @@ unifi-poller.exe -c up.conf
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
 :::
 
 ## Next Steps

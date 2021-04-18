@@ -32,8 +32,12 @@ but also for InfluxDB and Grafana. If you wish to use existing instances then am
 
 ### Using Environment Variables
 
-In order to pass environment variables via `docker-compose` you need to have a
+The easiest way to pass environment variables via `docker-compose` is to have a
 file called `.env` in the same folder as the `docker-compose` yaml file
+
+:::tip Hidden Files
+Files beginning with a period `.` are generally hidden. You may need to use `ls -a` to find the `.env` file.
+:::
 
 - Copy the example [environment file](https://github.com/unifi-poller/unifi-poller/blob/master/init/docker/docker-compose.env.example)
 - Edit it as necessary (in particular ensure that `UNIFI_USER` and `UNIFI_PASS` are set)
@@ -45,8 +49,17 @@ saved in the same folder as the `.env` file)
 
 #### Prometheus Example
 
+This example is advanced, for demonstration only, and not recommend for newbies.
+
+<details>
+  <summary>Advanced Prometheus Example</summary>
+
+---
+
 The following example illustrates launching Grafana, Prometheus and UniFi Poller with docker compose.
-This still requires a [configuration for Prometheus](../dependencies/prometheus) to scrape Poller.
+This does not utilize a `.env` file nor a configuration file and instead puts all the env variables
+directly into the docker-compose file.
+This still requires a [Prometheus configuration](../dependencies/prometheus) to scrape Poller.
 
 :::note
 This is a [community provided](https://github.com/unifi-poller/unifi-poller/issues/309#issuecomment-796870916)
@@ -103,6 +116,7 @@ volumes:
   grafana-storage:
   prometheus-data:
 ```
+</details>
 
 ### Using Configuration File
 
@@ -117,7 +131,7 @@ Alternatively, if you choose to use a configuration file:
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
 :::
 
 Add the following to your `docker-compose.yml` after replacing `YOURLOCALPATH`
@@ -199,4 +213,6 @@ docker-compose up -d
 
 ## Next Steps
 
+1. Creating an InfluxDB database and retention policy is explained on the
+  [InfluxDB](../dependencies/influxdb#post-setup) page.
 1. Finish [Setting-up Grafana](../install/grafana).

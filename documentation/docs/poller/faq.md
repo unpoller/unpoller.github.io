@@ -9,6 +9,10 @@ title: FAQs
 - InfluxDB 1.7.7 or newer is needed, if you choose to use InfluxDB.
 - Prometheus 2.x if you choose to use Prometheus.
 
+:::caution InfluxDB 2.0
+UniFi Poller does not currently work with versions of InfluxDB newer than 1.8.x.
+:::
+
 UniFi Poller has not been fully tested with InfluxDB 2.0 or newer. While InfluxDB
 2.0 may be able to scrape metrics from Poller, there are no pre-built dashboards
 available to display the data.

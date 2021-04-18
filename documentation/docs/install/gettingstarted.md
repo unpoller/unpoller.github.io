@@ -28,7 +28,7 @@ configuration steps. The first of these is to set up the controller correctly.
 The only requirement of the controller is that UniFi Poller can log in to it and extract data.
 For this purpose go ahead and create a new user now. Make a note of the username and password you have chosen.
 
-If your controller is on a UDM or UDM-Pro or UCK running UnifiOS then it is recommended that a
+If your controller is on a UDM, UXG, or UDM-Pro or UCK running UnifiOS then it is recommended that a
 Limited Admin user is created with Read-Only rights to the UniFi Network app. Other access
 levels may not work correctly.
 

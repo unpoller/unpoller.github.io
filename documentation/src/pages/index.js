@@ -13,7 +13,7 @@ const features = [
     description: (
       <>
         UniFi Poller was designed from the ground up to be flexibly installed.
-        It's a simpe tool that provides a wealth of valuable data.
+        It's a simple tool that provides a wealth of valuable data.
       </>
     ),
   },

@@ -113,7 +113,7 @@ helps avoid conflicts with the host or other containers you might have that we c
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
 :::
 
 ## Check that poller and influx are working

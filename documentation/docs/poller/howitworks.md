@@ -34,6 +34,6 @@ you will probably find it most efficient to use those, amending the installation
 
 ## What's Next
 
-**Have a look at the [Getting Started](../install/gettingstarted) page.**
-Have a look at the [Other Guides](../poller/otherguides) page for third party guides
-from the community, including detailed Raspberry Pi directions.
+- Check out the [Getting Started](../install/gettingstarted) page.
+- And the [Other Guides](../poller/otherguides) page for third party guides
+  from the community, including detailed Raspberry Pi instructions.

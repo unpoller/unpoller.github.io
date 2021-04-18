@@ -3,6 +3,9 @@ id: contributors
 title: Contributors
 ---
 
+Thank you to [waterside](https://community.ubnt.com/t5/user/viewprofilepage/user-id/303058)
+for the initial inspiration and Grafana dashboard.
+
 Many thanks to [mabunixda](https://github.com/mabunixda) for helping begin our Docker support!
 The images are built automatically by Docker Cloud using the Dockerfile included in the main repo.
 
