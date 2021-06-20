@@ -200,7 +200,7 @@ Using Docker it may look like this:
 docker run
   -e "UP_INFLUXDB_URL=http://127.0.0.1:8086" \
   -e "UP_INFLUXDB_DB=unifi" \
-  -e "UP_INFLUXDB_INTEVAL=60s" \
+  -e "UP_INFLUXDB_INTERVAL=60s" \
   -e "UP_UNIFI_DEFAULT_URL=https://192.168.1.2"
   -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd"
   golift/unifi-poller
