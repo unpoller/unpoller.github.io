@@ -24,13 +24,14 @@ The config tells Unpoller where to find the Unifi controller(s), database, and o
 [Creating/Modifying Config](applicationconfig)
 
 ### 4) Install Unpoller Suite
-#### Option 1 - Using a Docker image
+Option 1 - Using a Docker image
 
 - [Installing via docker-compose](dockercompose)
 - [Installing via command line](docker)
 
 <details>
-  <summary>#### Option 2 - Manual installation</summary>
+  <summary>Option 2 - Manual installation</summary>
+
 **Install Database:**
 [InfluxDB](../dependencies/influxdb) and [Prometheus](../dependencies/prometheus) are both supported. You only need one.
 
@@ -47,7 +48,7 @@ Platform specific install docs:
 - [Linux](linux)
 - [FreeBSD](freebsd)
 
-<details>
+</details>
   
 ### 5) Setup Grafana
 Setup Grafana
