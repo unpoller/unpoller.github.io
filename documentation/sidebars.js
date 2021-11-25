@@ -11,6 +11,8 @@ module.exports = {
     ],
     "Installation": [
       'install/gettingstarted',
+      'install/installationmethod,
+      'install/controllerlogin',
       'install/dockercompose',
       'install/docker',
       'install/freebsd',
