@@ -9,7 +9,7 @@ If you prefer you can keep this page open as you walk though the installation st
 ### 1) Choose an Installation Method
 
 
-[Chosing an Install Method](installmethod)
+[Chosing an Install Method](../install/installmethod)
 
 ### 2) Setup Unifi login for Unpoller
 No matter which method of installation you choose you will need to give Unpoller a way to access the infomation in your controller.
