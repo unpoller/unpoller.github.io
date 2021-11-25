@@ -8,7 +8,7 @@ The setup detailed below will install containers for UniFi Poller, Grafana and I
 
 ## First
 
-Make sure you have set up a user on your controller for UniFi Poller.
+Make sure you have [set up a user](unifilogin) on your controller for UniFi Poller. 
 
 ---
 
