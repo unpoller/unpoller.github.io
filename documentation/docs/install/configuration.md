@@ -89,7 +89,6 @@ When configuring make sure that you do **not** include `:8443` on the url of the
 if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
 :::
 
-#### Unifi Section Example
 Most `unifi` configuration will look like this:
 
 ```toml
@@ -184,7 +183,6 @@ This section begins with ``[influxdb]`` and configures a single InfluxDB write d
 |UP_INFLUXDB_PASS |influxdb.pass |`"unifipoller"` password for username|
 |UP_INFLUXDB_INTERVAL |influxdb.interval|`"30s"` how often to poll and collect metrics, ie "1m" or "90s"|
 
-#### InfluxDB Example
 InfluxDB is very easy to use with UniFi Poller, and it's recommend if this whole
 metrics ecosystem is new to you. All you do is add a small configuration like you
 see below and poller sends all your glorious data into the database.
