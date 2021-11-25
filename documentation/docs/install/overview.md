@@ -21,7 +21,7 @@ You can setup Unpoller to get information from multiple controllers if you want,
 The config tells Unpoller where to find the Unifi controller(s), database, and other infomation.
 (If you are doing a Manual installation you may need some information from step 3 to compleate the config.)
 
-[Creating/Modifiing Config](applicationconfig)
+[Creating/Modifying Config](applicationconfig)
 
 ### 4) Install Unpoller Suite
 #### Option 1 - Using a Docker image
