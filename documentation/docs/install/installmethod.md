@@ -5,10 +5,10 @@ title: Install Method
 
 ## Chosing an Install Method
 
-There are three main methods to install the Unpollor 'suite' (Unpoller and accociated programs)
+There are two main methods to install the Unpollor 'suite' (Unpoller and accociated programs)
 
 ### Docker image
-This is recommended way to install
+This is the recommended way to install and the best option for new users.
 
 #### Advantages of Docker
 
@@ -40,11 +40,10 @@ Install each of the components individually
 ### Device Specific
 Some devices have specific install methods
 
-#### unRAID Template
-An unRAID Template is available in the Community Applications.
-
-#### CloudKey
-You may also install this on a [CloudKey](cloudkey), but that's an advanced setup and not generally recommended.
+- unRAID Template
+-- An unRAID Template is available in the Community Applications.
+- CloudKey
+-- You may also install directly on a [CloudKey](cloudkey), but that's an advanced setup and not generally recommended.
 
 ## Installation Overview
 If you prefer you can keep this page open as you walk though the installion steps.
@@ -57,33 +56,28 @@ You can setup Unpoller to get information from multiple controllers if you want,
 
 ### 2) Create Config
 The config tells Unpoller where to find the Unifi controller(s), database, and other infomation.
-
-UnPoller can be configured for use in two ways:
-- Using environment variables (often used in Docker).
-- With a configuration file.
+(If you are doing a Manual installation you may need some information from step 3 to compleate the config.)
 
 [Creating/Modifiing Config](applicationconfig)
 
 ### 3) Install Unpoller Suite
-#### Using a Docker image
-Docker can be installed using `docker-compose` or using command line
+#### Option 1 - Using a Docker image
 
-[Installing via docker-compose](dockercompose)
-[Installing via command line](docker)
+- [Installing via docker-compose](dockercompose)
+- [Installing via command line](docker)
 
-#### Using Manual installation
-##### Install Prerequisite Software
+#### Option 2 - Manual installation
 
-**__Database__**
+**Install Database:**
 [InfluxDB](../dependencies/influxdb) and [Prometheus](../dependencies/prometheus) are both supported. You only need one.
 
 InfluxDB is recomended, as it supports both metrics and logging.
 Prometheus can hold only metrics. Loki is made by the Devs of Prometheus to hold logs. If you want both metrics & logging you will need to install Loki alongside Prometheus.
 
-**__Grafana__**
+**Install Grafana:**
 [Grafana Installation](Grafana)
 
-##### Install Unpoller
+**Install Unpoller:**
 Platform specific install docs:
 - [Windows](windows)
 - [MacOS](macos)
