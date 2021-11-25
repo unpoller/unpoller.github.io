@@ -3,6 +3,7 @@ If you prefer you can keep this page open as you walk though the installation st
 
 ### 1) Choose an Installation Method
 
+
 [Chosing an Install Method](installmethod)
 
 ### 2) Setup Unifi login for Unpoller
@@ -32,7 +33,7 @@ InfluxDB is recomended, as it supports both metrics and logging.
 Prometheus can hold only metrics. Loki is made by the Devs of Prometheus to hold logs. If you want both metrics & logging you will need to install Loki alongside Prometheus.
 
 **Install Grafana:**
-[Grafana Installation](Grafana)
+[Grafana Installation](grafana)
 
 **Install Unpoller:**
 Platform specific install docs:
