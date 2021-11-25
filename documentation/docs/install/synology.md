@@ -66,6 +66,10 @@ helps avoid conflicts with the host or other containers you might have that we c
     - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
     - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
 
+:::note
+The unifi-poller container requires the InfluxDB database to already exist, so you *must* create the containers in the order below.
+:::
+
 ### Create influxdb container
 
 1. In `Image`, select `influxdb:latest` and click `launch`
@@ -89,6 +93,10 @@ helps avoid conflicts with the host or other containers you might have that we c
     - Click `APPLY`
     - Click `NEXT`
     - Click `APPLY`
+1. We now need to create the database that the unifi-poller container will use.
+    - SSH into your Synology
+    - Run the command `sudo docker exec -it influxdb1 bash`
+    - Follow the [InfluxDB Post Setup instructions](../dependencies/influxdb#post-setup).
 
 ## Create unifi-poller container
 
