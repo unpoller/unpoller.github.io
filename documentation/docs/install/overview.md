@@ -1,5 +1,5 @@
 ## Installation Overview
-If you prefer you can keep this page open as you walk though the installion steps.
+If you prefer you can keep this page open as you walk though the installation steps.
 
 ### 1) Choose an Installation Method
 
