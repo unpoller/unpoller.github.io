@@ -30,7 +30,7 @@ Install each of the components individually
 - Works on systems that don't support Docker
 - You can make use of any components you already have
 - Less performance impact
-- Don't need VM support
+- Don't need hardware VM support
 
 #### Disadvantages of Manual
 
