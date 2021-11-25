@@ -48,6 +48,3 @@ Some devices have specific install methods
 [Installation Overview](overview)
 
 - [Setup controller login for Unpoller](controllerlogin)
-- [Create Config](applicationconfig)
-- Install Unpoller Suite
-- [Setup Grafana](grafana)
