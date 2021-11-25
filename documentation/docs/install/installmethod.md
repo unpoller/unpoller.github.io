@@ -40,10 +40,9 @@ Install each of the components individually
 ### Device Specific
 Some devices have specific install methods
 
-- unRAID Template
--- An unRAID Template is available in the Community Applications.
-- CloudKey
--- You may also install directly on a [CloudKey](cloudkey), but that's an advanced setup and not generally recommended.
+- unRAID Template -- An unRAID Template is available in the Community Applications.
+- [Synology](Synology) -- Via Docker Image
+- [CloudKey](cloudkey) -- You may also install directly on a [CloudKey](cloudkey), but that's an advanced setup and not generally recommended.
 
 ## Installation Overview
 If you prefer you can keep this page open as you walk though the installion steps.
