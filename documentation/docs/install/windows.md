@@ -32,7 +32,6 @@ if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recen
 :::
 
 ## Next Steps
+[Installation Overview](overview)
 
-1. [Configure the Application](../install/configuration).
-1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
-1. Finish [Setting-up Grafana](../install/grafana).
+- [Setup Grafana](grafana)
