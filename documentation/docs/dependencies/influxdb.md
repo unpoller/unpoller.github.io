@@ -23,7 +23,7 @@ Using Power Shell (Run as Administrator)
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.10_windows_amd64.zip -UseBasicParsing -OutFile influxdb-1.8.10_windows_amd64.zip
 Expand-Archive .\influxdb-1.8.10_windows_amd64.zip -DestinationPath 'C:\Program Files\InfluxData\influxdb\'
 ```
-Windows InfluxDB 1.x directions came [from here:](https://portal.influxdata.com/downloads/)
+Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/downloads/)
 
 ### CentOS 7
 
