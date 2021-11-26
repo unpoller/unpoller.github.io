@@ -12,14 +12,16 @@ a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
 If you don't have them, follow these instructions for installing
 [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+You can review the [installation overview](overview.md) if needed.
 
 ---
 
 ## Install
 
 As it is now, a pre-compiled windows binary (.exe) is provided on the
-[Releases](https://github.com/unifi-poller/unifi-poller/releases) page.
-Combine this with a valid config file and you can run this on Windows.
+[Releases](https://github.com/unifi-poller/unifi-poller/releases) page `unifi-poller.amd64.exe.zip`.
+Unzip the file where you would like to install Unpoller.
+Drop a valid config file `up.conf` in and you can run this on Windows.
 Please contact us on [Discord](https://golift.io/discord) if you need any help.
 
 ```shell
