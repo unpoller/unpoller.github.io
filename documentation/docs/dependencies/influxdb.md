@@ -25,6 +25,12 @@ Expand-Archive .\influxdb-1.8.10_windows_amd64.zip -DestinationPath 'C:\Program 
 ```
 Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/downloads/)
 
+Start & configure:
+- run `influxd.exe`
+- [configure](influxdb.md#post-setup)
+(Default install path: 'C:\Program Files\InfluxData\influxdb\')
+
+
 ### CentOS 7
 
 Provided by community: https://github.com/unifi-poller/unifi-poller/issues/30
