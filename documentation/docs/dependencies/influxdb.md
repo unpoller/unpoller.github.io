@@ -27,7 +27,7 @@ Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/d
 
 **Start & configure:**
 - Run `influxd.exe`
-- [configure](influxdb.md#post-setup)
+- [Post setup](influxdb.md#post-setup) configuration
 
 (Default install path: 'C:\Program Files\InfluxData\influxdb\')
 
