@@ -62,7 +62,6 @@ Platform specific install docs:
 [Setup Grafana](grafana)
 
 ### You're Done!
-
 If you're having issues:
 - Check for some [Common Problems](../help/common)
 - Check the [Unpoller FAQ](../poller/faq)
@@ -72,6 +71,11 @@ If you're having issues:
 thread on the UI community.
 - Alternatively, raise an [issue](https://github.com/unifi-poller/unifi-poller/issues) on Github.
 
-### Customization and Advanced Setup
 
+
+### Advanced Setup & Customization
+
+[Multiple Controllers](configuration.md#multiple-controllers)
+
+!!! Need to flush this out with links to Grafana guides to manipulating dashboards, presenting data, and any scraps of infomation we can find on the Unifi data that's being pulled.
 
