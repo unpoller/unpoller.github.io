@@ -4,11 +4,11 @@ title: Installation Overview
 ---
 
 ## Installation Overview
-If you prefer you can keep this page open as you walk though the installation steps of the Unpoller Suite.
+If you prefer you can keep this page open as you walk though the installation steps of the Unpoller suite.
 
 The Unpoller suite allows you to collect data from your UniFi network controller, save it to a database, and then display it on pre-supplied attractive and data-rich Grafana dashboards
 
-The 'suite' consit of three main programs that work togather.
+The 'suite' consists of three main programs that work togather.
 UnPoller itself --> The Database --> Grafana viewer dashboards
 
 For more information check out [how it works](../poller/howitworks).
