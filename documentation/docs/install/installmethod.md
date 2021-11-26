@@ -42,7 +42,7 @@ Some devices have specific install methods
 
 - unRAID Template -- An unRAID Template is available in the Community Applications.
 - [Synology](Synology) -- Via Docker Image
-- [CloudKey](cloudkey) -- You may also install directly on a [CloudKey](cloudkey), but that's an advanced setup and not generally recommended.
+- [CloudKey](cloudkey) -- You may also install directly on a CloudKey, but that's an advanced setup and not generally recommended.
 
 ## Next Steps
 [Installation Overview](overview)
