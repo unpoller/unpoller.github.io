@@ -29,7 +29,7 @@ Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/d
 - Run `influxd.exe`
 - [Post setup](influxdb.md#post-setup) configuration
 
-(Default install path: 'C:\Program Files\InfluxData\influxdb\')
+Default install path: 'C:\Program Files\InfluxData\influxdb\'
 
 
 ### CentOS 7
