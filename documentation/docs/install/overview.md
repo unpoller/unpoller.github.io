@@ -4,7 +4,15 @@ title: Installation Overview
 ---
 
 ## Installation Overview
-If you prefer you can keep this page open as you walk though the installation steps.
+If you prefer you can keep this page open as you walk though the installation steps of the Unpoller Suite.
+
+The Unpoller suite allows you to collect data from your UniFi network controller, save it to a database, and then display it on pre-supplied attractive and data-rich Grafana dashboards
+
+The 'suite' consit of three main programs that work togather.
+UnPoller itself --> The Database --> Grafana viewer dashboards
+
+For more information check out [how it works](../poller/howitworks).
+If you're ready to get started, follow our step by step install guide below.
 
 ### 1) Choose an Installation Method
 
@@ -57,6 +65,7 @@ Platform specific install docs:
 
 If you're having issues:
 - Check for some [Common Problems](../help/common)
+- Check the [Unpoller FAQ](../poller/faq)
 - If you have questions regarding Docker check out the [Docker FAQ](../help/docker_faq)
 - Contact us on [Discord](https://golift.io/discord)
 - Or try [this](https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1)
