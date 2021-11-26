@@ -16,6 +16,16 @@ There are no pre-built graphs to display the data it collects.
 
 ## Installation
 
+### Windows
+
+Using Power Shell (Run as Administrator)
+```shell
+wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.10_windows_amd64.zip -UseBasicParsing -OutFile influxdb-1.8.10_windows_amd64.zip
+Expand-Archive .\influxdb-1.8.10_windows_amd64.zip -DestinationPath 'C:\Program Files\InfluxData\influxdb\'
+```
+-or-
+InfluxDB 1.x directions came [from here:](https://portal.influxdata.com/downloads/)
+
 ### CentOS 7
 
 Provided by community: https://github.com/unifi-poller/unifi-poller/issues/30
