@@ -19,7 +19,7 @@ The following explains the steps for InfluxDB; the Prometheus steps are very sim
 - Select the InfluxDB option
 - Set the following fields:
 - - Name = `UniFi InfluxDB` (or whatever name you want) and set to default
-- - URL = `http://influxdb1:8086`
+- - URL = `http://influxdb1:8086` or `http://localhost:8086`
 - - Database = `unifi`
 - - Username = `unifipoller`
 - - Password = `unifipoller`
