@@ -20,7 +20,8 @@ This will set it up on localhost:3000 with admin/admin login.
 
 ### Windows
 
-[Install instructions](https://grafana.com/docs/grafana/latest/installation/windows/) for Windows
+- [Install Grafana](https://grafana.com/docs/grafana/latest/installation/windows/)
+- [Install Plugins](grafana.md#plugins)
 
 ### Linux
 
