@@ -21,7 +21,7 @@ You can review the [installation overview](overview.md) if needed.
 As it is now, a pre-compiled windows binary (.exe) is provided on the
 [Releases](https://github.com/unifi-poller/unifi-poller/releases) page `unifi-poller.amd64.exe.zip`.
 Unzip the file where you would like to install Unpoller.
-Drop a valid config file `up.conf` in the same directory, and you can run this on Windows by using the following command:
+Drop a valid [config file](configuration) `up.conf` in the same directory, and you can run this on Windows by using the following command:
 
 ```shell
 unifi-poller.amd64.exe -c up.conf
