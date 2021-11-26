@@ -52,3 +52,17 @@ Platform specific install docs:
   
 ### 5) Setup Grafana
 [Setup Grafana](grafana)
+
+### You're Done!
+
+Or maybe it isn't working check for [Common Problems](../help/common)
+
+Please contact us on [Discord](https://golift.io/discord) if you need any help.
+Or try [this](https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1)
+thread on the UI community.
+
+Alternatively, raise an [issue](https://github.com/unifi-poller/unifi-poller/issues) on Github.
+
+### Customization and Advanced Setup
+
+
