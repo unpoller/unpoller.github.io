@@ -38,7 +38,7 @@ Install each of the components individually
 - Requires manual configuration
 
 ### Device Specific
-Some devices have specific install methods
+Some devices have specific install methods. If you have one of those devices the instructions for that device take precedence.
 
 - unRAID Template -- An unRAID Template is available in the Community Applications.
 - [Synology](Synology) -- Via Docker Image
