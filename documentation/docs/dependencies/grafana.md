@@ -10,25 +10,6 @@ Configuration is documented in [another page](../install/grafana).
 Grafana 7.4.0+ is recommended. Grafana 7.x or newer is required.
 :::
 
-## Plugins
-
-This application uses a few Grafana plugins. Install them. Grafana must be installed first, see below.
-
-- Clock
-- Discrete (InfluxDB only)
-- PieChart
-
-```shell
-grafana-cli plugins install grafana-clock-panel
-grafana-cli plugins install natel-discrete-panel
-grafana-cli plugins install grafana-piechart-panel
-```
-
-If you're running Grafana in Docker, pass this environment variable/value to Grafana to install the plugins:
-```shell
-GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
-```
-
 ## Installing
 
 :::note
@@ -36,6 +17,10 @@ You can find official instructions in the [Grafana Docs](https://grafana.com/doc
 :::
 
 This will set it up on localhost:3000 with admin/admin login.
+
+### Windows
+
+[Install instructions](https://grafana.com/docs/grafana/latest/installation/windows/) for Windows
 
 ### Linux
 
@@ -83,6 +68,26 @@ grafana/grafana
 ```
 
 Replace `YOURLOCALPATH` with a location for the data Grafana needs to write to disk.
+
+
+## Plugins
+
+This application uses a few Grafana plugins. Install them. Grafana must be installed first, see below.
+
+- Clock
+- Discrete (InfluxDB only)
+- PieChart
+
+```shell
+grafana-cli plugins install grafana-clock-panel
+grafana-cli plugins install natel-discrete-panel
+grafana-cli plugins install grafana-piechart-panel
+```
+
+If you're running Grafana in Docker, pass this environment variable/value to Grafana to install the plugins:
+```shell
+GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
+```
 
 ## Configuring
 
