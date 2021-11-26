@@ -53,7 +53,7 @@ the changes, and apply them to your own custom dashboards.
       and copying graphs out of them.
     - This also allows you to identify problems with them and open an Issue.
 
-### Dashboards Instructions
+### Dashboard Installation Instructions
 
 - Simply click the + on the left nav bar in Grafana and click Import.
 - Put in the ID for the dashboard (below) and click the blue Load button.
