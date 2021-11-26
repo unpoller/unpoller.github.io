@@ -3,31 +3,31 @@ id: dockercompose
 title: Docker Compose
 ---
 
-This page assumes that you have decided to start UniFi Poller using `docker-compose`.
-The setup detailed below will install containers for UniFi Poller, Grafana and InfluxDB
+This page assumes that you have decided to start Unpoller using `docker-compose`.
+The setup detailed below will install containers for Unpoller, Grafana and InfluxDB
 
 ## First
 
-Make sure you have [set up a user](unifilogin) on your controller for UniFi Poller. 
+Make sure you have [set up a user](unifilogin) on your controller for Unpoller. 
 
 ---
 
 ## Installation
 
-UniFi Poller's Docker container can be configured in two ways:
+Unpoller's Docker container can be configured in two ways:
 
 1. Using environment variables.
 1. Using a configuration file.
 
 Which to use is a matter of personal choice. The environmental path has the advantage that
 all settings are in one place (albeit a hidden file, and one where all information is available
-to all containers). The config file method has the advantage that UniFi Poller specific
+to all containers). The config file method has the advantage that Unpoller specific
 settings can be saved in the same shared Docker folder as the rest of the app's data.
 
 There is a detailed description of the configuration parameters on the
 [Application Configuration](../install/configuration) page.
 
-Both of the alternatives described here will pull containers not just for UniFi Poller,
+Both of the alternatives described here will pull containers not just for Unpoller,
 but also for InfluxDB and Grafana. If you wish to use existing instances then amend the files as necessary.
 
 ### Using Environment Variables
@@ -56,13 +56,13 @@ This example is advanced, for demonstration only, and not recommend for newbies.
 
 ---
 
-The following example illustrates launching Grafana, Prometheus and UniFi Poller with docker compose.
+The following example illustrates launching Grafana, Prometheus and Unpoller with docker compose.
 This does not utilize a `.env` file nor a configuration file and instead puts all the env variables
 directly into the docker-compose file.
 This still requires a [Prometheus configuration](../dependencies/prometheus) to scrape Poller.
 
 :::note
-This is a [community provided](https://github.com/unifi-poller/unifi-poller/issues/309#issuecomment-796870916)
+This is a [community provided](https://github.com/unpoller/unpoller/issues/309#issuecomment-796870916)
 example.
 :::
 
@@ -122,7 +122,7 @@ volumes:
 
 Alternatively, if you choose to use a configuration file:
 
-- Copy the example [config file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+- Copy the example [config file](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 - Edit it as necessary (in particular ensure that the `[unifi]`/`user` and `pass` variables are set)
 - In the `[influxdb]` section change ``url  = "http://127.0.0.1:8086"`` to become
   `url  = "http://THE_IP_OF_YOUR_DOCKER_HOST:8086"`
