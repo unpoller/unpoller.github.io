@@ -26,6 +26,8 @@ Drop a valid [config file](configuration) `up.conf` in the same directory, and y
 ```shell
 unifi-poller.amd64.exe -c up.conf
 ```
+As long as Unpoller is running it should be retreiving updated data from your controller.
+
 Please contact us on [Discord](https://golift.io/discord) if you need any help.
 
 ## Next Steps
