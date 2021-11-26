@@ -57,7 +57,7 @@ Platform specific install docs:
 
 If you're having issues:
 - Check for some [Common Problems](../help/common)
-- If you have question regarding Docker check out the [Docker FAQ](../help/docker_faq)
+- If you have questions regarding Docker check out the [Docker FAQ](../help/docker_faq)
 - Contact us on [Discord](https://golift.io/discord)
 - Or try [this](https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1)
 thread on the UI community.
