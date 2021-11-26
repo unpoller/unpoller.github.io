@@ -28,11 +28,6 @@ unifi-poller.amd64.exe -c up.conf
 ```
 Please contact us on [Discord](https://golift.io/discord) if you need any help.
 
-:::important
-When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
-:::
-
 ## Next Steps
 [Installation Overview](overview)
 
