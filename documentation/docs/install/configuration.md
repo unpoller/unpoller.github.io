@@ -21,7 +21,8 @@ the advantage that UniFi Poller specific settings can be saved in the same share
 Docker folder as other app's data. **Normally native installs use a
 configuration file and Docker installations use environment variables.**
 
-An example is included in the Unpoller install folder `up.conf.example` you can edit it and then renamed it to `up.conf`
+An example is included in the Unpoller install folder `up.conf.example`
+You can edit the file in a text editor and then rename it to `up.conf`
 
 The variables to be set can be split into three categories:
 
