@@ -3,11 +3,11 @@ id: docker
 title: Docker
 ---
 
-This page assumes that you have decided to start UniFi Poller with Docker using the command line.
+This page assumes that you have decided to start Unpoller with Docker using the command line.
 
 ## First
 
-Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
+Make sure you have set up a user on your controller for Unpoller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
 If you don't have them, follow these instructions for installing
@@ -29,7 +29,7 @@ Details of tags available are described in [Docker - FAQ](../help/docker_faq).
 
 ## Container Configuration
 
-UniFi Poller's Docker container can be configured in two ways:
+Unpoller's Docker container can be configured in two ways:
 
 1. Using environment variables.
 1. Using a configuration file.
