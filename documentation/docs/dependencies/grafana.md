@@ -79,6 +79,7 @@ This application uses a few Grafana plugins. Install them. Grafana must be insta
 - Discrete (InfluxDB only)
 - PieChart
 
+Using the Grafana CLI tool `grafana-cli.exe` installed in the Grafana directory:
 ```shell
 grafana-cli plugins install grafana-clock-panel
 grafana-cli plugins install natel-discrete-panel
