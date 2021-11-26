@@ -39,7 +39,7 @@ InfluxDB is recomended, as it supports both metrics and logging.
 Prometheus can hold only metrics. Loki is made by the Devs of Prometheus to hold logs. If you want both metrics & logging you will need to install Loki alongside Prometheus.
 
 **Install Grafana:**
-[Grafana Installation](grafana)
+[Grafana Installation](../dependencies/grafana)
 
 **Install Unpoller:**
 Platform specific install docs:
@@ -51,4 +51,4 @@ Platform specific install docs:
 </details>
   
 ### 5) Setup Grafana
-Setup Grafana
+[Setup Grafana](grafana)
