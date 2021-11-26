@@ -57,7 +57,7 @@ Platform specific install docs:
 - [FreeBSD](freebsd)
 
 </details>
-  
+
 ### 5) Setup Grafana
 [Setup Grafana](grafana)
 
