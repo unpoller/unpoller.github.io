@@ -27,7 +27,7 @@ You can setup Unpoller to get information from multiple controllers if you want,
 
 ### 3) Create Config
 The config tells Unpoller where to find the Unifi controller(s), database, and other infomation.
-(If you are doing a Manual installation you may need some information from step 3 to compleate the config.)
+(If you are doing a Manual installation you may need some information from Step-4 to complete the config.)
 
 [Creating/Modifying Config](applicationconfig)
 
