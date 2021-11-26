@@ -93,4 +93,4 @@ GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-pan
 ## Configuring
 
 To configure Grafana, you need to add a data source and import the dashboards.
-Learn how to do that in [Grafana Setup](../install/grafana.md).
+Learn how to do that in [Grafana Setup](../install/grafana).
