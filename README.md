@@ -1,5 +1,5 @@
-# UniFi Poller Dot Com
+# UnPoller Dot Com
 
-This repository contains the files that create https://unifipoller.com.
+This repository contains the files that create https://unpoller.com.
 
 The application used is [Docusaurus](https://docusaurus.io).
