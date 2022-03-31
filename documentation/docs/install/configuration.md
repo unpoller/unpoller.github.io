@@ -177,6 +177,7 @@ This section begins with ``[influxdb]`` and configures a single InfluxDB write d
 
 |**ENV**|**config**|**default and explanation**|
 |---|---|---|
+|UP_INFLUXDB_DISABLE|influxdb.disable|`false`|
 |UP_INFLUXDB_URL |influxdb.url |`"http://127.0.0.1:8086"` influxdb URL|
 |UP_INFLUXDB_DB|influxdb.db |`"unifi"` name of database you created in influx|
 |UP_INFLUXDB_USER |influxdb.user|`"unifipoller"` username with access to database|
