@@ -111,7 +111,6 @@ docker run
   -e "UP_UNIFI_DEFAULT_URL=http://127.0.0.1:8086" \
   -e "UP_UNIFI_DEFAULT_PASS=unifip4assw0rd" \
   -e "UP_UNIFI_DEFAULT_SAVE_SITES=true" \
-  -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd" \
   -e "UP_UNIFI_DEFAULT_SITE_0=default" \
   golift/unifi-poller
 ```
