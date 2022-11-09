@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://unpoller.com/blog</id>
-    <title>Un Poller Blog</title>
+    <id>https://unifipoller.com/blog</id>
+    <title>UniFi Poller Blog</title>
     <updated>2015-10-25T23:29:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://unpoller.com/blog"/>
-    <subtitle>Un Poller Blog</subtitle>
-    <icon>https://unpoller.com/img/favicon.ico</icon>
+    <link rel="alternate" href="https://unifipoller.com/blog"/>
+    <subtitle>UniFi Poller Blog</subtitle>
+    <icon>https://unifipoller.com/img/favicon.ico</icon>
 </feed>
