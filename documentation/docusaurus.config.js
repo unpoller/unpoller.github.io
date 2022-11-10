@@ -1,13 +1,13 @@
 module.exports = {
-  title: 'UniFi Poller',
+  title: 'Unpoller - UniFi Poller',
   tagline: 'Telemetry and Observability for your UniFi Network',
-  url: 'https://unifipoller.com',
+  url: 'https://unpoller.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'unifi-poller', // Usually your GitHub org/user name.
-  projectName: 'unifi-poller.github.io', // Usually your repo name.
+  organizationName: 'unpoller', // Usually your GitHub org/user name.
+  projectName: 'unpoller.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       logo: {
@@ -52,8 +52,8 @@ module.exports = {
               href: 'https://community.ui.com/questions/Unifi-Poller-Store-Unifi-Controller-Metrics-in-InfluxDB-without-SNMP/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1',
             },
             {
-              label: 'Ubiquiti Discord',
-              href: 'https://discord.gg/KnyKYt2',
+              label: 'Go Lift Discord',
+              href: 'https://golift.io/discord',
             },
           ],
         },
@@ -66,7 +66,7 @@ module.exports = {
             },
             {
               label: 'Latest Release',
-              href: 'https://github.com/unifi-poller/unifi-poller/releases/latest',
+              href: 'https://github.com/unpoller/unpoller/releases/latest',
             },
           ],
         },
