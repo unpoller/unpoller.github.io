@@ -8,6 +8,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'unpoller', // Usually your GitHub org/user name.
   projectName: 'unpoller.github.io', // Usually your repo name.
+  deploymentBranch: 'master',
   themeConfig: {
     navbar: {
       logo: {
