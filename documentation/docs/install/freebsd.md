@@ -20,7 +20,7 @@ If you don't have them, follow these instructions for installing
 Install compiled binary from ports run:
 
 ```shell
-pkg install net/unifi-poller
+pkg install net/unpoller
 ```
 
 ## Compile
@@ -28,14 +28,14 @@ pkg install net/unifi-poller
 To build and install from ports run:
 
 ```shell
-cd /usr/ports/net-mgmt/unifi-poller
+cd /usr/ports/net-mgmt/unpoller
 make install clean
 ```
 
 ## Maintenance
 
 See [Application Configuration](../install/configuration) and the
-[example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+[example config](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 file for additional post-install configuration information.
 
 :::important
@@ -47,25 +47,25 @@ Use these commands to maintain the service:
 
 ```shell
 # View manual.
-man unifi-poller
+man unpoller
 
 # Edit config file.
-# A defualt configuration file is placed in /usr/local/etc/unifi-poller/up.conf which is not overwritten on upgrades
-# A sample configuration is placed in /usr/local/etc/unifi-poller/up.conf.sample
-vi /usr/local/etc/unifi-poller/up.conf
+# A defualt configuration file is placed in /usr/local/etc/unpoller/up.conf which is not overwritten on upgrades
+# A sample configuration is placed in /usr/local/etc/unpoller/up.conf.sample
+vi /usr/local/etc/unpoller/up.conf
 
 # enable the service. Or edit /etc/rc.conf
 sysrc unifi_poller_enable="YES"
 
 # Start, Restart, Stop service.
-service unifi-poller start
-service unifi-poller restart
-service unifi-poller stop
+service unpoller start
+service unpoller restart
+service unpoller stop
 # Check service status, useful for scripts.
-service unifi-poller status
+service unpoller status
 
 # Logs should wind up in this file, but your syslog may differ.
-grep unifi-poller /var/log/messages
+grep unpoller /var/log/messages
 ```
 
 ## Next Steps

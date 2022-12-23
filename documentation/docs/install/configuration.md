@@ -21,6 +21,8 @@ the advantage that UniFi Poller specific settings can be saved in the same share
 Docker folder as other app's data. **Normally native installs use a
 configuration file and Docker installations use environment variables.**
 
+An example is included in the Unpoller install folder `up.xxxx.example`. You can edit the file in a text editor and then rename it removing `.example`. To create a valid file.
+
 The variables to be set can be split into three categories:
 
 1. Configuration of UniFi Poller itself.
@@ -31,8 +33,8 @@ The variables to be set can be split into three categories:
     - Other outputs plugins can be created, but none exist currently.
 
 More documentation on the configuration options is included in the
-[example configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
-in the main Github repo.
+[example configuration file](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
+in the main Github repo. You can copy it to make your own `up.conf` file.
 
 The following sections break down the various configuration options available
 for the three main categories mentioned previously.
@@ -58,7 +60,7 @@ debug = false
 Docker Example:
 
 ```shell
-docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unifi-poller
+docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unpoller
 ```
 
 ## UniFi Controller
@@ -112,7 +114,7 @@ docker run
   -e "UP_UNIFI_DEFAULT_PASS=unifip4assw0rd" \
   -e "UP_UNIFI_DEFAULT_SAVE_SITES=true" \
   -e "UP_UNIFI_DEFAULT_SITE_0=default" \
-  golift/unifi-poller
+  golift/unpoller
 ```
 
 ### Multiple Controllers
@@ -202,5 +204,5 @@ docker run
   -e "UP_INFLUXDB_INTERVAL=60s" \
   -e "UP_UNIFI_DEFAULT_URL=https://192.168.1.2"
   -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd"
-  golift/unifi-poller
+  golift/unpoller
 ```

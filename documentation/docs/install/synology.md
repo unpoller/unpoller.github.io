@@ -62,12 +62,12 @@ helps avoid conflicts with the host or other containers you might have that we c
 
 1. Select `Registry`
 1. Use the search box to find the following:
-    - unifi-poller for `golift/unifi-poller:latest` https://hub.docker.com/r/golift/unifi-poller/
+    - unpoller for `ghcr.io/unpoller/upoller:latest` https://github.com/unpoller/unpoller/pkgs/container/unpoller
     - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
     - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
 
 :::note
-The unifi-poller container requires the InfluxDB database to already exist, so you *must* create the containers in the order below.
+The unpoller container requires the InfluxDB database to already exist, so you *must* create the containers in the order below.
 :::
 
 ### Create influxdb container
@@ -93,16 +93,16 @@ The unifi-poller container requires the InfluxDB database to already exist, so y
     - Click `APPLY`
     - Click `NEXT`
     - Click `APPLY`
-1. We now need to create the database that the unifi-poller container will use.
+1. We now need to create the database that the unpoller container will use.
     - SSH into your Synology
     - Run the command `sudo docker exec -it influxdb1 bash`
     - Follow the [InfluxDB Post Setup instructions](../dependencies/influxdb#post-setup).
 
-## Create unifi-poller container
+## Create unpoller container
 
-1. In `Image` select `golift/unifi-poller:latest` and click launch
-1. Leave general settings alone - container name should be `golift-unifi-poller1`,
-    unless you created other unifi-pollers
+1. In `Image` select `ghcr.io/unpoller/unpoller:latest` and click launch
+1. Leave general settings alone - container name should be `unpoller1`,
+    unless you created other unpollers
 1. Click Advanced Settings
 1. On the network tab:
     - Add your network - in this example: `Grafana_Net`
@@ -127,7 +127,7 @@ if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recen
 ## Check that poller and influx are working
 
 1. Select the `Container` tab in the Docker UI
-1. Double click `golift-unifi-poller1`
+1. Double click `unpoller1`
 1. Select the `Log` tab
 1. After a couple of minutes you should see an entry like the following,
   if you do then everything is working ok:

@@ -12,27 +12,25 @@ a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
 If you don't have them, follow these instructions for installing
 [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
+You can review the [installation overview](overview.md) if needed.
 
 ---
 
 ## Install
 
 As it is now, a pre-compiled windows binary (.exe) is provided on the
-[Releases](https://github.com/unifi-poller/unifi-poller/releases) page.
-Combine this with a valid config file and you can run this on Windows.
-Please contact us on [Discord](https://golift.io/discord) if you need any help.
+[Releases](https://github.com/unpoller/unpoller/releases) page `unpoller.amd64.exe.zip`.
+Unzip the file where you would like to install Unpoller.
+Drop a valid [config file](configuration) `up.conf` in the same directory, and you can run this on Windows by using the following command:
 
 ```shell
-unifi-poller.exe -c up.conf
+unpoller.amd64.exe -c up.conf
 ```
+As long as Unpoller is running it should be retreiving updated data from your controller.
 
-:::important
-When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
-:::
+Please contact us on [Discord](https://golift.io/discord) if you need any help.
 
 ## Next Steps
+[Installation Overview](overview)
 
-1. [Configure the Application](../install/configuration).
-1. Don't forget the [Grafana Plugins](../dependencies/grafana#plugins).
-1. Finish [Setting-up Grafana](../install/grafana).
+- [Setup Grafana](grafana)

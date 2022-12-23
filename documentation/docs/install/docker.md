@@ -3,11 +3,11 @@ id: docker
 title: Docker
 ---
 
-This page assumes that you have decided to start UniFi Poller with Docker using the command line.
+This page assumes that you have decided to start Unpoller with Docker using the command line.
 
 ## First
 
-Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
+Make sure you have set up a user on your controller for Unpoller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
 least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
 If you don't have them, follow these instructions for installing
@@ -20,7 +20,7 @@ If you don't have them, follow these instructions for installing
 First pull the image from Docker Hub using
 
 ```shell
-docker pull golift/unifi-poller
+docker pull golift/unpoller
 ```
 
 :::info
@@ -29,7 +29,7 @@ Details of tags available are described in [Docker - FAQ](../help/docker_faq).
 
 ## Container Configuration
 
-UniFi Poller's Docker container can be configured in two ways:
+Unpoller's Docker container can be configured in two ways:
 
 1. Using environment variables.
 1. Using a configuration file.
@@ -49,21 +49,21 @@ If you are using the command line and have decided to use environment variables 
 container using the following command (and pass in other environment variables you wish to).
 
 ```shell
-docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-pasword"  golift/unifi-poller:latest
+docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-pasword"  golift/unpoller:latest
 ```
 
 ### Using Configuration File
 
 If you choose to use a configuration file:
 
-- Copy this [example config file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+- Copy this [example config file](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 - Edit it as necessary (in particular ensure that the `[unifi]`/`user` and `pass` variables are set)
-- Save it as `unifi-poller.conf` in the local location you use for Docker storage.
+- Save it as `unpoller.conf` in the local location you use for Docker storage.
 
 Start the container by running:
 
 ```shell
-docker run -v /your-local-location/unifi-poller.conf:/config/unifi-poller.conf golift/unifi-poller
+docker run -v /your-local-location/unpoller.conf:/config/unpoller.conf golift/unpoller
 ```
 
 :::note

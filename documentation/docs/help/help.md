@@ -9,4 +9,4 @@ Discord server.
 Or [this](https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1)
 thread on the UI community.
 
-Alternatively, raise an [issue](https://github.com/unifi-poller/unifi-poller/issues) on Github.
+Alternatively, raise an [issue](https://github.com/unpoller/unpoller/issues) on Github.

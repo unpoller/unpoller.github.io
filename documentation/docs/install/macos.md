@@ -23,7 +23,7 @@ If you don't have them, follow these instructions for installing
   ```
 1. Install Poller
   ```
-  brew install golift/mugs/unifi-poller
+  brew install golift/mugs/unpoller
   ```
 1. Edit the config file after installing the brew.
   :::important
@@ -32,20 +32,20 @@ If you don't have them, follow these instructions for installing
   :::
   See [Application Configuration](../install/configuration) for more information
   ```shell
-  nano /usr/local/etc/unifi-poller/up.conf
+  nano /usr/local/etc/unpoller/up.conf
   # or
-  vi /usr/local/etc/unifi-poller/up.conf
+  vi /usr/local/etc/unpoller/up.conf
   ```
 1. Start the service:
   ```shell
   # do not use sudo
-  brew services start unifi-poller
+  brew services start unpoller
   ```
-    - The log file should show up at `/usr/local/var/log/unifi-poller.log`
+    - The log file should show up at `/usr/local/var/log/unpoller.log`
     - If it does not show up, make sure your user has permissions to create the file.
 1. To restart (** required after upgrade**)
   ```shell
-  brew services restart unifi-poller
+  brew services restart unpoller
   ```
 
 ## Maintenance
@@ -56,13 +56,13 @@ All maintenance is done with homebrew. Example commands:
 # list all services brew controls.
 brew services list
 # restart poller.
-brew services restart unifi-poller
+brew services restart unpoller
 # running stop will make it not run on boot.
-brew services stop unifi-poller
+brew services stop unpoller
 # start makes it start now and on boot.
-brew services start unifi-poller
+brew services start unpoller
 # run starts it but will not re-start on boot.
-brew services run unifi-poller
+brew services run unpoller
 ```
 
 ## Next Steps

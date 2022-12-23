@@ -58,7 +58,7 @@ timeout    = "10s"
 ```
 
 You can set a user and pass if your Loki instance requires auth. This currently only supports Basic Auth.
-Please open an [Issue](https://github.com/unifi-poller/unifi-poller/issues/) if you need support for something
+Please open an [Issue](https://github.com/unpoller/unpoller/issues/) if you need support for something
 else. Alternatively you can pass the Tenant ID header directly by setting `tenant_id`.
 If your Loki instance is using/behind an SSL proxy that has a valid SSL cert you may set `verify_ssl` to true.
 The recommended interval is `2m` but anything from `1m` to `15m` should work fine.
@@ -72,8 +72,8 @@ The Loki Docker logging driver if you don't have it installed.
 ```yaml
 version: '3.0'
 services:
-  unifi-poller:
-    container_name: unifi-poller
+  unpoller:
+    container_name: unpoller
     environment:
       UP_INFLUXDB_DISABLE: "true"
       UP_LOKI_URL: http://log01.tylephony.com:3100
@@ -89,7 +89,7 @@ services:
       UP_UNIFI_DEFAULT_SAVE_SITES: "true"
       UP_UNIFI_DEFAULT_URL: https://unifi.tylephony.com:443
       UP_UNIFI_DEFAULT_USER: unifipoller
-    image: golift/unifi-poller:2.0.2-beta1
+    image: ghcr.io/unpoller/unpoller:latest
     logging:
       driver: loki
       options:

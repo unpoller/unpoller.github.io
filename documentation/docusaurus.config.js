@@ -40,7 +40,7 @@ module.exports = {
             },
             {
               label: 'Send Feedback',
-              href: 'https://golift.io/unifi-poller/issues/new',
+              href: 'https://golift.io/unpoller/issues/new',
             },
           ],
         },
@@ -85,7 +85,7 @@ module.exports = {
         },
       ],
       copyright: `<div class="row"><div class="col footer__col">
-      <a href="https://hub.docker.com/r/golift/unifi-poller">&#9733; THIS PROJECT ON DOCKERHUB</a>
+      <a href="https://github.com/unpoller/unpoller/pkgs/container/unpoller">&#9733; THIS PROJECT ON GHCR.IO</a>
       </div><div class="col footer__col" style="text-align:left;">
       Copyright © 2018-${new Date().getFullYear()} Go Lift
       </div><div class="col footer__col"><a href="https://golift.io"><img src="https://docs.golift.io/integrations/golift.png" /></a></div></div>`,

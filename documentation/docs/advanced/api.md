@@ -36,7 +36,7 @@ $ curl unifi.poller:37288/api/v1/config | jq .
     "unifi": {
       "name": "unifi",
       "version": "v0.0.9",
-      "path": "github.com/unifi-poller/inputunifi"
+      "path": "github.com/unpoller/inputunifi"
     }
   },
   "malloc": 9353240,
@@ -44,20 +44,25 @@ $ curl unifi.poller:37288/api/v1/config | jq .
   "mtalloc": 33876272,
   "numgc": 1234,
   "outputs": {
+    "datadog": {
+      "name": "datadog",
+      "version": "v0.0.11",
+      "path": "github.com/unpoller/pkg/datadogunifi"
+    },
     "influxdb": {
       "name": "influxdb",
       "version": "v0.0.11",
-      "path": "github.com/unifi-poller/influxunifi"
+      "path": "github.com/unpoller/pkg/influxunifi"
     },
     "loki": {
       "name": "loki",
       "version": "v0.0.1",
-      "path": "github.com/unifi-poller/lokiunifi"
+      "path": "github.com/unpoller/pkg/lokiunifi"
     },
     "prometheus": {
       "name": "prometheus",
       "version": "v0.0.10",
-      "path": "github.com/unifi-poller/promunifi"
+      "path": "github.com/unpoller/pkg/promunifi"
     }
   },
   "pid": 1,
@@ -83,24 +88,29 @@ $ curl unifi.poller:37288/api/v1/config/plugins | jq .
     "unifi": {
       "name": "unifi",
       "version": "v0.0.9",
-      "path": "github.com/unifi-poller/inputunifi"
+      "path": "github.com/unpoller/pkg/inputunifi"
     }
   },
   "outputs": {
+    "datadog": {
+      "name": "datadog",
+      "version": "v0.0.11",
+      "path": "github.com/unpoller/pkg/datadogunifi"
+    },
     "influxdb": {
       "name": "influxdb",
       "version": "v0.0.11",
-      "path": "github.com/unifi-poller/influxunifi"
+      "path": "github.com/unpoller/pkg/influxunifi"
     },
     "loki": {
       "name": "loki",
       "version": "v0.0.1",
-      "path": "github.com/unifi-poller/lokiunifi"
+      "path": "github.com/unpoller/pkg/lokiunifi"
     },
     "prometheus": {
       "name": "prometheus",
       "version": "v0.0.10",
-      "path": "github.com/unifi-poller/promunifi"
+      "path": "github.com/unpoller/pkg/promunifi"
     }
   }
 }

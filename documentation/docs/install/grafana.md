@@ -18,11 +18,11 @@ The following explains the steps for InfluxDB; the Prometheus steps are very sim
 - Click `Add your first data source` on the home page you see after login.
 - Select the InfluxDB option
 - Set the following fields:
-        Name = UniFi InfluxDB (or whatever name you want) and set to default
-        URL = `http://influxdb1:8086`
-        Database = `unifi`
-        Username = `unifipoller`
-        Password = `unifipoller`
+- - Name = `UniFi InfluxDB` (or whatever name you want) and set to default
+- - URL = `http://influxdb1:8086` or `http://localhost:8086`
+- - Database = `unifi`
+- - Username = `unifipoller`
+- - Password = `unifipoller`
 - No other fields need to be changed or set on this page.
 - Click `Save & Test`
 - You should get green banner above the save and test that says 'Data Source is Working'
@@ -53,7 +53,7 @@ the changes, and apply them to your own custom dashboards.
       and copying graphs out of them.
     - This also allows you to identify problems with them and open an Issue.
 
-### Dashboards Instructions
+### Dashboard Installation Instructions
 
 - Simply click the + on the left nav bar in Grafana and click Import.
 - Put in the ID for the dashboard (below) and click the blue Load button.

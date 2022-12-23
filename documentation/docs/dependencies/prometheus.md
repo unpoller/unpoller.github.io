@@ -3,7 +3,7 @@ id: prometheus
 title: Prometheus
 ---
 
-This page explains how to configure Prometheus and UniFi-Poller.
+This page explains how to configure Prometheus and Unpoller.
 For help installing Prometheus you'll have to look elsewhere; that's not in this document.
 If you need help getting started,
 [InfluxDB](../dependencies/influxdb) is recommended.
@@ -20,10 +20,10 @@ Many changes were made to how one may configure a controller. This page only app
 
 Configure a single controller in `up.conf` (or using environment variables).
 See [Application Configuration](../install/configuration) and the
-[example config file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+[example config file](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 for help with that.
 
-Then you simply point prometheus at unifi-poller using a config like this:
+Then you simply point prometheus at unpoller using a config like this:
 
 ```yaml
 scrape_configs:
@@ -44,15 +44,15 @@ This may require exposing ports or modifying firewalls.
 
 ## Multiple Controllers
 
-You can either configure the controllers in unifi-poller or poll them unconfigured.
+You can either configure the controllers in unpoller or poll them unconfigured.
 When polling unconfigured, you must enable dynamic.
 You can scrape multiple controllers in several ways. Here is a list of options:
 
 1. Set all controller user/passwords the same and pass in controller URLs from Prometheus.
    To do this, you set the username and password as the default in the unifi config.
-1. Configure each controller in unifi-poller and pass in urls from Prometheus.
+1. Configure each controller in unpoller and pass in urls from Prometheus.
    This allows them to have different usernames and passwords.
-1. **NOT Recommended:** Configure each controller in unifi-poller and configure
+1. **NOT Recommended:** Configure each controller in unpoller and configure
    prometheus as shown above in the Single Controller section. This is useful when you
    want to poll all the controllers at the same time from a single prometheus instance.
 
@@ -60,7 +60,7 @@ You can scrape multiple controllers in several ways. Here is a list of options:
 
 This describes approach 1 above.
 
-Using this approach all you need to configure for controllers in unifi-poller is the name
+Using this approach all you need to configure for controllers in unpoller is the name
 and password. Example below. Any settings you provide to [unifi.defaults] will be used
 for all controllers passed in from Prometheus. All other settings are optional.
 ```toml
@@ -87,7 +87,7 @@ UP_UNIFI_DEFAULT_PASS="unifipoller"
 This describes approach 2 above.
 
 Configure each controller in up.conf or using environment variables.
-When Prometheus scrapes from unifi-poller the poller will map the URL directly to the one configured
+When Prometheus scrapes from unpoller the poller will map the URL directly to the one configured
 in up.conf (or using env vars). Just make sure the url you put into the prometheus configuration
  matches the url put into the poller configuration.
 
@@ -138,7 +138,7 @@ scrape_configs:
        replacement: localhost:9130
 ```
 
-Replace `localhost` with the IP of your unifi-poller host, and replace `unifi.controller`
+Replace `localhost` with the IP of your unpoller host, and replace `unifi.controller`
 and another.controller with the IPs of your controllers.
 
 ### Final Approach, NOT Recommended
