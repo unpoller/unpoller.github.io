@@ -46,10 +46,10 @@ UP_WEBSERVER_ACCOUNTS_captain="$2a$04$a2XvB0gvTXW6d4rHUXQdduUDBrQB3/2lGTxZXQ32Sd
 
 ### Making a Password Hash
 
-Use `unifi-poller` to make a web server account password hash. Like this:
+Use `unpoller` to make a web server account password hash. Like this:
 
 ```console
-unifi-poller -e -
+unpoller -e -
 Enter Password:
 $2a$04$a2XvB0gvTXW6d4rHUXQdduUDBrQB3/2lGTxZXQ32Sd9hYDxrz.oHm
 ```
@@ -57,8 +57,8 @@ $2a$04$a2XvB0gvTXW6d4rHUXQdduUDBrQB3/2lGTxZXQ32Sd9hYDxrz.oHm
 Using Docker:
 
 ```shell
-docker pull golift/unifi-poller
-docker -it golift/unifi-poller -e -
+docker pull ghcr.io/unpoller/unpoller
+docker -it ghcr.io/unpoller/unpoller -e -
 Enter Password:
 $2a$04$yOE5zjJs2Gg0jsGQpE7j2ucKiNndUGEzpX6BsLoKl0hkxBvE81z8.
 ```
@@ -69,7 +69,7 @@ These are the advanced settings and their default values.
 
 ```toml
   port          = 37288
-  html_path     = "/usr/lib/unifi-poller/web"
+  html_path     = "/usr/lib/unpoller/web"
   ssl_cert_path = ""
   ssl_key_path  = ""
   max_events    = 200
@@ -77,7 +77,7 @@ These are the advanced settings and their default values.
 
 The default HTML path is installed by any package or the Official Golift Docker image.
 This usually does not need to be changed. Exceptions are BSD and macOS systems.
-The HTML path on these OSes is `/usr/local/lib/unifi-poller/web`, and you need to set it.
+The HTML path on these OSes is `/usr/local/lib/unpoller/web`, and you need to set it.
 
 An SSL listener may be enabled instead of standard HTTP by providing an SSL Cert File and Key File paths.
 

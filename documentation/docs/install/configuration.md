@@ -33,7 +33,7 @@ The variables to be set can be split into three categories:
     - Other outputs plugins can be created, but none exist currently.
 
 More documentation on the configuration options is included in the
-[example configuration file](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+[example configuration file](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 in the main Github repo. You can copy it to make your own `up.conf` file.
 
 The following sections break down the various configuration options available
@@ -60,7 +60,7 @@ debug = false
 Docker Example:
 
 ```shell
-docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unifi-poller
+docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unpoller
 ```
 
 ## UniFi Controller
@@ -114,7 +114,7 @@ docker run
   -e "UP_UNIFI_DEFAULT_PASS=unifip4assw0rd" \
   -e "UP_UNIFI_DEFAULT_SAVE_SITES=true" \
   -e "UP_UNIFI_DEFAULT_SITE_0=default" \
-  golift/unifi-poller
+  golift/unpoller
 ```
 
 ### Multiple Controllers
@@ -204,5 +204,5 @@ docker run
   -e "UP_INFLUXDB_INTERVAL=60s" \
   -e "UP_UNIFI_DEFAULT_URL=https://192.168.1.2"
   -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd"
-  golift/unifi-poller
+  golift/unpoller
 ```

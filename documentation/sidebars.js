@@ -11,7 +11,7 @@ module.exports = {
     ],
     "Installation": [
       'install/gettingstarted',
-      'install/installationmethod',
+      'install/installmethod',
       'install/controllerlogin',
       'install/dockercompose',
       'install/docker',

@@ -27,25 +27,25 @@ See below for how to install that repo!
 :::
 
 This works on any system with apt or yum. If your system does not use APT or YUM,
-then download a package from the [Releases](https://github.com/unifi-poller/unifi-poller/releases) page.
+then download a package from the [Releases](https://github.com/unpoller/unpoller/releases) page.
 Install the Go Lift package repo and UniFi Poller with this command:
 
 ```shell
-curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
+curl -s https://golift.io/repo.sh | sudo bash -s - unpoller
 ```
 
 ## Maintenance
 
 See [Application Configuration](../install/configuration) and the
-[example config](https://github.com/unifi-poller/unifi-poller/blob/master/examples/up.conf.example)
+[example config](https://github.com/unpoller/unpoller/blob/master/examples/up.conf.example)
 file for additional post-install configuration information.
 
 - Edit the config file after installing the package, and correct the authentication
   information for your setup:
   ```shell
-  sudo nano /etc/unifi-poller/up.conf
+  sudo nano /etc/unpoller/up.conf
   # or
-  sudo vi /etc/unifi-poller/up.conf
+  sudo vi /etc/unpoller/up.conf
   ```
 
 :::important
@@ -55,11 +55,11 @@ controller if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey
 
 - Restart the service:
   ```shell
-  sudo systemctl restart unifi-poller
+  sudo systemctl restart unpoller
   ```
 - Check the log:
   ```shell
-  tail -f -n100  /var/log/syslog /var/log/messages | grep unifi-poller
+  tail -f -n100  /var/log/syslog /var/log/messages | grep unpoller
   ```
 
 ## Next Steps

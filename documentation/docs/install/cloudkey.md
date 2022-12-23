@@ -64,7 +64,7 @@ Linux repository hosting provided by
 Install the Go Lift package repo and Unpoller with this command:
 
 ```shell
-curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
+curl -s https://golift.io/repo.sh | sudo bash -s - unpoller
 ```
 
 ### Current Firmware: `unifios`
@@ -75,7 +75,7 @@ aware of any user implementing Unpoller using this method, but it should be stra
 
 ## Configuration
 
-The config file is located at `/etc/unifi-poller/up.conf` and
+The config file is located at `/etc/unpoller/up.conf` and
 it is explained on the [Application Configuration](../install/configuration) page.
 
 ## Next Steps

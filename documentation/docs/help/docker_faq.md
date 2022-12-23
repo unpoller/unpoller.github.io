@@ -5,7 +5,7 @@ title: Docker FAQ
 
 **Where are the Docker images?**
 
-Images are available on [Docker Hub](https://hub.docker.com/r/golift/unifi-poller/tags)
+Images are available on [GHCR.io](https://github.com/unpoller/unpoller/pkgs/container/unpoller)
 
 Linux images are available for `386`, `amd64`, `arm32v6` and `arm64v8` architectures.
 There is no need to specify an architecture tag, docker will pull the correct image
@@ -22,15 +22,15 @@ you've been overly warned.
 
 You can install a specific version by specifying a version like this:
 ```shell
-docker pull golift/unifi-poller:2.0.1
+docker pull ghcr.io/unpoller/unpoller:latest
 ```
 or minor version like this:
 ```shell
-docker pull golift/unifi-poller:2.0
+docker pull ghcr.io/unpoller/unpoller:latest
 ```
 or a major version like this:
 ```shell
-docker pull golift/unifi-poller:2
+docker pull ghcr.io/unpoller/unpoller:latest
 ```
 
 **How can I build from source?**
@@ -38,11 +38,11 @@ docker pull golift/unifi-poller:2
 You can build your own image from source.
 
 ```shell
-git clone https://github.com/unifi-poller/unifi-poller.git
-cd unifi-poller
-make docker
+git clone https://github.com/unpoller/unpoller.git
+cd unpoller
+make build
 ```
 
 This builds a 64-bit amd64 linux image from scratch. If you need another architecture,
 use the `docker build` command directly with a correct ``--build-arg`` flag.
-Examples [here](https://github.com/unifi-poller/unifi-poller/tree/master/init/docker/hooks).
+Examples [here](https://github.com/unpoller/unpoller/tree/master/init/docker/hooks).

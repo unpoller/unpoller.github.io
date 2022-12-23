@@ -39,11 +39,11 @@ file called `.env` in the same folder as the `docker-compose` yaml file
 Files beginning with a period `.` are generally hidden. You may need to use `ls -a` to find the `.env` file.
 :::
 
-- Copy the example [environment file](https://github.com/unifi-poller/unifi-poller/blob/master/init/docker/docker-compose.env.example)
+- Copy the example [environment file](https://github.com/unpoller/unpoller/blob/master/init/docker/docker-compose.env.example)
 - Edit it as necessary (in particular ensure that `UNIFI_USER` and `UNIFI_PASS` are set)
 - Save it as `.env` in the same folder as your `docker-compose.yml` (if you have one; if not see below)
 
-Download the [example](https://github.com/unifi-poller/unifi-poller/blob/master/init/docker/docker-compose.yml)
+Download the [example](https://github.com/unpoller/unpoller/blob/master/init/docker/docker-compose.yml)
 `docker-compose.yml` and add it to your existing one (if you have one; if not just make sure it is
 saved in the same folder as the `.env` file)
 
@@ -90,12 +90,12 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin123
       - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
-  unifi-poller:
-    image: golift/unifi-poller:latest
+  unpoller:
+    image: ghcr.io/unpoller/unpoller:latest
     restart: unless-stopped
     ports:
       - '9130:9130'
-    container_name: unifi-poller
+    container_name: unpoller
     environment:
       UP_INFLUXDB_DISABLE="true"
       UP_POLLER_DEBUG="false"
@@ -126,8 +126,8 @@ Alternatively, if you choose to use a configuration file:
 - Edit it as necessary (in particular ensure that the `[unifi]`/`user` and `pass` variables are set)
 - In the `[influxdb]` section change ``url  = "http://127.0.0.1:8086"`` to become
   `url  = "http://THE_IP_OF_YOUR_DOCKER_HOST:8086"`
-- Save it as `unifi-poller.conf` in the local location you use for Docker storage in a
-  folder called `unifi-poller`
+- Save it as `unpoller.conf` in the local location you use for Docker storage in a
+  folder called `unpoller`
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
@@ -169,15 +169,15 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
 
-  unifi-poller:
+  unpoller:
     container_name: up-poller
     restart: unless-stopped
-    image: golift/unifi-poller:latest
+    image: ghcr.io/unpoller/unpoller:latest
     depends_on:
       - influxdb
       - grafana
     volumes:
-      - /YOURLOCALPATH/unifi-poller:/config
+      - /YOURLOCALPATH/unpoller:/config
 ```
 
 :::info

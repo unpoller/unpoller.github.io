@@ -34,7 +34,7 @@ Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/d
 
 ### CentOS 7
 
-Provided by community: https://github.com/unifi-poller/unifi-poller/issues/30
+Provided by community: https://github.com/unpoller/unpoller/issues/30
 
 ### CentOS 8 / RHEL 8
 
@@ -42,7 +42,7 @@ Provided by community: https://computingforgeeks.com/how-to-install-influxdb-on-
 
 ### Ubuntu 18.04
 
-These directions came [from here](https://github.com/unifi-poller/unifi-poller/issues/26).
+These directions came [from here](https://github.com/unpoller/unpoller/issues/26).
 
 Install:
 
