@@ -56,12 +56,12 @@ For InfluxDB on a CloudKey it is *highly* advisable to add a retention policy to
 prevent the database from growing in uncontrollably.
 :::
 
-#### Install UniFi Poller
+#### Install Unpoller
 
 Linux repository hosting provided by
 [![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
 
-Install the Go Lift package repo and UniFi Poller with this command:
+Install the Go Lift package repo and Unpoller with this command:
 
 ```shell
 curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
@@ -71,7 +71,7 @@ curl -s https://golift.io/repo.sh | sudo bash -s - unifi-poller
 
 There is an existing suite for installing `podman` containers to run on `unifios` -
 see [here](https://github.com/boostchicken/udm-utilities).  At the time of writing  we are not
-aware of any use implementing UniFi Poller  using this method, but it should be straightforward.
+aware of any user implementing Unpoller using this method, but it should be straightforward.
 
 ## Configuration
 
