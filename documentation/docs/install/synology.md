@@ -64,7 +64,7 @@ helps avoid conflicts with the host or other containers you might have that we c
 1. Use the search box to find the following:
     - unpoller for `ghcr.io/unpoller/upoller:latest` https://github.com/unpoller/unpoller/pkgs/container/unpoller
     - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
-    - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
+    - influxdb for `influxdb:2.5` https://hub.docker.com/_/influxdb/
 
 :::note
 The unpoller container requires the InfluxDB database to already exist, so you *must* create the containers in the order below.
@@ -72,7 +72,7 @@ The unpoller container requires the InfluxDB database to already exist, so you *
 
 ### Create influxdb container
 
-1. In `Image`, select `influxdb:latest` and click `launch`
+1. In `Image`, select `influxdb:2.5` and click `launch`
 1. Leave `General Settings` alone - container name should be `influxdb1`, unless you created other influxdb's
 1. Click `Advanced Settings`
 1. On volume tab add the following:
@@ -111,8 +111,9 @@ The unpoller container requires the InfluxDB database to already exist, so you *
 1. On the Environment tab, add the following vars:
     - `UP_INFLUXDB_URL`       | `http://influxdb1:8086`
     - `UP_UNIFI_DEFAULT_URL`  | `https://your.unifi.controller.ip:8443`
-    - `UP_UNIFI_DEFAULT_USER` | username for account created earlier. e.g. `unifipoller`
-    - `UP_UNIFI_DEFAULT_PASS` | password for above user
+    - `UP_UNIFI_DEFAULT_AUTH_TOKEN` | auth token for account created earlier. e.g. `unifipoller`
+    - `UP_UNIFI_DEFAULT_ORG` | org created earlier
+    - `UP_UNIFI_DEFAULT_BUCKET` | bucket created earlier
     - (optional) `UP_POLLER_DEBUG` | `true`
 1. Finalize the container by:
     - Click `APPLY`
