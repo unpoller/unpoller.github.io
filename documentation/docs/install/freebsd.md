@@ -55,7 +55,7 @@ man unpoller
 vi /usr/local/etc/unpoller/up.conf
 
 # enable the service. Or edit /etc/rc.conf
-sysrc unifi_poller_enable="YES"
+sysrc unpoller_enable="YES"
 
 # Start, Restart, Stop service.
 service unpoller start
