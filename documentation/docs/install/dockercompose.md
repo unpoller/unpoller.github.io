@@ -8,7 +8,7 @@ The setup detailed below will install containers for Unpoller, Grafana and Influ
 
 ## First
 
-Make sure you have [set up a user](unifilogin) on your controller for Unpoller. 
+Make sure you have [set up a user](controllerlogin) on your controller for Unpoller. 
 
 ---
 

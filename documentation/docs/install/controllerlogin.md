@@ -32,4 +32,4 @@ The Unifi controller currently requires the email be formated correctly. If you 
 ## Next Steps
 [Installation Overview](overview)
 
-- [Create Config](applicationconfig)
+- [Create Config](controllerlogin)

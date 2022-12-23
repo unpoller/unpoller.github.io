@@ -23,7 +23,7 @@ If you're ready to get started, follow our step by step install guide below.
 No matter which method of installation you choose you will need to give Unpoller a way to access the infomation in your controller.
 You can setup Unpoller to get information from multiple controllers if you want, however we recommend getting one controller working before linking multiple.
 
-[Adding a login for Unpoller](unifilogin)
+[Adding a login for Unpoller](controllerlogin)
 
 ### 3) Create Config
 The config tells Unpoller where to find the Unifi controller(s), database, and other infomation.
