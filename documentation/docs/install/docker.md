@@ -20,7 +20,7 @@ If you don't have them, follow these instructions for installing
 First pull the image from Docker Hub using
 
 ```shell
-docker pull golift/unpoller
+docker pull ghcr.io/unpoller/unpoller
 ```
 
 :::info
@@ -49,7 +49,7 @@ If you are using the command line and have decided to use environment variables 
 container using the following command (and pass in other environment variables you wish to).
 
 ```shell
-docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-pasword"  golift/unpoller:latest
+docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-pasword"  ghcr.io/unpoller/unpoller:latest
 ```
 
 ### Using Configuration File
@@ -63,7 +63,7 @@ If you choose to use a configuration file:
 Start the container by running:
 
 ```shell
-docker run -v /your-local-location/unpoller.conf:/config/unpoller.conf golift/unpoller
+docker run -v /your-local-location/unpoller.conf:/etc/unpoller/up.conf ghcr.io/unpoller/unpoller
 ```
 
 :::note

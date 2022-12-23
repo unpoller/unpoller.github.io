@@ -139,45 +139,105 @@ to a local location for Docker storage.
 
 #### InfluxDB Example
 
+Create this environment file `docker-compose.env` and reference this with `-e /your/path/docker-compose.env`:
+
+```text
+#influxdb
+INFLUXDB_HTTP_AUTH_ENABLED=true
+INFLUXDB_ADMIN_USER=unpoller
+INFLUXDB_ADMIN_PASSWORD=CHANGEME
+INFLUXDB_DB=unpoller
+INFLUXDB_ORG=unpoller
+INFLUXDB_BUCKET=unpoller
+INFLUXDB_ADMIN_TOKEN=unpollersecret
+
+#grafana
+GRAFANA_USERNAME=admin
+GRAFANA_PASSWORD=grafanaadmin
+
+#unifi-poller
+POLLER_TAG=latest
+POLLER_DEBUG=false
+POLLER_SAVE_DPI=false
+UNIFI_USER=unpoller
+UNIFI_PASS=set_this_on_your_controller
+UNIFI_URL=https://127.0.0.1:8443
+```
+
+The `docker-compose.yml` file: 
+
 ```yaml
-version: "3"
+# This is for unifi-poller v2.
+version: '3'
 services:
   influxdb:
-    container_name: up_influxdb
-    restart: unless-stopped
-    image: influxdb:1.8
+    restart: always
+    image: influxdb:2.5
     ports:
       - '8086:8086'
     volumes:
-      - /YOURLOCALPATH/influxdb:/var/lib/influxdb
+      - influxdb-storage:/var/lib/influxdb
     environment:
-      - INFLUXDB_DB=unifi
-      - INFLUXDB_ADMIN_USER=unifi
-      - INFLUXDB_ADMIN_PASSWORD=unifi
-
+      - INFLUXDB_DB=${INFLUXDB_DB}
+      - INFLUXDB_HTTP_AUTH_ENABLED=${INFLUXDB_HTTP_AUTH_ENABLED}
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=${INFLUXDB_ADMIN_USER}
+      - DOCKER_INFLUXDB_INIT_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
+      - DOCKER_INFLUXDB_INIT_ORG=${INFLUXDB_ORG}
+      - DOCKER_INFLUXDB_INIT_BUCKET=${INFLUXDB_BUCKET}
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_ADMIN_TOKEN}
+  chronograf:
+    image: chronograf:latest
+    restart: always
+    ports:
+      - '8888:8888'
+    volumes:
+      - chronograf-storage:/var/lib/chronograf
+    depends_on:
+      - influxdb
+    environment:
+      - INFLUXDB_URL=http://influxdb:8086
+      - INFLUXDB_USERNAME=${INFLUXDB_ADMIN_USER}
+      - INFLUXDB_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
   grafana:
-    container_name: up_grafana
-    image: grafana/grafana
-    restart: unless-stopped
+    image: grafana/grafana:latest
+    restart: always
     ports:
       - '3000:3000'
     volumes:
-      - /YOURLOCALPATH/grafana:/var/lib/grafana
+      - grafana-storage:/var/lib/grafana
     depends_on:
       - influxdb
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
       - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
-
   unpoller:
-    container_name: up-poller
-    restart: unless-stopped
-    image: ghcr.io/unpoller/unpoller:latest
+    restart: always
+    image: ghcr.io/unpoller/unpoller:${POLLER_TAG}
     depends_on:
-      - influxdb
       - grafana
+      - influxdb
+      - chronograf
+    environment:
+      - UP_INFLUXDB_DB=${INFLUXDB_DB}
+      - UP_INFLUXDB_USER=${INFLUXDB_ADMIN_USER}
+      - UP_INFLUXDB_PASS=${INFLUXDB_ADMIN_PASSWORD}
+      - UP_INFLUXDB_ORG=${INFLUXDB_ORG}
+      - UP_INFLUXDB_BUCKET=${INFLUXDB_BUCKET}
+      - UP_INFLUXDB_AUTH_TOKEN=${INFLUXDB_ADMIN_TOKEN}
+      - UP_INFLUXDB_URL=http://influxdb:8086
+      - UP_UNIFI_DEFAULT_USER=${UNIFI_USER}
+      - UP_UNIFI_DEFAULT_PASS=${UNIFI_PASS}
+      - UP_UNIFI_DEFAULT_URL=${UNIFI_URL}
+      - UP_POLLER_DEBUG=${POLLER_DEBUG}
+      - UP_UNIFI_DEFAULT_SAVE_DPI=${POLLER_SAVE_DPI}
     volumes:
-      - /YOURLOCALPATH/unpoller:/config
+      - YOURPATH/up.conf:/etc/unpoller/up.conf
+volumes:
+  influxdb-storage:
+  chronograf-storage:
+  grafana-storage:
 ```
 
 :::info
@@ -189,7 +249,7 @@ Details of tags available are described in [Docker - FAQ](../help/docker_faq).
 Whichever configuration method you chose, this is how you start the contianers:
 
 ```shell
-docker-compose up
+docker-compose up -e docker-compose.env
 ```
 
 If everything is working, after a few minutes you should see like likes this:
@@ -208,7 +268,7 @@ Get the container id with `docker ps`.
 Stop the containers and restart them in daemon mode, like this:
 
 ```shell
-docker-compose up -d
+docker-compose up -e docker-compose.env -d
 ```
 
 ## Next Steps
