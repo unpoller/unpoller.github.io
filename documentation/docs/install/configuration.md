@@ -88,7 +88,7 @@ The unifi section begins with the `[unifi]` header and has the following paramet
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
 :::
 
 Most `unifi` configuration will look like this:

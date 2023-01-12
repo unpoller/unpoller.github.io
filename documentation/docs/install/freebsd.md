@@ -40,7 +40,7 @@ file for additional post-install configuration information.
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
 :::
 
 Use these commands to maintain the service:
