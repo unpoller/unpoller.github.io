@@ -28,7 +28,7 @@ If you don't have them, follow these instructions for installing
 1. Edit the config file after installing the brew.
   :::important
   When configuring make sure that you do **not** include `:8443` on the url of the controller
-  if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+  if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
   :::
   See [Application Configuration](../install/configuration) for more information
   ```shell

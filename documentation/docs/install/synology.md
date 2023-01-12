@@ -122,7 +122,7 @@ The unpoller container requires the InfluxDB database to already exist, so you *
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
 :::
 
 ## Check that poller and influx are working

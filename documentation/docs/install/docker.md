@@ -40,7 +40,7 @@ A decision should be made which method of configuration to use. Both are explain
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
 :::
 
 ### Using Environment Variables

@@ -131,7 +131,7 @@ Alternatively, if you choose to use a configuration file:
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CkoudKey with recent firmware.
+if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
 :::
 
 Add the following to your `docker-compose.yml` after replacing `YOURLOCALPATH`
