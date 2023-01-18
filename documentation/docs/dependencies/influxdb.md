@@ -106,3 +106,27 @@ by implementing a retention policy. For example, to hold data for 32 days add th
 ```none
 CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
 ```
+
+If you're using InfluxDB 2.x (default with docker compose), you can set the retention policy by exec-ing into the container:
+
+```none
+docker exec -it unpoller_influxdb_1 /bin/bash
+```
+
+Extracting the unpoller bucket ID from the result of the command `/usr/local/bin/influx bucket ls` (in the example below, it's `0af2f3c9840627f6`):
+
+```none
+root@515481c98cb9:/# /usr/local/bin/influx bucket ls
+ID			Name		Retention	Shard group duration	Organization ID		Schema Type
+6d12a2decc0d9b23	_monitoring	168h0m0s	24h0m0s			5b8f04254daaddb6	implicit
+2e1c4e9d11b806e3	_tasks		72h0m0s		24h0m0s			5b8f04254daaddb6	implicit
+0af2f3c9840627f6	unpoller	infinite	168h0m0s		5b8f04254daaddb6	implicit
+```
+
+And then updating the retention policy with the command `/usr/local/bin/influx bucket update -i 0af2f3c9840627f6 -r 32d`, susbtituting your bucket ID:
+
+```none
+root@515481c98cb9:/# /usr/local/bin/influx bucket update -i 0af2f3c9840627f6 -r 32d
+ID			Name		Retention	Shard group duration	Organization ID		Schema Type
+0af2f3c9840627f6	unpoller	768h0m0s	168h0m0s		5b8f04254daaddb6	implicit
+```
