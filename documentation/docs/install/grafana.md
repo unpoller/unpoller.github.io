@@ -19,10 +19,11 @@ The following explains the steps for InfluxDB; the Prometheus steps are very sim
 - Select the InfluxDB option
 - Set the following fields:
 - - Name = `UniFi InfluxDB` (or whatever name you want) and set to default
-- - URL = `http://influxdb1:8086` or `http://localhost:8086`
-- - Database = `unifi`
-- - Username = `unifipoller`
-- - Password = `unifipoller`
+- - URL = `http://influxdb:8086` or `http://localhost:8086`
+- - Database = `unpoller`
+- - Username = `unpoller`
+- - Password = `CHANGEME` (or whatever you changed `INFLUXDB_ADMIN_PASSWORD` to)
+- Under "Custom HTTP Headers" add an `Authorization` header, with value `Token unpollersecret` (optionally replace `unpollersecret` with whatever you changed `INFLUXDB_ADMIN_TOKEN` to).
 - No other fields need to be changed or set on this page.
 - Click `Save & Test`
 - You should get green banner above the save and test that says 'Data Source is Working'
