@@ -62,7 +62,7 @@ helps avoid conflicts with the host or other containers you might have that we c
 
 1. Select `Registry`
 1. Use the search box to find the following:
-    - unpoller for `ghcr.io/unpoller/upoller:latest` https://github.com/unpoller/unpoller/pkgs/container/unpoller
+    - unpoller for `ghcr.io/unpoller/unpoller:latest` https://github.com/unpoller/unpoller/pkgs/container/unpoller
     - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
     - influxdb for `influxdb:2.5` https://hub.docker.com/_/influxdb/
 
