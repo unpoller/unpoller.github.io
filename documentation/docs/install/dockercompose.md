@@ -172,7 +172,7 @@ version: '3'
 services:
   influxdb:
     restart: always
-    image: influxdb:2.5
+    image: influxdb:1.8
     ports:
       - '8086:8086'
     volumes:
