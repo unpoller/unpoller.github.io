@@ -72,7 +72,7 @@ brew services restart influxdb
 Pull the container and run InfluxDB like this:
 
 ```shell
-docker pull influxdb:2.5
+docker pull influxdb:1
 docker run -p 8086:8086 \
 -e INFLUXDB_DB=unifi \
 -e INFLUXDB_ADMIN_USER=unifi \
