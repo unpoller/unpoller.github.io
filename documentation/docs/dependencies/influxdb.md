@@ -6,7 +6,7 @@ title: InfluxDB
 This page provides simple instructions on how to install and maintain InfluxDB and Grafana.
 
 :::tip
-InfluxDB 1.7.7 or new is required. Version 1.8.4 is recommended.
+InfluxDB 1.8.x or newer is required. Version 1.8.10+ is recommended.
 :::
 
 :::warning
