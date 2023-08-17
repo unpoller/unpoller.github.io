@@ -107,7 +107,7 @@ by implementing a retention policy. For example, to hold data for 32 days add th
 CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
 ```
 
-If you're using InfluxDB 2.x (default with docker compose), you can set the retention policy by exec-ing into the container:
+If you're using InfluxDB 2.x (not recommended at this time), you can set the retention policy by exec-ing into the container:
 
 ```none
 docker exec -it unpoller_influxdb_1 /bin/bash
