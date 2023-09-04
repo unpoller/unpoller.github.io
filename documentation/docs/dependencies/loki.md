@@ -76,6 +76,7 @@ services:
     container_name: unpoller
     environment:
       UP_INFLUXDB_DISABLE: "true"
+      UP_LOKI_DISABLE: "false"
       UP_LOKI_URL: http://log01.tylephony.com:3100
       UP_POLLER_DEBUG: "false"
       UP_PROMETHEUS_HTTP_LISTEN: 0.0.0.0:9130
