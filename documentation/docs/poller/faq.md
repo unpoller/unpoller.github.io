@@ -6,7 +6,8 @@ title: FAQs
 **What are the requirements?**
 
 - Grafana 7.4.0+ is recommended. Grafana 7.x or newer is required.
-- InfluxDB 1.7.7 or newer is needed, if you choose to use InfluxDB.
+- InfluxDB 1.8.x is needed, if you choose to use InfluxDB. 1.10 and 1.11 may work.
+- InfluxDB 2.x does **not** work.
 - Prometheus 2.x if you choose to use Prometheus.
 
 :::caution InfluxDB 2.0
