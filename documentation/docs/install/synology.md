@@ -64,7 +64,7 @@ helps avoid conflicts with the host or other containers you might have that we c
 1. Use the search box to find the following:
     - unpoller for `ghcr.io/unpoller/unpoller:latest` https://github.com/unpoller/unpoller/pkgs/container/unpoller
     - grafana for `grafana/grafana:latest` https://hub.docker.com/r/grafana/grafana/
-    - influxdb for `influxdb:2.5` https://hub.docker.com/_/influxdb/
+    - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
 
 :::note
 The unpoller container requires the InfluxDB database to already exist, so you *must* create the containers in the order below.
@@ -72,7 +72,7 @@ The unpoller container requires the InfluxDB database to already exist, so you *
 
 ### Create influxdb container
 
-1. In `Image`, select `influxdb:2.5` and click `launch`
+1. In `Image`, select `influxdb:` and click `launch`
 1. Leave `General Settings` alone - container name should be `influxdb1`, unless you created other influxdb's
 1. Click `Advanced Settings`
 1. On volume tab add the following:
