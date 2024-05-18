@@ -5,7 +5,7 @@ title: Install Method
 
 ## Chosing an Install Method
 
-There are two main methods to install the Unpollor 'suite' (Unpoller and accociated programs)
+There are three main methods to install the Unpollor 'suite' (Unpoller and accociated programs)
 
 ### Docker Image
 This is the recommended way to install and the best option for new users.
@@ -36,6 +36,19 @@ Install each of the components individually
 
 - Harder to update
 - Requires manual configuration
+
+### Kubernetes
+Run Unpoller in a k8s cluster through the usage of the helm chart. 
+
+#### Advantages of Kubernetes
+- Automatic updates when combined with flux
+- Integration with prometheus operator and grafana operator
+- Pre packed solution
+
+#### Disadvantages of Kubernetes
+- Requires a kubernetes cluster + all associated complexities
+- Requires kubernetes knowledge to troubleshoot
+- Higher complexity
 
 ### Device Specific
 Some devices have specific install methods. If you have one of those devices the instructions for that device take precedence.

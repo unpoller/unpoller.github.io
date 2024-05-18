@@ -55,6 +55,7 @@ Platform specific install docs:
 - [MacOS](macos)
 - [Linux](linux)
 - [FreeBSD](freebsd)
+- [Kubernetes](kubernetes)
 
 </details>
 
