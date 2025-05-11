@@ -15,6 +15,7 @@ module.exports = {
       'install/controllerlogin',
       'install/dockercompose',
       'install/docker',
+      'install/kubernetes',
       'install/freebsd',
       'install/macos',
       'install/linux',

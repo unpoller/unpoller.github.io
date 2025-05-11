@@ -1,18 +1,21 @@
 ---
-id: linux
-title: Linux
+id: kubernetes
+title: Kubernetes
 ---
 
 This page assumes that you have decided to install UniFi Poller on to an kubernetes cluster.
 Installing a cluster is not in the scope of this guide.
 
 ## First
-All the possible configuration can be found on the [main page](https://github.com/unpoller/helm-chart) hosting the chart 
+
+All the possible configuration can be found on the [main page](https://github.com/unpoller/helm-chart) hosting the chart
 This chart uses CRDs from the prometheus operator, which can be installed with their [community
 repository](https://github.com/prometheus-community/helm-charts)
 
 ---
+
 ## Installation
+
 The two main ways to install the helm chart is through the CLI or through a gitops tools as flux.
 
 ```shell
@@ -21,6 +24,7 @@ helm repo update
 ```
 
 If you are using flux, you can rely on their CR:
+
 ```yaml
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
@@ -33,6 +37,7 @@ spec:
 ```
 
 Once the repository has been configured, you can proceed to install the chart.
+
 ```bash
 helm install -f myvalues.yaml your-release-name unpoller/unpoller
 ```
@@ -60,6 +65,7 @@ spec:
 ```
 
 ## Maintenance
+
 When a new release of the chart (or unpoller is generated) you can update unpoller
 by running helm
 
