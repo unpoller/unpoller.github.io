@@ -19,18 +19,20 @@ There are no pre-built graphs to display the data it collects.
 ### Windows
 
 Using Power Shell (Run as Administrator)
+
 ```shell
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.10_windows_amd64.zip -UseBasicParsing -OutFile influxdb-1.8.10_windows_amd64.zip
 Expand-Archive .\influxdb-1.8.10_windows_amd64.zip -DestinationPath 'C:\Program Files\InfluxData\influxdb\'
 ```
+
 Windows InfluxDB 1.x directions came [from here](https://portal.influxdata.com/downloads/)
 
 **Start & configure:**
+
 - Run `influxd.exe`
 - [Post setup](influxdb.md#post-setup) configuration
 
-*Default install path: 'C:\Program Files\InfluxData\influxdb\'*
-
+_Default install path: 'C:\Program Files\InfluxData\influxdb\'_
 
 ### CentOS 7
 
@@ -62,6 +64,7 @@ You need [Homebrew](https://brew.sh):
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
 ```shell
 brew install influxdb
 brew services restart influxdb
@@ -72,11 +75,10 @@ brew services restart influxdb
 Pull the container and run InfluxDB like this:
 
 ```shell
-docker pull influxdb:1
+docker pull influxdb:1.8
 docker run -p 8086:8086 \
--e INFLUXDB_DB=unifi \
--e INFLUXDB_ADMIN_USER=unifi \
--e INFLUXDB_ADMIN_PASSWORD=changeme \
+-e INFLUXDB_DB=unpoller \
+-e INFLUXDB_HTTP_AUTH_ENABLED=false \
 -v /YOURLOCALPATH/influxdb:/var/lib/influxdb \
 influxdb:1.8
 ```
@@ -94,17 +96,23 @@ Get shell access to wherever it is and run the command `influx`
 Create the database:
 
 ```none
-CREATE DATABASE unifi
-USE unifi
+CREATE DATABASE unpoller
+```
+
+We recommend running InfluxDB without authentication enabled,
+but if you wish to enable, add a user and give it access to the database.
+
+```none
+USE unpoller
 CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
-GRANT ALL ON unifi TO unifipoller
+GRANT ALL ON unpoller TO unifipoller
 ```
 
 Optionally - and this is a very sensible idea - set limits on how much data you wish to retain
 by implementing a retention policy. For example, to hold data for 32 days add the command:
 
 ```none
-CREATE RETENTION POLICY retention_policy ON unifi DURATION 32d REPLICATION 1
+CREATE RETENTION POLICY retention_policy ON unpoller DURATION 32d REPLICATION 1
 ```
 
 If you're using InfluxDB 2.x (not recommended at this time), you can set the retention policy by exec-ing into the container:
