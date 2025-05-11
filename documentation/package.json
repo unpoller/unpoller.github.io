@@ -16,8 +16,8 @@
     "@docusaurus/preset-classic": "^2.2.0",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^2.0.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "browserslist": {
     "production": [
