@@ -5,7 +5,7 @@ title: Webserver
 
 Poller has a built-in and **disabled by default** web server.
 The web server provides some very basic information about your UniFi environment, devices and clients.
-At the time of this writing it is [only an API](API), but a simple human interface (read-only) is planned.
+At the time of this writing it is [only an API](./api), but a simple human interface (read-only) is planned.
 
 :::note
 The web server was added in UniFi Poller v2.0.2.
