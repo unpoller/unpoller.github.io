@@ -95,9 +95,10 @@ Get shell access to wherever it is and run the command `influx`
 
 Create the database:
 
-````none
+```none
 CREATE DATABASE unpoller
 ```
+
 We recommend running InfluxDB without authentication enabled,
 but if you wish to enable, add a user and give it access to the database.
 
@@ -105,7 +106,7 @@ but if you wish to enable, add a user and give it access to the database.
 USE unpoller
 CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
 GRANT ALL ON unpoller TO unifipoller
-````
+```
 
 Optionally - and this is a very sensible idea - set limits on how much data you wish to retain
 by implementing a retention policy. For example, to hold data for 32 days add the command:
