@@ -45,21 +45,21 @@ Add user to influx; [from here](https://v2.docs.influxdata.com/v2.0/users/create
 
 ```shell
 influx -host localhost -port 8086
-CREATE DATABASE unifi
-USE unifi
+CREATE DATABASE unpoller
+USE unpoller
 CREATE USER unifipoller WITH PASSWORD 'unifipoller' WITH ALL PRIVILEGES
-GRANT ALL ON unifi TO unifipoller
+GRANT ALL ON unpoller TO unifipoller
 ```
 
 :::note
-For InfluxDB on a CloudKey it is *highly* advisable to add a retention policy to
+For InfluxDB on a CloudKey it is _highly_ advisable to add a retention policy to
 prevent the database from growing in uncontrollably.
 :::
 
 #### Install Unpoller
 
 Linux repository hosting provided by
-[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
+[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png 'PackageCloud.io')](http://packagecloud.io)
 
 Install the Go Lift package repo and Unpoller with this command:
 
@@ -70,7 +70,7 @@ curl -s https://golift.io/repo.sh | sudo bash -s - unpoller
 ### Current Firmware: `unifios`
 
 There is an existing suite for installing `podman` containers to run on `unifios` -
-see [here](https://github.com/boostchicken/udm-utilities).  At the time of writing  we are not
+see [here](https://github.com/boostchicken/udm-utilities). At the time of writing we are not
 aware of any user implementing Unpoller using this method, but it should be straightforward.
 
 ## Configuration

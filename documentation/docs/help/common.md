@@ -16,16 +16,7 @@ It must be enabled in both the poller config and in your UniFi controller. Two s
 ### Check the port used to connect to the controller
 
 It should be `8443` if you are using a non-unifios interface (eg the original Cloudkey with
-  old firmware) and `443` (or just omitted) if you are using a unifios device (UDM-Pro, UDM, UXG, etc)
-
-### Run Updated Components
-
-Running out of date components may result in missing data, or errors from Grafana.
-
-Make sure you're running up-to-date software. InfluxDB must be at least 1.7.x.
-Version 1.7.9 is out and it works great. Grafana 6.5.2 also works great,
-and any version older than 6.4.x is going to give you problems.
-UniFi Poller should be at least version 1.6.3 if you are seeking help.
+old firmware) and `443` (or just omitted) if you are using a unifios device (UDM-Pro, UDM, UXG, etc)
 
 ### Check Log Files
 
@@ -43,13 +34,12 @@ If you are a Docker user then check out [Dozzle](https://dozzle.dev/)
 
 Many users make typos in their data source. Sometimes on the URLs, sometimes on the passwords.
 This will cause data to not show up and the dashboards may provide red error messages.
- Most data sources do not have paths; just `http://ip:port`.
+Most data sources do not have paths; just `http://ip:port`.
 
 ### Double-Check Passwords
 
-The default username used to be `influxdb`, but has been changed to `unifipoller`.
 Keep this in mind when setting things up. Can't tell you how many times someone had
-issues only to find a bad password. Check it, check it again; log in with it yourself.
+issues only to find a bad password. Check it, check it again; **log in with it yourself**.
 The poller log should give you clues if this is the problem.
 
 ### Dashboard Variables
