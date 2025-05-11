@@ -9,7 +9,7 @@ This page assumes that you have decided to install UniFi Poller on to an existin
 
 Make sure you have set up a user on your controller for UniFi Poller to poll. You must have
 a working (and supported) version of [Grafana](../dependencies/grafana) and at
-least one of [InfluxDB](../dependencies/influxDB) or [Prometheus](../dependencies/prometheus).
+least one of [InfluxDB](../dependencies/influxdb) or [Prometheus](../dependencies/prometheus).
 If you don't have them, follow these instructions for installing
 [InfluxDB](../dependencies/influxdb) and [Grafana](../dependencies/grafana).
 
