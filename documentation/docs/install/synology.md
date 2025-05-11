@@ -217,15 +217,13 @@ Skip to 'running the container section below'
 #### Method 2 Container
 
 1. Run the following command.
-
-```shell
-sudo docker run --user 1031 --name grafana-grafana1 \
-  --net=Grafana_Net -p 300:3000 \
-  --volume /volume1/docker/grafanatest:/var/lib/grafana \
-  -e "GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel" \
-  grafana/grafana:latest
-```
-
+   ```shell
+   sudo docker run --user 1031 --name grafana-grafana1 \
+     --net=Grafana_Net -p 300:3000 \
+     --volume /volume1/docker/grafanatest:/var/lib/grafana \
+     -e "GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel" \
+     grafana/grafana:latest
+   ```
 1. Use the pid you got in step 3 above, use the network name you created if you didn't use
    `Grafana_Net` AND you will need to use the volume # of your docker folder (the one you
    created manually is on) by default this will be on `/volume1`, but if you have multiple

@@ -18,45 +18,35 @@ If you don't have them, follow these instructions for installing
 ## Installation
 
 1. Install [Homebrew](https://brew.sh/)
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
+   ```shell
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   ```
 1. Install Poller
-
-```
-brew install golift/mugs/unpoller
-```
-
+   ```
+   brew install golift/mugs/unpoller
+   ```
 1. Edit the config file after installing the brew.
    :::important
    When configuring make sure that you do **not** include `:8443` on the url of the controller
    if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
    :::
    See [Application Configuration](../install/configuration) for more information
-
-```shell
-nano /usr/local/etc/unpoller/up.conf
-# or
-vi /usr/local/etc/unpoller/up.conf
-```
-
+   ```shell
+   nano /usr/local/etc/unpoller/up.conf
+   # or
+   vi /usr/local/etc/unpoller/up.conf
+   ```
 1. Start the service:
-
-```shell
-# do not use sudo
-brew services start unpoller
-```
-
-    - The log file should show up at `/usr/local/var/log/unpoller.log`
-    - If it does not show up, make sure your user has permissions to create the file.
-
+   ```shell
+   # do not use sudo
+   brew services start unpoller
+   ```
+   - The log file should show up at `/usr/local/var/log/unpoller.log`
+   - If it does not show up, make sure your user has permissions to create the file.
 1. To restart (** required after upgrade**)
-
-```shell
-brew services restart unpoller
-```
+   ```shell
+   brew services restart unpoller
+   ```
 
 ## Maintenance
 
