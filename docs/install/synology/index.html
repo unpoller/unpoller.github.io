@@ -2,26 +2,29 @@
 <html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-install/synology" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.7.0">
-<title data-rh="true">Synology | Unpoller - UniFi Poller</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://unpoller.com/docs/install/synology"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Synology | Unpoller - UniFi Poller"><meta data-rh="true" name="description" content="Introduction"><meta data-rh="true" property="og:description" content="Introduction"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://unpoller.com/docs/install/synology"><link data-rh="true" rel="alternate" href="https://unpoller.com/docs/install/synology" hreflang="en"><link data-rh="true" rel="alternate" href="https://unpoller.com/docs/install/synology" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.1e330b02.css">
-<script src="/assets/js/runtime~main.d721efc9.js" defer="defer"></script>
-<script src="/assets/js/main.84a76257.js" defer="defer"></script>
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Synology | Unpoller - UniFi Poller</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://unpoller.com/docs/install/synology"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Synology | Unpoller - UniFi Poller"><meta data-rh="true" name="description" content="Introduction"><meta data-rh="true" property="og:description" content="Introduction"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://unpoller.com/docs/install/synology"><link data-rh="true" rel="alternate" href="https://unpoller.com/docs/install/synology" hreflang="en"><link data-rh="true" rel="alternate" href="https://unpoller.com/docs/install/synology" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Synology","item":"https://unpoller.com/docs/install/synology"}]}</script><link rel="stylesheet" href="/assets/css/styles.ff435d9c.css">
+<script src="/assets/js/runtime~main.1a95e2de.js" defer="defer"></script>
+<script src="/assets/js/main.e97ba6a0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="UniFi Poller" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="UniFi Poller" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/poller/introduction">Documentation</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Docusaurus<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/poller/introduction">Poller</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/install/gettingstarted">Installation</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/gettingstarted">Getting Started</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/installmethod">Install Method</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/controllerlogin">Unifi Controller Login</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/dockercompose">Docker Compose</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/docker">Docker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/kubernetes">Kubernetes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/freebsd">FreeBSD</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/macos">MacOS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/linux">Linux</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/windows">Windows</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/cloudkey">CloudKey</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/install/synology">Synology</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/configuration">Application Configuration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/grafana">Setup Grafana</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/dependencies/grafana">Dependencies</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/advanced/webserver">Advanced</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/help/common">Help</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Installation</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Synology</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Synology</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="UniFi Poller" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="UniFi Poller" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/poller/introduction">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Docusaurus<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/poller/introduction"><span title="Poller" class="categoryLinkLabel_W154">Poller</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/install/gettingstarted"><span title="Installation" class="categoryLinkLabel_W154">Installation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/gettingstarted"><span title="Getting Started" class="linkLabel_WmDU">Getting Started</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/installmethod"><span title="Install Method" class="linkLabel_WmDU">Install Method</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/controllerlogin"><span title="Unifi Controller Login" class="linkLabel_WmDU">Unifi Controller Login</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/dockercompose"><span title="Docker Compose" class="linkLabel_WmDU">Docker Compose</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/docker"><span title="Docker" class="linkLabel_WmDU">Docker</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/kubernetes"><span title="Kubernetes" class="linkLabel_WmDU">Kubernetes</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/freebsd"><span title="FreeBSD" class="linkLabel_WmDU">FreeBSD</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/macos"><span title="MacOS" class="linkLabel_WmDU">MacOS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/linux"><span title="Linux" class="linkLabel_WmDU">Linux</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/windows"><span title="Windows" class="linkLabel_WmDU">Windows</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/cloudkey"><span title="CloudKey" class="linkLabel_WmDU">CloudKey</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/install/synology"><span title="Synology" class="linkLabel_WmDU">Synology</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/configuration"><span title="Application Configuration" class="linkLabel_WmDU">Application Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/install/grafana"><span title="Setup Grafana" class="linkLabel_WmDU">Setup Grafana</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/dependencies/grafana"><span title="Dependencies" class="categoryLinkLabel_W154">Dependencies</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/advanced/webserver"><span title="Advanced" class="categoryLinkLabel_W154">Advanced</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/help/common"><span title="Help" class="categoryLinkLabel_W154">Help</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Installation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Synology</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Synology</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
 <p>We are not claiming this is the only way to do this.
 However this is designed to use the official packages for UniFi Poller,
 InfluxDB and Grafana with the aim to make this maintainable as possible.</p>
 <p>We use a custom bridge network for some very good reasons and we highly recommend most people use it:</p>
 <ul>
-<li>This ensures name resolution works between the containers without needing to use the
+<li class="">This ensures name resolution works between the containers without needing to use the
 deprecated link functionality</li>
-<li>The default bridge on docker does NOT have name resolution enabled and requires mucking
+<li class="">The default bridge on docker does NOT have name resolution enabled and requires mucking
 about with host files (this is a docker feature not anything to do with Synology)</li>
-<li>This also means in the event the container IP changes (it happens) you don&#x27;t need to reconfigure</li>
-<li>This also means, due to the ICC, that no host port mappings are required other than for the
+<li class="">This also means in the event the container IP changes (it happens) you don&#x27;t need to reconfigure</li>
+<li class="">This also means, due to the ICC, that no host port mappings are required other than for the
 Grafana 3000:3000 mapping in the Grafana contained, you can choose to remove other port mappings if you desire</li>
-<li>The reason for not using host port mappings for container not equalling container comms is we
+<li class="">The reason for not using host port mappings for container not equalling container comms is we
 keep this solution self-container and don&#x27;t have to worry about weird things that might have been
 on the Synology (changing of Synology IP, other containers with host mappings etc).
 Customize in your environment as needed.</li>
@@ -30,134 +33,134 @@ Customize in your environment as needed.</li>
 1 for Grafana documented here.</p>
 <p>Assumptions:</p>
 <ol>
-<li>You already installed Docker from <a href="https://www.synology.com/en-us/dsm/packages/Docker" target="_blank" rel="noopener noreferrer">package center</a>.</li>
-<li><a href="https://www.synology.com/en-global/knowledgebase/DSM/help/DSM/AdminCenter/system_terminal" target="_blank" rel="noopener noreferrer">Enable SSH</a>
+<li class="">You already installed Docker from <a href="https://www.synology.com/en-us/dsm/packages/Docker" target="_blank" rel="noopener noreferrer" class="">package center</a>.</li>
+<li class=""><a href="https://www.synology.com/en-global/knowledgebase/DSM/help/DSM/AdminCenter/system_terminal" target="_blank" rel="noopener noreferrer" class="">Enable SSH</a>
 on Synology</li>
 </ol>
 <p><strong>Note:</strong> You should always logon with your default admin account you created when you setup
 you Synology, logging on as root no longer works.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prepare-synology--docker">Prepare Synology &amp; Docker<a href="#prepare-synology--docker" class="hash-link" aria-label="Direct link to Prepare Synology &amp; Docker" title="Direct link to Prepare Synology &amp; Docker">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="run-docker--configure-network">Run docker &amp; configure network<a href="#run-docker--configure-network" class="hash-link" aria-label="Direct link to Run docker &amp; configure network" title="Direct link to Run docker &amp; configure network">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prepare-synology--docker">Prepare Synology &amp; Docker<a href="#prepare-synology--docker" class="hash-link" aria-label="Direct link to Prepare Synology &amp; Docker" title="Direct link to Prepare Synology &amp; Docker" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="run-docker--configure-network">Run docker &amp; configure network<a href="#run-docker--configure-network" class="hash-link" aria-label="Direct link to Run docker &amp; configure network" title="Direct link to Run docker &amp; configure network" translate="no">​</a></h3>
 <p>Click on network and select add to create new network:</p>
 <ol>
-<li>Name it something like <code>Grafana_Net</code></li>
-<li>Enable IPv4</li>
-<li>Ensure <code>Get network configuration automatically</code> is selected</li>
-<li>Click <code>add</code></li>
+<li class="">Name it something like <code>Grafana_Net</code></li>
+<li class="">Enable IPv4</li>
+<li class="">Ensure <code>Get network configuration automatically</code> is selected</li>
+<li class="">Click <code>add</code></li>
 </ol>
 <p>We do this because the default bridge doesn&#x27;t have name resolution but new bridge do,
 so you don&#x27;t have to mess with host files etc inside the container. (need to verify this is actually true)</p>
 <p>I don&#x27;t recommend you use host network, using the bridge network keeps it self contained at
 helps avoid conflicts with the host or other containers you might have that we cannot predict.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prepare-mapped-volumes">Prepare mapped volumes<a href="#prepare-mapped-volumes" class="hash-link" aria-label="Direct link to Prepare mapped volumes" title="Direct link to Prepare mapped volumes">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prepare-mapped-volumes">Prepare mapped volumes<a href="#prepare-mapped-volumes" class="hash-link" aria-label="Direct link to Prepare mapped volumes" title="Direct link to Prepare mapped volumes" translate="no">​</a></h3>
 <ol>
-<li>Create the following structure in your preferred location (mine is a shared folder called
+<li class="">Create the following structure in your preferred location (mine is a shared folder called
 docker):<!-- -->
 <ul>
-<li><code>/docker/grafana</code> and <code>/docker/influxdb</code></li>
+<li class=""><code>/docker/grafana</code> and <code>/docker/influxdb</code></li>
 </ul>
 </li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="download-needed-images-from-the-registry">Download needed images from the registry<a href="#download-needed-images-from-the-registry" class="hash-link" aria-label="Direct link to Download needed images from the registry" title="Direct link to Download needed images from the registry">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="download-needed-images-from-the-registry">Download needed images from the registry<a href="#download-needed-images-from-the-registry" class="hash-link" aria-label="Direct link to Download needed images from the registry" title="Direct link to Download needed images from the registry" translate="no">​</a></h3>
 <ol>
-<li>Select <code>Registry</code></li>
-<li>Use the search box to find the following:<!-- -->
+<li class="">Select <code>Registry</code></li>
+<li class="">Use the search box to find the following:<!-- -->
 <ul>
-<li>unpoller for <code>ghcr.io/unpoller/unpoller:latest</code> <a href="https://github.com/unpoller/unpoller/pkgs/container/unpoller" target="_blank" rel="noopener noreferrer">https://github.com/unpoller/unpoller/pkgs/container/unpoller</a></li>
-<li>grafana for <code>grafana/grafana:latest</code> <a href="https://hub.docker.com/r/grafana/grafana/" target="_blank" rel="noopener noreferrer">https://hub.docker.com/r/grafana/grafana/</a></li>
-<li>influxdb for <code>influxdb:1.8</code> <a href="https://hub.docker.com/_/influxdb/" target="_blank" rel="noopener noreferrer">https://hub.docker.com/_/influxdb/</a></li>
+<li class="">unpoller for <code>ghcr.io/unpoller/unpoller:latest</code> <a href="https://github.com/unpoller/unpoller/pkgs/container/unpoller" target="_blank" rel="noopener noreferrer" class="">https://github.com/unpoller/unpoller/pkgs/container/unpoller</a></li>
+<li class="">grafana for <code>grafana/grafana:latest</code> <a href="https://hub.docker.com/r/grafana/grafana/" target="_blank" rel="noopener noreferrer" class="">https://hub.docker.com/r/grafana/grafana/</a></li>
+<li class="">influxdb for <code>influxdb:1.8</code> <a href="https://hub.docker.com/_/influxdb/" target="_blank" rel="noopener noreferrer" class="">https://hub.docker.com/_/influxdb/</a></li>
 </ul>
 </li>
 </ol>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>The unpoller container requires the InfluxDB database to already exist, so you <em>must</em> create the containers in the order below.</p></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-influxdb-container">Create influxdb container<a href="#create-influxdb-container" class="hash-link" aria-label="Direct link to Create influxdb container" title="Direct link to Create influxdb container">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-influxdb-container">Create influxdb container<a href="#create-influxdb-container" class="hash-link" aria-label="Direct link to Create influxdb container" title="Direct link to Create influxdb container" translate="no">​</a></h3>
 <ol>
-<li>In <code>Image</code>, select <code>influxdb:</code> and click <code>launch</code></li>
-<li>Leave <code>General Settings</code> alone - container name should be <code>influxdb1</code>, unless you created other influxdb&#x27;s</li>
-<li>Click <code>Advanced Settings</code></li>
-<li>On volume tab add the following:<!-- -->
+<li class="">In <code>Image</code>, select <code>influxdb:</code> and click <code>launch</code></li>
+<li class="">Leave <code>General Settings</code> alone - container name should be <code>influxdb1</code>, unless you created other influxdb&#x27;s</li>
+<li class="">Click <code>Advanced Settings</code></li>
+<li class="">On volume tab add the following:<!-- -->
 <ul>
-<li>The <code>/docker/influxdb</code> folder from above to mount path <code>/var/lib/influxdb</code> - leave as read/write</li>
+<li class="">The <code>/docker/influxdb</code> folder from above to mount path <code>/var/lib/influxdb</code> - leave as read/write</li>
 </ul>
 </li>
-<li>On the <code>Network</code> tab<!-- -->
+<li class="">On the <code>Network</code> tab<!-- -->
 <ul>
-<li>Add your network - in this example: <code>Grafana_Net</code></li>
-<li>Remove the default bridge (usually called <code>Bridge</code>)</li>
-<li>Ensure that <code>use the same network as docker host</code> is unchecked</li>
+<li class="">Add your network - in this example: <code>Grafana_Net</code></li>
+<li class="">Remove the default bridge (usually called <code>Bridge</code>)</li>
+<li class="">Ensure that <code>use the same network as docker host</code> is unchecked</li>
 </ul>
 </li>
-<li>On port settings<!-- -->
+<li class="">On port settings<!-- -->
 <ul>
-<li>Change local port from <code>Auto</code> to one you have free on host - this makes it predictable. Something like <code>3456</code></li>
-<li>Leave container port as <code>8086</code> and type as <code>TCP</code></li>
+<li class="">Change local port from <code>Auto</code> to one you have free on host - this makes it predictable. Something like <code>3456</code></li>
+<li class="">Leave container port as <code>8086</code> and type as <code>TCP</code></li>
 </ul>
 </li>
-<li>On environment tab add the following vars<!-- -->
+<li class="">On environment tab add the following vars<!-- -->
 <ul>
-<li><code>INFLUXDB_DATA_DIR</code> | <code>/var/lib/influxdb/data</code></li>
-<li><code>INFLUXDB_DATA_WAL_DIR</code> | <code>/var/lib/influxdb/wal</code></li>
-<li><code>INFLUXDB_DATA_META_DIR</code> | <code>/var/lib/influxdb/meta</code></li>
+<li class=""><code>INFLUXDB_DATA_DIR</code> | <code>/var/lib/influxdb/data</code></li>
+<li class=""><code>INFLUXDB_DATA_WAL_DIR</code> | <code>/var/lib/influxdb/wal</code></li>
+<li class=""><code>INFLUXDB_DATA_META_DIR</code> | <code>/var/lib/influxdb/meta</code></li>
 </ul>
 </li>
-<li>Finalize container and:<!-- -->
+<li class="">Finalize container and:<!-- -->
 <ul>
-<li>Click <code>APPLY</code></li>
-<li>Click <code>NEXT</code></li>
-<li>Click <code>APPLY</code></li>
+<li class="">Click <code>APPLY</code></li>
+<li class="">Click <code>NEXT</code></li>
+<li class="">Click <code>APPLY</code></li>
 </ul>
 </li>
-<li>We now need to create the database that the unpoller container will use.<!-- -->
+<li class="">We now need to create the database that the unpoller container will use.<!-- -->
 <ul>
-<li>SSH into your Synology</li>
-<li>Run the command <code>sudo docker exec -it influxdb1 bash</code></li>
-<li>Follow the <a href="/docs/dependencies/influxdb#post-setup">InfluxDB Post Setup instructions</a>.</li>
+<li class="">SSH into your Synology</li>
+<li class="">Run the command <code>sudo docker exec -it influxdb1 bash</code></li>
+<li class="">Follow the <a class="" href="/docs/dependencies/influxdb#post-setup">InfluxDB Post Setup instructions</a>.</li>
 </ul>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="create-unpoller-container">Create unpoller container<a href="#create-unpoller-container" class="hash-link" aria-label="Direct link to Create unpoller container" title="Direct link to Create unpoller container">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-unpoller-container">Create unpoller container<a href="#create-unpoller-container" class="hash-link" aria-label="Direct link to Create unpoller container" title="Direct link to Create unpoller container" translate="no">​</a></h2>
 <ol>
-<li>In <code>Image</code> select <code>ghcr.io/unpoller/unpoller:latest</code> and click launch</li>
-<li>Leave general settings alone - container name should be <code>unpoller1</code>,
+<li class="">In <code>Image</code> select <code>ghcr.io/unpoller/unpoller:latest</code> and click launch</li>
+<li class="">Leave general settings alone - container name should be <code>unpoller1</code>,
 unless you created other unpollers</li>
-<li>Click Advanced Settings</li>
-<li>On the network tab:<!-- -->
+<li class="">Click Advanced Settings</li>
+<li class="">On the network tab:<!-- -->
 <ul>
-<li>Add your network - in this example: <code>Grafana_Net</code></li>
-<li>Remove the default bridge (usually called <code>Bridge</code>)</li>
-<li>Ensure that <code>use the same network as docker host</code> is unchecked</li>
+<li class="">Add your network - in this example: <code>Grafana_Net</code></li>
+<li class="">Remove the default bridge (usually called <code>Bridge</code>)</li>
+<li class="">Ensure that <code>use the same network as docker host</code> is unchecked</li>
 </ul>
 </li>
-<li>On the Environment tab, add the following vars:<!-- -->
+<li class="">On the Environment tab, add the following vars:<!-- -->
 <ul>
-<li><code>UP_INFLUXDB_URL</code> | <code>http://influxdb1:8086</code></li>
-<li><code>UP_UNIFI_DEFAULT_URL</code> | <code>https://your.unifi.controller.ip:8443</code></li>
-<li><code>UP_UNIFI_DEFAULT_AUTH_TOKEN</code> | auth token for account created earlier. e.g. <code>unifipoller</code></li>
-<li><code>UP_UNIFI_DEFAULT_ORG</code> | org created earlier</li>
-<li><code>UP_UNIFI_DEFAULT_BUCKET</code> | bucket created earlier</li>
-<li>(optional) <code>UP_POLLER_DEBUG</code> | <code>true</code></li>
+<li class=""><code>UP_INFLUXDB_URL</code> | <code>http://influxdb1:8086</code></li>
+<li class=""><code>UP_UNIFI_DEFAULT_URL</code> | <code>https://your.unifi.controller.ip:8443</code></li>
+<li class=""><code>UP_UNIFI_DEFAULT_AUTH_TOKEN</code> | auth token for account created earlier. e.g. <code>unifipoller</code></li>
+<li class=""><code>UP_UNIFI_DEFAULT_ORG</code> | org created earlier</li>
+<li class=""><code>UP_UNIFI_DEFAULT_BUCKET</code> | bucket created earlier</li>
+<li class="">(optional) <code>UP_POLLER_DEBUG</code> | <code>true</code></li>
 </ul>
 </li>
-<li>Finalize the container by:<!-- -->
+<li class="">Finalize the container by:<!-- -->
 <ul>
-<li>Click <code>APPLY</code></li>
-<li>Click <code>NEXT</code></li>
-<li>Click <code>APPLY</code></li>
+<li class="">Click <code>APPLY</code></li>
+<li class="">Click <code>NEXT</code></li>
+<li class="">Click <code>APPLY</code></li>
 </ul>
 </li>
 </ol>
 <div class="theme-admonition theme-admonition-important admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>important</div><div class="admonitionContent_BuS1"><p>When configuring make sure that you do <strong>not</strong> include <code>:8443</code> on the url of the controller
 if you are using <code>unifios</code>. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="check-that-poller-and-influx-are-working">Check that poller and influx are working<a href="#check-that-poller-and-influx-are-working" class="hash-link" aria-label="Direct link to Check that poller and influx are working" title="Direct link to Check that poller and influx are working">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="check-that-poller-and-influx-are-working">Check that poller and influx are working<a href="#check-that-poller-and-influx-are-working" class="hash-link" aria-label="Direct link to Check that poller and influx are working" title="Direct link to Check that poller and influx are working" translate="no">​</a></h2>
 <ol>
-<li>Select the <code>Container</code> tab in the Docker UI</li>
-<li>Double click <code>unpoller1</code></li>
-<li>Select the <code>Log</code> tab</li>
-<li>After a couple of minutes you should see an entry like the following,
+<li class="">Select the <code>Container</code> tab in the Docker UI</li>
+<li class="">Double click <code>unpoller1</code></li>
+<li class="">Select the <code>Log</code> tab</li>
+<li class="">After a couple of minutes you should see an entry like the following,
 if you do then everything is working ok:</li>
 </ol>
-<div class="language-none codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-none codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">[INFO] UniFi Measurements Recorded. Sites: 1, Clients: 78, Wireless APs: 6, Gateways: 1, Switches: 6, Points: 193, Fields: 7398</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="grafana-container">Grafana Container<a href="#grafana-container" class="hash-link" aria-label="Direct link to Grafana Container" title="Direct link to Grafana Container">​</a></h2>
+<div class="language-none codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-none codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">[INFO] UniFi Measurements Recorded. Sites: 1, Clients: 78, Wireless APs: 6, Gateways: 1, Switches: 6, Points: 193, Fields: 7398</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="grafana-container">Grafana Container<a href="#grafana-container" class="hash-link" aria-label="Direct link to Grafana Container" title="Direct link to Grafana Container" translate="no">​</a></h2>
 <p>This container is a little difficult on Synology.
 There are two methods that have been to shown to work.
 If you have an even better method let us know!
@@ -165,117 +168,117 @@ The two different methods do have their pros and cons.</p>
 <p>Options:</p>
 <p><strong>Method 1</strong> - Create the container in the Docker UI, use SSH on the Synology to change some file permissions.</p>
 <ul>
-<li>Advantages - the Docker Clean action in the UI continues to work.</li>
-<li>Disadvantages - be careful not to break the container by modifying folder attributes in the UI.</li>
+<li class="">Advantages - the Docker Clean action in the UI continues to work.</li>
+<li class="">Disadvantages - be careful not to break the container by modifying folder attributes in the UI.</li>
 </ul>
 <p><strong>Method 2</strong> - Create the container via SSH command on the Synology.</p>
 <ul>
-<li>Advantages - no need to change file system ownership attributes.</li>
-<li>Disadvantages - you have to create a user account, delete the container,
+<li class="">Advantages - no need to change file system ownership attributes.</li>
+<li class="">Disadvantages - you have to create a user account, delete the container,
 and re-run the docker command each time you want to update the base image.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="method-1---recommended">Method 1 - Recommended<a href="#method-1---recommended" class="hash-link" aria-label="Direct link to Method 1 - Recommended" title="Direct link to Method 1 - Recommended">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method-1-preparation">Method 1 Preparation<a href="#method-1-preparation" class="hash-link" aria-label="Direct link to Method 1 Preparation" title="Direct link to Method 1 Preparation">​</a></h4>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-1---recommended">Method 1 - Recommended<a href="#method-1---recommended" class="hash-link" aria-label="Direct link to Method 1 - Recommended" title="Direct link to Method 1 - Recommended" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-1-preparation">Method 1 Preparation<a href="#method-1-preparation" class="hash-link" aria-label="Direct link to Method 1 Preparation" title="Direct link to Method 1 Preparation" translate="no">​</a></h4>
 <ol>
-<li>SSH into your Synology</li>
-<li>You will need to <code>cd</code> to the root <code>Docker Directory</code> you created earlier
+<li class="">SSH into your Synology</li>
+<li class="">You will need to <code>cd</code> to the root <code>Docker Directory</code> you created earlier
 (In this example, the <code>/docker</code> folder containing the <code>/grafana</code> folder)</li>
-<li>The command is:<!-- -->
+<li class="">The command is:<!-- -->
 <ul>
-<li><code>cd /volume{x}/[dirname]</code></li>
-<li>On my system this shared folder is on volume 3 so, for me it is: cd <code>/volume3/docker</code></li>
+<li class=""><code>cd /volume{x}/[dirname]</code></li>
+<li class="">On my system this shared folder is on volume 3 so, for me it is: cd <code>/volume3/docker</code></li>
 </ul>
 </li>
-<li>Now, you need to change the permissions of the grafana folder:<!-- -->
+<li class="">Now, you need to change the permissions of the grafana folder:<!-- -->
 <ul>
-<li><code>sudo chown 472 grafana</code></li>
+<li class=""><code>sudo chown 472 grafana</code></li>
 </ul>
 </li>
 </ol>
 <ul>
-<li><strong>NOTE:</strong> If you look at the grafana folder ownership in file station it
+<li class=""><strong>NOTE:</strong> If you look at the grafana folder ownership in file station it
 will say <code>472</code> rather than any user you have created.</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method-1-container">Method 1 Container<a href="#method-1-container" class="hash-link" aria-label="Direct link to Method 1 Container" title="Direct link to Method 1 Container">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-1-container">Method 1 Container<a href="#method-1-container" class="hash-link" aria-label="Direct link to Method 1 Container" title="Direct link to Method 1 Container" translate="no">​</a></h4>
 <ol>
-<li>In the <code>Image</code> tab, select <code>grafana/grafana:latest</code> and click <code>Launch</code></li>
-<li>Leave the <code>General Settings</code> alone - the container name should be <code>grafana-grafana1</code>,
+<li class="">In the <code>Image</code> tab, select <code>grafana/grafana:latest</code> and click <code>Launch</code></li>
+<li class="">Leave the <code>General Settings</code> alone - the container name should be <code>grafana-grafana1</code>,
 unless you created other Grafanas.</li>
-<li>Click <code>Advanced Settings</code></li>
-<li>On the <code>Volume</code> tab, add the following:<!-- -->
+<li class="">Click <code>Advanced Settings</code></li>
+<li class="">On the <code>Volume</code> tab, add the following:<!-- -->
 <ul>
-<li><code>docker/grafana</code> folder to mount path <code>/var/lib/grafana</code> and leave as <code>read/write</code></li>
+<li class=""><code>docker/grafana</code> folder to mount path <code>/var/lib/grafana</code> and leave as <code>read/write</code></li>
 </ul>
 </li>
-<li>On the <code>Network</code> tab:<!-- -->
+<li class="">On the <code>Network</code> tab:<!-- -->
 <ul>
-<li>Add your network, in this example, <code>Grafana_Net</code></li>
-<li>Remove the default bridge (usually called <code>bridge</code>)</li>
-<li>Ensure that <code>use the same network as docker host</code> is Unchecked</li>
+<li class="">Add your network, in this example, <code>Grafana_Net</code></li>
+<li class="">Remove the default bridge (usually called <code>bridge</code>)</li>
+<li class="">Ensure that <code>use the same network as docker host</code> is Unchecked</li>
 </ul>
 </li>
-<li>On Port Settings<!-- -->
+<li class="">On Port Settings<!-- -->
 <ul>
-<li>Change <code>local port</code> from <code>Auto</code> to one you have free on host -
+<li class="">Change <code>local port</code> from <code>Auto</code> to one you have free on host -
 this makes it predictable. Something like <code>3000</code></li>
-<li>Leave container port as <code>3000</code> and type as <code>TCP</code></li>
+<li class="">Leave container port as <code>3000</code> and type as <code>TCP</code></li>
 </ul>
 </li>
-<li>On the <code>Environment</code> tab, add the following vars:<!-- -->
+<li class="">On the <code>Environment</code> tab, add the following vars:<!-- -->
 <ul>
-<li><code>GF_INSTALL_PLUGINS</code> | <code>grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel</code></li>
+<li class=""><code>GF_INSTALL_PLUGINS</code> | <code>grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel</code></li>
 </ul>
 </li>
-<li>Finalize container and:<!-- -->
+<li class="">Finalize container and:<!-- -->
 <ul>
-<li>Click <code>APPLY</code></li>
-<li>Click <code>NEXT</code></li>
-<li>Click <code>APPLY</code></li>
+<li class="">Click <code>APPLY</code></li>
+<li class="">Click <code>NEXT</code></li>
+<li class="">Click <code>APPLY</code></li>
 </ul>
 </li>
 </ol>
 <p><strong>NOTE:</strong> Don&#x27;t change ownership in file station of the Grafana folder or you will break the container.</p>
 <p>Skip to &#x27;running the container section below&#x27;</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="method-2">Method 2<a href="#method-2" class="hash-link" aria-label="Direct link to Method 2" title="Direct link to Method 2">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method-2-preparation">Method 2 Preparation<a href="#method-2-preparation" class="hash-link" aria-label="Direct link to Method 2 Preparation" title="Direct link to Method 2 Preparation">​</a></h4>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-2">Method 2<a href="#method-2" class="hash-link" aria-label="Direct link to Method 2" title="Direct link to Method 2" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-2-preparation">Method 2 Preparation<a href="#method-2-preparation" class="hash-link" aria-label="Direct link to Method 2 Preparation" title="Direct link to Method 2 Preparation" translate="no">​</a></h4>
 <ol>
-<li>Create a new user account on the Synology from the <code>Control Panel</code>:<!-- -->
+<li class="">Create a new user account on the Synology from the <code>Control Panel</code>:<!-- -->
 <ul>
-<li>Call the user <code>grafana</code></li>
-<li>Set the password (you don&#x27;t need to logon as grafana and change it)</li>
-<li><code>Disallow Password Change</code></li>
-<li>Assign them to the user group <code>users</code></li>
-<li>Give them <code>r/w</code> permission to the folder you created e.g. <code>/docker/grafana</code></li>
-<li>Don&#x27;t assign them anything else</li>
+<li class="">Call the user <code>grafana</code></li>
+<li class="">Set the password (you don&#x27;t need to logon as grafana and change it)</li>
+<li class=""><code>Disallow Password Change</code></li>
+<li class="">Assign them to the user group <code>users</code></li>
+<li class="">Give them <code>r/w</code> permission to the folder you created e.g. <code>/docker/grafana</code></li>
+<li class="">Don&#x27;t assign them anything else</li>
 </ul>
 </li>
-<li><code>SSH</code> into your Synology</li>
-<li>Run the following command to find the <code>PID</code> of the user you created and note it for later:<!-- -->
+<li class=""><code>SSH</code> into your Synology</li>
+<li class="">Run the following command to find the <code>PID</code> of the user you created and note it for later:<!-- -->
 <ul>
-<li><code>sudo id grafana</code></li>
+<li class=""><code>sudo id grafana</code></li>
 </ul>
 </li>
 </ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method-2-container">Method 2 Container<a href="#method-2-container" class="hash-link" aria-label="Direct link to Method 2 Container" title="Direct link to Method 2 Container">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-2-container">Method 2 Container<a href="#method-2-container" class="hash-link" aria-label="Direct link to Method 2 Container" title="Direct link to Method 2 Container" translate="no">​</a></h4>
 <ol>
-<li>Run the following command.<!-- -->
-<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo docker run --user 1031 --name grafana-grafana1 \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  --net=Grafana_Net -p 300:3000 \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  --volume /volume1/docker/grafanatest:/var/lib/grafana \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  -e &quot;GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel&quot; \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  grafana/grafana:latest</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<li class="">Run the following command.<!-- -->
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo docker run --user 1031 --name grafana-grafana1 \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  --net=Grafana_Net -p 300:3000 \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  --volume /volume1/docker/grafanatest:/var/lib/grafana \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  -e &quot;GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,natel-discrete-panel&quot; \</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">  grafana/grafana:latest</span><br></span></code></pre></div></div>
 </li>
-<li>Use the pid you got in step 3 above, use the network name you created if you didn&#x27;t use
+<li class="">Use the pid you got in step 3 above, use the network name you created if you didn&#x27;t use
 <code>Grafana_Net</code> AND you will need to use the volume # of your docker folder (the one you
 created manually is on) by default this will be on <code>/volume1</code>, but if you have multiple
 volumes, this may not be the case.</li>
 </ol>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="method-2-notes">Method 2 Notes<a href="#method-2-notes" class="hash-link" aria-label="Direct link to Method 2 Notes" title="Direct link to Method 2 Notes">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="method-2-notes">Method 2 Notes<a href="#method-2-notes" class="hash-link" aria-label="Direct link to Method 2 Notes" title="Direct link to Method 2 Notes" translate="no">​</a></h4>
 <ul>
-<li>If you use the clean action in the Synology docker UI, you will break this VM and you
+<li class="">If you use the clean action in the Synology docker UI, you will break this VM and you
 will need to delete and rerun the <code>docker run</code> command.</li>
-<li>If you use the Synology docker UI to export the configuration and import it again later,
+<li class="">If you use the Synology docker UI to export the configuration and import it again later,
 docker will break and you will need to rerun the <code>docker run</code> command.</li>
-<li>I have no idea if hyperbackup or any other backup / restore will also break the config</li>
-<li>This all derives from the fact there is no way to do <code>--user {PID}</code> in the Synology docker UI / JSON.</li>
+<li class="">I have no idea if hyperbackup or any other backup / restore will also break the config</li>
+<li class="">This all derives from the fact there is no way to do <code>--user {PID}</code> in the Synology docker UI / JSON.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="running-the-container">Running the container<a href="#running-the-container" class="hash-link" aria-label="Direct link to Running the container" title="Direct link to Running the container">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="running-the-container">Running the container<a href="#running-the-container" class="hash-link" aria-label="Direct link to Running the container" title="Direct link to Running the container" translate="no">​</a></h3>
 <p>At this point your containers should have been created, hopefully with no issues.</p>
 <p>If so! Start the container. The first time it should take a while to initialize the database.
 Check the logs to make sure you have no file / folder permissions issues.
@@ -284,10 +287,10 @@ ownership of the host Grafana folder correctly.</p>
 <p>From your host browser, access <code>http://{ip address of your synology}:3000</code>
 and you should see the Grafana logon (the default is admin<!-- -->:admin<!-- -->)</p>
 <p>You will be prompted to change the default password, do so.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
 <ol>
-<li>Finish <a href="/docs/install/grafana">Setting-up Grafana</a>.</li>
-</ol></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/install/cloudkey"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CloudKey</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/install/configuration"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Application Configuration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#prepare-synology--docker" class="table-of-contents__link toc-highlight">Prepare Synology &amp; Docker</a><ul><li><a href="#run-docker--configure-network" class="table-of-contents__link toc-highlight">Run docker &amp; configure network</a></li><li><a href="#prepare-mapped-volumes" class="table-of-contents__link toc-highlight">Prepare mapped volumes</a></li><li><a href="#download-needed-images-from-the-registry" class="table-of-contents__link toc-highlight">Download needed images from the registry</a></li><li><a href="#create-influxdb-container" class="table-of-contents__link toc-highlight">Create influxdb container</a></li></ul></li><li><a href="#create-unpoller-container" class="table-of-contents__link toc-highlight">Create unpoller container</a></li><li><a href="#check-that-poller-and-influx-are-working" class="table-of-contents__link toc-highlight">Check that poller and influx are working</a></li><li><a href="#grafana-container" class="table-of-contents__link toc-highlight">Grafana Container</a><ul><li><a href="#method-1---recommended" class="table-of-contents__link toc-highlight">Method 1 - Recommended</a></li><li><a href="#method-2" class="table-of-contents__link toc-highlight">Method 2</a></li><li><a href="#running-the-container" class="table-of-contents__link toc-highlight">Running the container</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Support</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://golift.io/discord" target="_blank" rel="noopener noreferrer" class="footer__link-item">Go Lift Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://golift.io/unpoller/issues/new" target="_blank" rel="noopener noreferrer" class="footer__link-item">Send Feedback<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://community.ui.com/questions/Unifi-Poller-Store-Unifi-Controller-Metrics-in-InfluxDB-without-SNMP/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1" target="_blank" rel="noopener noreferrer" class="footer__link-item">Ubiquiti Forums<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://golift.io/discord" target="_blank" rel="noopener noreferrer" class="footer__link-item">Go Lift Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Downloads</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://packagecloud.io/golift" target="_blank" rel="noopener noreferrer" class="footer__link-item">Packagecloud<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/unpoller/unpoller/releases/latest" target="_blank" rel="noopener noreferrer" class="footer__link-item">Latest Release<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Information</div><ul class="footer__items clean-list"><li class="footer__item"><a href="mailto:code@golift.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact Us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/poller/license">Software License</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright"><div class="row"><div class="col footer__col">
+<li class="">Finish <a class="" href="/docs/install/grafana">Setting-up Grafana</a>.</li>
+</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/install/cloudkey"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CloudKey</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/install/configuration"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Application Configuration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#prepare-synology--docker" class="table-of-contents__link toc-highlight">Prepare Synology &amp; Docker</a><ul><li><a href="#run-docker--configure-network" class="table-of-contents__link toc-highlight">Run docker &amp; configure network</a></li><li><a href="#prepare-mapped-volumes" class="table-of-contents__link toc-highlight">Prepare mapped volumes</a></li><li><a href="#download-needed-images-from-the-registry" class="table-of-contents__link toc-highlight">Download needed images from the registry</a></li><li><a href="#create-influxdb-container" class="table-of-contents__link toc-highlight">Create influxdb container</a></li></ul></li><li><a href="#create-unpoller-container" class="table-of-contents__link toc-highlight">Create unpoller container</a></li><li><a href="#check-that-poller-and-influx-are-working" class="table-of-contents__link toc-highlight">Check that poller and influx are working</a></li><li><a href="#grafana-container" class="table-of-contents__link toc-highlight">Grafana Container</a><ul><li><a href="#method-1---recommended" class="table-of-contents__link toc-highlight">Method 1 - Recommended</a></li><li><a href="#method-2" class="table-of-contents__link toc-highlight">Method 2</a></li><li><a href="#running-the-container" class="table-of-contents__link toc-highlight">Running the container</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Support</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://golift.io/discord" target="_blank" rel="noopener noreferrer" class="footer__link-item">Go Lift Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://golift.io/unpoller/issues/new" target="_blank" rel="noopener noreferrer" class="footer__link-item">Send Feedback<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://community.ui.com/questions/Unifi-Poller-Store-Unifi-Controller-Metrics-in-InfluxDB-without-SNMP/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1" target="_blank" rel="noopener noreferrer" class="footer__link-item">Ubiquiti Forums<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://golift.io/discord" target="_blank" rel="noopener noreferrer" class="footer__link-item">Go Lift Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Downloads</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://packagecloud.io/golift" target="_blank" rel="noopener noreferrer" class="footer__link-item">Packagecloud<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/unpoller/unpoller/releases/latest" target="_blank" rel="noopener noreferrer" class="footer__link-item">Latest Release<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Information</div><ul class="footer__items clean-list"><li class="footer__item"><a href="mailto:code@golift.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact Us<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/docs/poller/license">Software License</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright"><div class="row"><div class="col footer__col">
       <a href="https://github.com/unpoller/unpoller/pkgs/container/unpoller">&#9733; THIS PROJECT ON GHCR.IO</a>
       </div><div class="col footer__col" style="text-align:left;">
       Copyright © 2018-2026 Go Lift
