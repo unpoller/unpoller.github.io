@@ -36,3 +36,17 @@ available to display the data.
 - Because UniFi Poller just picks up data from the controller using the API,
   the only way of getting an accurate answer about what is shown is by asking UI themselves.
   Given that they don't officially support the API there may be little chance of an answer
+
+**My Prometheus graphs show dips or drop to zero, even though I set a short scrape interval**
+
+- The UniFi controller's own API does not update every value on every request; some data
+  points only refresh roughly once a minute (or slower), regardless of how often UniFi
+  Poller is scraped or how often Prometheus scrapes UniFi Poller. Setting a Prometheus
+  `scrape_interval` shorter than the controller's own update rate will not increase the
+  resolution of the underlying data.
+- This matters most for rate-based panels. Prometheus's `rate()` function needs at least
+  two real data points inside the range vector you give it; if the range is shorter than
+  the controller's update interval, `rate()` can return `0` even though traffic didn't
+  actually stop. As a rule of thumb, use a range of at least `3m` (eg. `rate(metric[3m])`)
+  for byte/packet rate metrics, and don't set your Prometheus `scrape_interval` for the
+  UniFi Poller job below `30s`.

@@ -155,3 +155,19 @@ scrape_configs:
 ```
 
 The standard ``/metrics`` path that the above snippet uses returns metrics for all configured controllers.
+
+## Remote API Key, Multiple Sites
+
+If you're using the [Remote API key](../install/configuration#remote-api-key) method,
+UniFi Poller discovers all of your sites automatically and exposes metrics for all of them
+on the standard ``/metrics`` path, the same as the Final Approach above:
+
+```yaml
+scrape_configs:
+  - job_name: 'unpoller'
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['unpoller-host:9130']
+```
+
+Replace `unpoller-host` with the IP or hostname of the machine running UniFi Poller.
