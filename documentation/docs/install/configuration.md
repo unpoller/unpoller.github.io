@@ -71,10 +71,13 @@ The unifi section begins with the `[unifi]` header and has the following paramet
 |---|---|---|
 |UP_UNIFI_DISABLE |disable |`false`  turns off this input. don't do that! |
 |UP_UNIFI_DYNAMIC |dynamic |`false`  enables dynamic lookups (from prometheus) |
+|UP_UNIFI_REMOTE |remote |`false` use the Ubiquiti Remote (Site Manager) API instead of connecting to a local controller. Requires `remote_api_key`, and cannot be combined with `[[unifi.controller]]` entries. |
+|UP_UNIFI_REMOTE_API_KEY |remote_api_key |`""` API key generated from your Ubiquiti (UI) account. Only used when `remote = true`. |
 |UP_UNIFI_DEFAULT_ROLE |unifi.defaults.role |`URL` allows grouping controllers |
 |UP_UNIFI_DEFAULT_URL|unifi.defaults.url|`"https://127.0.0.1:8443"` only applies if no controllers are defined (next section) |
-|UP_UNIFI_DEFAULT_USER |unifi.defaults.user |`"unifipoller"` default applies to any controller without a username |
-|UP_UNIFI_DEFAULT_PASS |unifi.defaults.pass |`""` default applies to any controller without a password |
+|UP_UNIFI_DEFAULT_USER |unifi.defaults.user |`"unifipoller"` default applies to any controller without a username. Not used with `api_key` or when `remote = true`. |
+|UP_UNIFI_DEFAULT_PASS |unifi.defaults.pass |`""` default applies to any controller without a password. Not used with `api_key` or when `remote = true`. |
+|UP_UNIFI_DEFAULT_API_KEY |unifi.defaults.api_key |`""` local API key for the controller, used instead of `user`/`pass`. See [Unifi Controller Login](../install/controllerlogin). |
 |UP_UNIFI_DEFAULT_SAVE_SITES |unifi.defaults.save_sites |`true`  |
 |UP_UNIFI_DEFAULT_SAVE_IDS |unifi.defaults.save_ids |`false` Only works with InfluxDB / Loki|
 |UP_UNIFI_DEFAULT_SAVE_EVENTS |unifi.defaults.save_events |`false` Only works with InfluxDB / Loki, added in v2.0.2|
@@ -88,7 +91,10 @@ The unifi section begins with the `[unifi]` header and has the following paramet
 
 :::important
 When configuring make sure that you do **not** include `:8443` on the url of the controller
-if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recent firmware.
+if you are using UnifiOS. UnifiOS devices (UDM Pro, UDM, UXG, UCK with recent firmware, and
+self-hosted UnifiOS Network Server) proxy the controller on port `443`, so the URL just
+works without a port, eg `https://192.168.1.1`. Non-UnifiOS controllers (Cloud Key Gen1,
+software controllers) still use port `8443`, eg `https://192.168.1.1:8443`.
 :::
 
 Most `unifi` configuration will look like this:
@@ -104,6 +110,27 @@ Most `unifi` configuration will look like this:
   save_alarms = false
   save_dpi = false
   sites = [ "default" ]
+```
+
+### Remote API Key
+
+If your UniFi Poller instance cannot reach your controller directly (for example, it runs
+on a different network), you can use Ubiquiti's Remote (Site Manager) API instead. Generate
+an API key from your Ubiquiti account, then set `remote = true` and `remote_api_key` at the
+`[unifi]` level (not inside `[unifi.defaults]` or `[[unifi.controller]]`). No `url`, `user`,
+or `pass` is needed; UniFi Poller discovers your consoles/sites automatically. This works
+with multiple sites on the same account.
+
+```toml
+[unifi]
+  dynamic = false
+  remote = true
+  remote_api_key = "my-secret"
+
+[unifi.defaults]
+  save_sites = true
+  save_dpi = true
+  verify_ssl = false
 ```
 
 Same example, but for Docker:
@@ -170,6 +197,14 @@ If you don't use Prometheus, set `disable` to `true`.
 
 :::tip
 The [Prometheus](../dependencies/prometheus) page has a full explanation of how to configure Poller.
+:::
+
+:::note Namespace vs. User
+`UP_PROMETHEUS_NAMESPACE` (default `unifipoller`) is only a metric name prefix; it has
+nothing to do with `UP_UNIFI_DEFAULT_USER`/`UP_UNIFI_CONTROLLER_0_USER`, which is the
+username of the read-only account you created on the controller. It's easy to confuse
+the two, especially if you named your controller account something other than
+`unifipoller` and left the namespace at its default.
 :::
 
 ### InfluxDB
