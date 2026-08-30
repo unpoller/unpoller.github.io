@@ -22,15 +22,11 @@ you've been overly warned.
 
 You can install a specific version by specifying a version like this:
 ```shell
-docker pull ghcr.io/unpoller/unpoller:latest
-```
-or minor version like this:
-```shell
-docker pull ghcr.io/unpoller/unpoller:latest
+docker pull ghcr.io/unpoller/unpoller:v5.1.0
 ```
 or a major version like this:
 ```shell
-docker pull ghcr.io/unpoller/unpoller:latest
+docker pull ghcr.io/unpoller/unpoller:v5
 ```
 
 **How can I build from source?**

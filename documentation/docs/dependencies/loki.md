@@ -66,11 +66,10 @@ The timeout is `10s`, adjust it if you get timeout errors.
 
 ## Examples
 
-The `docker-compose` example below (using Loki and Prometheus) was kindly provided by a community member.
-The Loki Docker logging driver if you don't have it installed.
+The Docker Compose example below (using Loki and Prometheus) was kindly provided by a community member.
+Install the Loki Docker logging driver if you don't have it.
 
 ```yaml
-version: '3.0'
 services:
   unpoller:
     container_name: unpoller

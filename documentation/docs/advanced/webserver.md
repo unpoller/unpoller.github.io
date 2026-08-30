@@ -58,7 +58,7 @@ Using Docker:
 
 ```shell
 docker pull ghcr.io/unpoller/unpoller
-docker -it ghcr.io/unpoller/unpoller -e -
+docker run -it ghcr.io/unpoller/unpoller -e -
 Enter Password:
 $2a$04$yOE5zjJs2Gg0jsGQpE7j2ucKiNndUGEzpX6BsLoKl0hkxBvE81z8.
 ```

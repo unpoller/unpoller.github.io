@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "default:automergeDigest",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "description": "Automerge GitHub Actions updates, including majors, when checks pass",
+      "matchManagers": ["github-actions"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge TypeScript minor and patch updates when checks pass",
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}

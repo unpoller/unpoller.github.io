@@ -3,7 +3,7 @@
 ```text
 MIT LICENSE.
 Copyright (c) 2018-2020 David Newhall II
-Copyright (c) 2020-2021 Go Lift
+Copyright (c) 2020-2026 Go Lift
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

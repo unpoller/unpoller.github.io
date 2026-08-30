@@ -21,7 +21,8 @@ the advantage that UniFi Poller specific settings can be saved in the same share
 Docker folder as other app's data. **Normally native installs use a
 configuration file and Docker installations use environment variables.**
 
-An example is included in the Unpoller install folder `up.xxxx.example`. You can edit the file in a text editor and then rename it removing `.example`. To create a valid file.
+An example is included in the UnPoller install folder as `up.conf.example`. You can edit the
+file in a text editor and then rename it, removing `.example`, to create a valid `up.conf` file.
 
 The variables to be set can be split into three categories:
 
@@ -60,7 +61,7 @@ debug = false
 Docker Example:
 
 ```shell
-docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" golift/unpoller
+docker run -e "UP_POLLER_DEBUG=true" -e "UP_POLLER_QUIET=false" ghcr.io/unpoller/unpoller
 ```
 
 ## UniFi Controller
@@ -141,7 +142,7 @@ docker run
   -e "UP_UNIFI_DEFAULT_PASS=unifip4assw0rd" \
   -e "UP_UNIFI_DEFAULT_SAVE_SITES=true" \
   -e "UP_UNIFI_DEFAULT_SITE_0=default" \
-  golift/unpoller
+  ghcr.io/unpoller/unpoller
 ```
 
 ### Multiple Controllers
@@ -199,7 +200,7 @@ If you don't use Prometheus, set `disable` to `true`.
 The [Prometheus](../dependencies/prometheus) page has a full explanation of how to configure Poller.
 :::
 
-:::note Namespace vs. User
+:::note[Namespace vs. User]
 `UP_PROMETHEUS_NAMESPACE` (default `unifipoller`) is only a metric name prefix; it has
 nothing to do with `UP_UNIFI_DEFAULT_USER`/`UP_UNIFI_CONTROLLER_0_USER`, which is the
 username of the read-only account you created on the controller. It's easy to confuse
@@ -220,7 +221,7 @@ This section begins with ``[influxdb]`` and configures a single InfluxDB write d
 |UP_INFLUXDB_PASS |influxdb.pass |`"unifipoller"` password for username|
 |UP_INFLUXDB_INTERVAL |influxdb.interval|`"30s"` how often to poll and collect metrics, ie "1m" or "90s"|
 
-InfluxDB is very easy to use with UniFi Poller, and it's recommend if this whole
+InfluxDB is very easy to use with UniFi Poller, and it's recommended if this whole
 metrics ecosystem is new to you. All you do is add a small configuration like you
 see below and poller sends all your glorious data into the database.
 
@@ -240,5 +241,5 @@ docker run
   -e "UP_INFLUXDB_INTERVAL=60s" \
   -e "UP_UNIFI_DEFAULT_URL=https://192.168.1.2"
   -e "UP_UNIFI_DEFAULT_PASS=unifipassw0rd"
-  golift/unpoller
+  ghcr.io/unpoller/unpoller
 ```

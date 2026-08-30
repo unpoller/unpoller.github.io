@@ -10,7 +10,7 @@ Below are some common solutions and possible symptoms.
 The number one cause of empty dashboards is an old version of InfluxDB.
 Make sure you are on version 1.7.x or 1.8.x. **Use of 1.6.x will cause empty dashboards.**
 
-If your DPI dashboards are empty `DPI` is like still disabled.
+If your DPI dashboards are empty, DPI is likely still disabled.
 It must be enabled in both the poller config and in your UniFi controller. Two spots.
 
 ### Check the port used to connect to the controller
@@ -23,9 +23,9 @@ old firmware) and `443` (or just omitted) if you are using a unifios device (UDM
 UniFi Poller has great logs that help when troubleshooting.
 If you're seeking help please enable debug mode and copy/paste some of your logs.
 All of this data helps figure out what's going on.
-Debug mode can be enable in up.conf or by passing the env variable UP_POLLER_DEBUG=true.
+Debug mode can be enabled in up.conf or by passing the env variable `UP_POLLER_DEBUG=true`.
 
-Grafana, Prometheus and InfluxDB also have logs files, but they're probably less useful.
+Grafana, Prometheus and InfluxDB also have log files, but they're probably less useful.
 You can still check them for errors.
 
 If you are a Docker user then check out [Dozzle](https://dozzle.dev/)
@@ -59,7 +59,7 @@ If you're getting errors like this:
 [ERROR] infdb.Write(bp): {"error":"partial write: field type conflict: input field "tx_power" on measurement "uap_radios" is type integer, already exists as type float dropped="}
 ```
 
-This usually indicates a bug was fixed and the resulting fixed has caused an incompatibility
+This usually indicates a bug was fixed and the resulting fix has caused an incompatibility
 with your existing InfluxDB database. This could also indicate you've found a new bug.
 Please open an issue if you are running the latest version and dropping the database
 did not solve the error. There are generally two fixes:

@@ -17,9 +17,9 @@ We use a custom bridge network for some very good reasons and we highly recommen
   about with host files (this is a docker feature not anything to do with Synology)
 - This also means in the event the container IP changes (it happens) you don't need to reconfigure
 - This also means, due to the ICC, that no host port mappings are required other than for the
-  Grafana 3000:3000 mapping in the Grafana contained, you can choose to remove other port mappings if you desire
+  Grafana 3000:3000 mapping in the Grafana container, you can choose to remove other port mappings if you desire
 - The reason for not using host port mappings for container not equalling container comms is we
-  keep this solution self-container and don't have to worry about weird things that might have been
+  keep this solution self-contained and don't have to worry about weird things that might have been
   on the Synology (changing of Synology IP, other containers with host mappings etc).
   Customize in your environment as needed.
 
@@ -33,7 +33,7 @@ Assumptions:
    on Synology
 
 **Note:** You should always logon with your default admin account you created when you setup
-you Synology, logging on as root no longer works.
+your Synology; logging on as root no longer works.
 
 ## Prepare Synology & Docker
 
@@ -46,10 +46,10 @@ Click on network and select add to create new network:
 1. Ensure `Get network configuration automatically` is selected
 1. Click `add`
 
-We do this because the default bridge doesn't have name resolution but new bridge do,
-so you don't have to mess with host files etc inside the container. (need to verify this is actually true)
+We do this because the default bridge doesn't have name resolution but new bridges do,
+so you don't have to mess with host files etc inside the container.
 
-I don't recommend you use host network, using the bridge network keeps it self contained at
+I don't recommend you use host network. Using the bridge network keeps it self-contained and
 helps avoid conflicts with the host or other containers you might have that we cannot predict.
 
 ### Prepare mapped volumes
@@ -67,7 +67,8 @@ helps avoid conflicts with the host or other containers you might have that we c
    - influxdb for `influxdb:1.8` https://hub.docker.com/_/influxdb/
 
 :::note
-The unpoller container requires the InfluxDB database to already exist, so you _must_ create the containers in the order below.
+The unpoller container requires the InfluxDB database to already exist,
+so you _must_ create the containers in the order below.
 :::
 
 ### Create influxdb container
@@ -109,10 +110,9 @@ The unpoller container requires the InfluxDB database to already exist, so you _
    - Ensure that `use the same network as docker host` is unchecked
 1. On the Environment tab, add the following vars:
    - `UP_INFLUXDB_URL` | `http://influxdb1:8086`
-   - `UP_UNIFI_DEFAULT_URL` | `https://your.unifi.controller.ip:8443`
-   - `UP_UNIFI_DEFAULT_AUTH_TOKEN` | auth token for account created earlier. e.g. `unifipoller`
-   - `UP_UNIFI_DEFAULT_ORG` | org created earlier
-   - `UP_UNIFI_DEFAULT_BUCKET` | bucket created earlier
+   - `UP_UNIFI_DEFAULT_URL` | `https://your.unifi.controller.ip` (add `:8443` only for non-UnifiOS)
+   - `UP_UNIFI_DEFAULT_USER` | controller username, e.g. `unifipoller`
+   - `UP_UNIFI_DEFAULT_PASS` | controller password
    - (optional) `UP_POLLER_DEBUG` | `true`
 1. Finalize the container by:
    - Click `APPLY`
@@ -139,7 +139,7 @@ if you are using `unifios`. Those are: UDM Pro, UDM, UXG, or CloudKey with recen
 ## Grafana Container
 
 This container is a little difficult on Synology.
-There are two methods that have been to shown to work.
+There are two methods that have been shown to work.
 If you have an even better method let us know!
 The two different methods do have their pros and cons.
 

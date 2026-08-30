@@ -5,7 +5,7 @@ title: Introduction
 
 UniFi Poller allows you to collect data from your UniFi network controller,
 save it to a database, and then display it on pre-supplied attractive
-and data-rich Grafana dashboards
+and data-rich Grafana dashboards.
 
 ## Main attractions
 
@@ -14,7 +14,7 @@ and data-rich Grafana dashboards
 - Easy access to data to help with troubleshooting or analysis.
 - Customizable: make your own dashboards, or change the ones supplied.
 - Works with either InfluxDB or Prometheus.
-- Re-use existing database or Grafana installations.
+- Reuse existing database or Grafana installations.
 
 ## Description
 
@@ -25,13 +25,13 @@ and simplify network device configuration. This controller can be installed on
 Windows, macOS, FreeBSD, Linux or Docker. Ubiquiti also provides a dedicated
 hardware device called a CloudKey that runs the controller software.
 And more recently they've developed the Dream Machine - an all-in-one
-controller, switch, gateway and accesspoint or NVR
+controller, switch, gateway and access point or NVR.
 
 UniFi Poller is a small [Golang](https://golang.org/) application that runs on
 Windows, macOS, FreeBSD, Linux or Docker. In Influx-mode it polls a UniFi controller
 every 30 seconds for measurements and exports the data to an Influx database.
 In Prometheus mode the poller opens a web port and accepts Prometheus polling.
-It converts the UniFi Controller API data into Prometheus exports on the fly
+It converts the UniFi Controller API data into Prometheus exports on the fly.
 
 This application requires your controller to be running all the time.
 If you run a UniFi controller, there's no excuse not to install Influx or Prometheus,

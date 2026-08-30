@@ -3,8 +3,8 @@ id: dockercompose
 title: Docker Compose
 ---
 
-This page assumes that you have decided to start Unpoller using `docker-compose`.
-The setup detailed below will install containers for Unpoller, Grafana and InfluxDB
+This page assumes that you have decided to start UnPoller using Docker Compose.
+The setup detailed below will install containers for UnPoller, Grafana and InfluxDB.
 
 ## First
 
@@ -32,10 +32,10 @@ but also for InfluxDB and Grafana. If you wish to use existing instances then am
 
 ### Using Environment Variables
 
-The easiest way to pass environment variables via `docker-compose` is to have a
-file called `.env` in the same folder as the `docker-compose` yaml file
+The easiest way to pass environment variables via Docker Compose is to have a
+file called `.env` in the same folder as the Compose YAML file
 
-:::tip Hidden Files
+:::tip[Hidden Files]
 Files beginning with a period `.` are generally hidden. You may need to use `ls -a` to find the `.env` file.
 :::
 
@@ -49,14 +49,14 @@ saved in the same folder as the `.env` file)
 
 #### Prometheus Example
 
-This example is advanced, for demonstration only, and not recommend for newbies.
+This example is advanced, for demonstration only, and not recommended for new users.
 
 <details>
   <summary>Advanced Prometheus Example</summary>
 
 ---
 
-The following example illustrates launching Grafana, Prometheus and Unpoller with docker compose.
+The following example illustrates launching Grafana, Prometheus and UnPoller with Docker Compose.
 This does not utilize a `.env` file nor a configuration file and instead puts all the env variables
 directly into the docker-compose file.
 This still requires a [Prometheus configuration](../dependencies/prometheus) to scrape Poller.
@@ -67,7 +67,6 @@ example.
 :::
 
 ```yaml
-version: '3'
 services:
   prometheus:
     image: prom/prometheus:latest
@@ -167,8 +166,7 @@ UNIFI_URL=https://127.0.0.1:8443
 The `docker-compose.yml` file: 
 
 ```yaml
-# This is for unifi-poller v2.
-version: '3'
+# This is for UnPoller v2+.
 services:
   influxdb:
     restart: always
@@ -246,13 +244,13 @@ Details of tags available are described in [Docker - FAQ](../help/docker_faq).
 
 ## Starting
 
-Whichever configuration method you chose, this is how you start the contianers:
+Whichever configuration method you chose, this is how you start the containers:
 
 ```shell
-docker-compose up -e docker-compose.env
+docker compose --env-file docker-compose.env up
 ```
 
-If everything is working, after a few minutes you should see like likes this:
+If everything is working, after a few minutes you should see lines like this:
 
 ```none
 [INFO] UniFi Metrics Recorded. Sites: 1, Clients: 67, UAP: 6, USG/UDM: 1, USW: 5, IDS Events: 0, Points: 1837, Fields: 11307, Errs: 0, Elapsed: 599ms
@@ -268,7 +266,7 @@ Get the container id with `docker ps`.
 Stop the containers and restart them in daemon mode, like this:
 
 ```shell
-docker-compose up -e docker-compose.env -d
+docker compose --env-file docker-compose.env up -d
 ```
 
 ## Next Steps

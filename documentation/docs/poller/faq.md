@@ -10,7 +10,7 @@ title: FAQs
 - InfluxDB 2.x does **not** work.
 - Prometheus 2.x if you choose to use Prometheus.
 
-:::caution InfluxDB 2.0
+:::caution[InfluxDB 2.0]
 UniFi Poller does not currently work with versions of InfluxDB newer than 1.8.x.
 :::
 

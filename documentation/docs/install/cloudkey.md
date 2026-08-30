@@ -6,7 +6,7 @@ title: CloudKey
 ## Introduction
 
 Two methods are available for installation on a CloudKey, CloudKey Gen2 or CloudKey G2+.
-The method depends on whether the device is running `unifos` or not.
+The method depends on whether the device is running UnifiOS or not.
 
 :::note
 These solutions are community-supplied and have a limited user base.
@@ -41,7 +41,7 @@ apt-get update
 apt-get install -y influxdb influxdb-client
 ```
 
-Add user to influx; [from here](https://v2.docs.influxdata.com/v2.0/users/create-user/):
+Add user to InfluxDB; [from here](https://docs.influxdata.com/influxdb/v1/tools/influx-cli/):
 
 ```shell
 influx -host localhost -port 8086
@@ -53,7 +53,7 @@ GRANT ALL ON unpoller TO unifipoller
 
 :::note
 For InfluxDB on a CloudKey it is _highly_ advisable to add a retention policy to
-prevent the database from growing in uncontrollably.
+prevent the database from growing uncontrollably.
 :::
 
 #### Install Unpoller
@@ -67,7 +67,7 @@ Install the Go Lift package repo and Unpoller with this command:
 curl -s https://golift.io/repo.sh | sudo bash -s - unpoller
 ```
 
-### Current Firmware: `unifios`
+### Current Firmware: UnifiOS
 
 There is an existing suite for installing `podman` containers to run on `unifios` -
 see [here](https://github.com/boostchicken/udm-utilities). At the time of writing we are not

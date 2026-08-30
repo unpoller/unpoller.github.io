@@ -25,16 +25,14 @@ The following fine folks are providing their services, completely free!
 These service integrations are used for things like storage, building, compiling,
 distribution and documentation support. This project succeeds because of them. Thank you!
 
-<a title="PackageCloud" alt="PackageCloud" href="https://packagecloud.io"><img src="https://docs.golift.io/integrations/packagecloud.png" alt="PackageCloud" /></a> &nbsp;
-
-<a title="GitHub" alt="GitHub" href="https://GitHub.com"><img src="https://docs.golift.io/integrations/octocat.png" alt="GitHub" /></a> &nbsp;
-
-<a title="Docker Cloud" alt="Docker" href="https://cloud.docker.com"><img src="https://docs.golift.io/integrations/docker.png" alt="Docker" /></a> &nbsp;
-
-<a title="Travis-CI" alt="Travis-CI" href="https://Travis-CI.com"><img src="https://docs.golift.io/integrations/travis-ci.png" alt="Travis-CI" /></a> &nbsp;
-
-<a title="Homebrew" alt="Homebrew" href="https://brew.sh"><img src="https://docs.golift.io/integrations/homebrew.png" alt="Homebrew" /></a> &nbsp;
-
-<a title="Go Lift" alt="Go Lift" href="https://golift.io"><img src="https://docs.golift.io/integrations/golift.png" alt="Go Lift" /></a> &nbsp;
-
-<a title="Grafana" alt="Grafana" href="https://grafana.com"><img src="https://docs.golift.io/integrations/grafana.png" alt="Grafana" /></a> &nbsp;
+[![PackageCloud](https://docs.golift.io/integrations/packagecloud.png)](https://packagecloud.io)
+&nbsp;
+[![GitHub](https://docs.golift.io/integrations/octocat.png)](https://GitHub.com)
+&nbsp;
+[![Docker](https://docs.golift.io/integrations/docker.png)](https://cloud.docker.com)
+&nbsp;
+[![Homebrew](https://docs.golift.io/integrations/homebrew.png)](https://brew.sh)
+&nbsp;
+[![Go Lift](https://docs.golift.io/integrations/golift.png)](https://golift.io)
+&nbsp;
+[![Grafana](https://docs.golift.io/integrations/grafana.png)](https://grafana.com)

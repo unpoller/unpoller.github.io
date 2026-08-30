@@ -75,7 +75,7 @@ file format. If you use environment variables, they all need to be updated!
     You may configure multiple controllers and group them with roles.
 -   **Dynamic controller support added to input module and prometheus module.**
 -   **All [dashboards updated](https://grafana.com/dashboards?search=unifi-poller).
-    Multi-controller support added**, but hidden (since most users wont need it).
+    Multi-controller support added**, but hidden (since most users won't need it).
 -   Many build fixes and improvements for packages, FreeBSD, Homebrew and Docker.
 -   Type Conflict error fixes for InfluxDB (and probably more errors added, uhg).
 -   [Install script](https://github.com/unpoller/unpoller/blob/master/scripts/install.sh)

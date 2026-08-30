@@ -36,8 +36,8 @@ UnifiOS (check under Settings > System in the UniFi Network app), it is recommen
 Limited Admin user is created with Read-Only rights to the UniFi Network app. Other access
 levels may not work correctly.
 
-For example,the screenshot below show the username chosen as `unifipoller`.
-This is the default, will be used throughout these docs.
+For example, the screenshot below shows the username chosen as `unifipoller`.
+This is the default, and will be used throughout these docs.
 
 ![img](../../static/img/UDM_user.png)
 
@@ -48,9 +48,11 @@ running UnifiOS) then create a manual read-only user.
 
 The `Email` field will be the 'username' you will need to create the config file.
 
-The Unifi controller currently requires the email be formated correctly. If you don't have your own domain try using @example.com so you don't inadvertantly give access to a random user.
+The UniFi controller currently requires the email be formatted correctly. If you don't have
+your own domain try using `@example.com` so you don't inadvertently give access to a random user.
 
 ## Next Steps
+
 [Installation Overview](overview)
 
-- [Create Config](controllerlogin)
+- [Create Config](configuration)
