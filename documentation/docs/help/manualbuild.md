@@ -5,7 +5,7 @@ title: Manual Build
 
 ## Manual package
 
-Recommended reading the note at the bottom if you're using a Mac.
+Read the note at the bottom if you're using a Mac.
 
 1. Install [Go](https://golang.org/doc/install)
 1. Install [GoReleaser](https://goreleaser.com/install/)
