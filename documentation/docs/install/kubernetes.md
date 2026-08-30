@@ -3,27 +3,28 @@ id: kubernetes
 title: Kubernetes
 ---
 
-This page assumes that you have decided to install UniFi Poller on to an kubernetes cluster.
+This page assumes that you have decided to install UnPoller onto a Kubernetes cluster.
 Installing a cluster is not in the scope of this guide.
 
 ## First
 
-All the possible configuration can be found on the [main page](https://github.com/unpoller/helm-chart) hosting the chart
-This chart uses CRDs from the prometheus operator, which can be installed with their [community
-repository](https://github.com/prometheus-community/helm-charts)
+All the possible configuration can be found on the [main page](https://github.com/unpoller/helm-chart)
+hosting the chart.
+This chart uses CRDs from the Prometheus Operator, which can be installed with their
+[community repository](https://github.com/prometheus-community/helm-charts).
 
 ---
 
 ## Installation
 
-The two main ways to install the helm chart is through the CLI or through a gitops tools as flux.
+The two main ways to install the Helm chart are through the CLI or through a GitOps tool such as Flux.
 
 ```shell
 helm repo add unpoller https://unpoller.github.io/helm-chart
 helm repo update
 ```
 
-If you are using flux, you can rely on their CR:
+If you are using Flux, you can rely on their CR:
 
 ```yaml
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -54,7 +55,6 @@ spec:
   chart:
     spec:
       chart: unpoller
-      version: 2.11.2-Chart6
       sourceRef:
         kind: HelmRepository
         name: unpoller
@@ -64,13 +64,16 @@ spec:
     allPossibleValues:
 ```
 
+Pin `spec.chart.spec.version` to a [chart release](https://github.com/unpoller/helm-chart/releases)
+if you do not want Flux to track latest.
+
 ## Maintenance
 
-When a new release of the chart (or unpoller is generated) you can update unpoller
-by running helm
+When a new release of the chart (or UnPoller) is generated you can update UnPoller
+by running Helm:
 
 ```bash
-helm upgrade --reuse-values yourreleasename ./redis
+helm upgrade --reuse-values your-release-name unpoller/unpoller
 ```
 
-In case of flux/argocd, just updating the version of the chart, should be enough.
+In case of Flux or Argo CD, updating the version of the chart should be enough.

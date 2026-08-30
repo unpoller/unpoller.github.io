@@ -3,7 +3,7 @@ id: docker
 title: Docker
 ---
 
-This page assumes that you have decided to start Unpoller with Docker using the command line.
+This page assumes that you have decided to start UnPoller with Docker using the command line.
 
 ## First
 
@@ -17,7 +17,7 @@ If you don't have them, follow these instructions for installing
 
 ## Pull the Image
 
-First pull the image from Docker Hub using
+First pull the image from [GHCR](https://github.com/unpoller/unpoller/pkgs/container/unpoller) using
 
 ```shell
 docker pull ghcr.io/unpoller/unpoller
@@ -49,7 +49,7 @@ If you are using the command line and have decided to use environment variables 
 container using the following command (and pass in other environment variables you wish to).
 
 ```shell
-docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-pasword"  ghcr.io/unpoller/unpoller:latest
+docker run -e UP_UNIFI_DEFAULT_PASS="your-secret-password" ghcr.io/unpoller/unpoller:latest
 ```
 
 ### Using Configuration File

@@ -1,6 +1,6 @@
 ---
 id: macos
-title: MacOS
+title: macOS
 ---
 
 This page assumes that you have decided to install UniFi Poller on to an existing macOS operating system.
@@ -19,7 +19,7 @@ If you don't have them, follow these instructions for installing
 
 1. Install [Homebrew](https://brew.sh/)
    ```shell
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 1. Install Poller
    ```

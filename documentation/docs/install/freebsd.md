@@ -50,7 +50,7 @@ Use these commands to maintain the service:
 man unpoller
 
 # Edit config file.
-# A defualt configuration file is placed in /usr/local/etc/unpoller/up.conf which is not overwritten on upgrades
+# A default configuration file is placed in /usr/local/etc/unpoller/up.conf which is not overwritten on upgrades
 # A sample configuration is placed in /usr/local/etc/unpoller/up.conf.sample
 vi /usr/local/etc/unpoller/up.conf
 

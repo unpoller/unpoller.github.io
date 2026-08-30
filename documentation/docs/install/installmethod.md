@@ -3,9 +3,9 @@ id: installmethod
 title: Install Method
 ---
 
-## Chosing an Install Method
+## Choosing an Install Method
 
-There are three main methods to install the Unpollor 'suite' (Unpoller and accociated programs)
+There are three main methods to install the UnPoller suite (UnPoller and associated programs).
 
 ### Docker Image
 
@@ -19,13 +19,13 @@ This is the recommended way to install and the best option for new users.
 
 #### Disadvantages of Docker
 
-- Some performance impact (though not likely to impact UniFi Poller, there is an overhead).
+- Some performance impact (though not likely to impact UnPoller, there is an overhead).
 - Relies on a base system for persistence of data.
 - May not be implemented on some useful platforms (eg NAS).
 
 ### Manual Install
 
-Install each of the components individually
+Install each of the components individually.
 
 #### Advantages of Manual
 
@@ -41,30 +41,32 @@ Install each of the components individually
 
 ### Kubernetes
 
-Run Unpoller in a k8s cluster through the usage of the helm chart.
+Run UnPoller in a k8s cluster through the usage of the Helm chart.
 
 #### Advantages of Kubernetes
 
-- Automatic updates when combined with flux
+- Automatic updates when combined with Flux
 - Integration with prometheus operator and grafana operator
-- Pre packed solution
+- Pre-packed solution
 
 #### Disadvantages of Kubernetes
 
-- Requires a kubernetes cluster + all associated complexities
-- Requires kubernetes knowledge to troubleshoot
+- Requires a Kubernetes cluster and all associated complexities
+- Requires Kubernetes knowledge to troubleshoot
 - Higher complexity
 
 ### Device Specific
 
-Some devices have specific install methods. If you have one of those devices the instructions for that device take precedence.
+Some devices have specific install methods. If you have one of those devices the instructions
+for that device take precedence.
 
 - unRAID Template -- An unRAID Template is available in the Community Applications.
 - [Synology](./synology) -- Via Docker Image
-- [CloudKey](./cloudkey) -- You may also install directly on a CloudKey, but that's an advanced setup and not generally recommended.
+- [CloudKey](./cloudkey) -- You may also install directly on a CloudKey, but that's an
+  advanced setup and not generally recommended.
 
 ## Next Steps
 
 [Installation Overview](overview)
 
-- [Setup controller login for Unpoller](controllerlogin)
+- [Setup controller login for UnPoller](controllerlogin)

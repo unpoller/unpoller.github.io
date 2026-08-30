@@ -18,16 +18,17 @@ You can review the [installation overview](overview.md) if needed.
 
 ## Install
 
-As it is now, a pre-compiled windows binary (.exe) is provided on the
+As it is now, a pre-compiled Windows binary (.exe) is provided on the
 [Releases](https://github.com/unpoller/unpoller/releases) page `unpoller.amd64.exe.zip`.
-Unzip the file where you would like to install Unpoller.
-Drop a valid [config file](configuration) `up.conf` in the same directory, and you can run this on Windows by using the following command:
+Unzip the file where you would like to install UnPoller.
+Drop a valid [config file](configuration) `up.conf` in the same directory, and you can run this
+on Windows by using the following command:
 
 ```shell
 unpoller.amd64.exe -c up.conf
 ```
 
-As long as Unpoller is running it should be retreiving updated data from your controller.
+As long as UnPoller is running it should be retrieving updated data from your controller.
 
 Please contact us on [Discord](https://golift.io/discord) if you need any help.
 

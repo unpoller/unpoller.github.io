@@ -38,8 +38,8 @@ If your controller runs UnifiOS (UDM, UDM Pro, UXG, UCG, UCK G2, or self-hosted 
 Network Server) then it is recommended that a Limited Admin user is created with Read-Only
 rights to the UniFi Network app. Other access levels may not work correctly.
 
-For example,the screenshot below show the username chosen as `unifipoller`.
-This is the default, will be used throughout these docs.
+For example, the screenshot below shows the username chosen as `unifipoller`.
+This is the default, and will be used throughout these docs.
 
 ![img](../../static/img/UDM_user.png)
 
@@ -58,7 +58,7 @@ New users may find `docker-compose` (using **InfluxDB**) easiest to use.
 
 At this point you need to decide whether to use:
 
-1. [Docker](../install/dockercompose) - using `docker-compose`.
+1. [Docker](../install/dockercompose) - using Docker Compose.
 1. [Docker](../install/docker) - using command line
     - This assumes that you have access to Grafana and InfluxDB/Prometheus.
 1. Bare metal or a NAS:

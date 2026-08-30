@@ -62,7 +62,7 @@ Start: `sudo systemctl start influxdb`
 You need [Homebrew](https://brew.sh):
 
 ```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ```shell
@@ -115,13 +115,15 @@ by implementing a retention policy. For example, to hold data for 32 days add th
 CREATE RETENTION POLICY retention_policy ON unpoller DURATION 32d REPLICATION 1
 ```
 
-If you're using InfluxDB 2.x (not recommended at this time), you can set the retention policy by exec-ing into the container:
+If you're using InfluxDB 2.x (not recommended at this time), you can set the retention
+policy by exec-ing into the container:
 
 ```none
 docker exec -it unpoller_influxdb_1 /bin/bash
 ```
 
-Extracting the unpoller bucket ID from the result of the command `/usr/local/bin/influx bucket ls` (in the example below, it's `0af2f3c9840627f6`):
+Extracting the unpoller bucket ID from the result of the command
+`/usr/local/bin/influx bucket ls` (in the example below, it's `0af2f3c9840627f6`):
 
 ```none
 root@515481c98cb9:/# /usr/local/bin/influx bucket ls
@@ -131,7 +133,8 @@ ID			Name		Retention	Shard group duration	Organization ID		Schema Type
 0af2f3c9840627f6	unpoller	infinite	168h0m0s		5b8f04254daaddb6	implicit
 ```
 
-And then updating the retention policy with the command `/usr/local/bin/influx bucket update -i 0af2f3c9840627f6 -r 32d`, susbtituting your bucket ID:
+And then updating the retention policy with
+`/usr/local/bin/influx bucket update -i 0af2f3c9840627f6 -r 32d`, substituting your bucket ID:
 
 ```none
 root@515481c98cb9:/# /usr/local/bin/influx bucket update -i 0af2f3c9840627f6 -r 32d

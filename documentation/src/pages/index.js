@@ -69,11 +69,11 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Go Lift`}
+      title={`UnPoller`}
       description="Telemetry and Observability for your UniFi Network">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title"><img alt="UniFi Poller" src="img/logo.png" /></h1>
+          <h1 className="hero__title"><img alt="UnPoller" src="img/logo.png" /></h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link

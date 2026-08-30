@@ -23,7 +23,9 @@ The following explains the steps for InfluxDB; the Prometheus steps are very sim
 - - Database = `unpoller`
 - - Username = `unpoller`
 - - Password = `CHANGEME` (or whatever you changed `INFLUXDB_ADMIN_PASSWORD` to)
-- Under "Custom HTTP Headers" add an `Authorization` header, with value `Token unpollersecret` (optionally replace `unpollersecret` with whatever you changed `INFLUXDB_ADMIN_TOKEN` to).
+- Under "Custom HTTP Headers" add an `Authorization` header, with value
+  `Token unpollersecret` (optionally replace `unpollersecret` with whatever you
+  changed `INFLUXDB_ADMIN_TOKEN` to).
 - No other fields need to be changed or set on this page.
 - Click `Save & Test`
 - You should get green banner above the save and test that says 'Data Source is Working'
@@ -70,7 +72,7 @@ Client DPI|[11310](https://grafana.com/grafana/dashboards/11310)|[10419](https:/
 Sites|[11311](https://grafana.com/grafana/dashboards/11311)|[10414](https://grafana.com/grafana/dashboards/10414)|...enabled `save_sites`
 USW|[11312](https://grafana.com/grafana/dashboards/11312)|[10417](https://grafana.com/grafana/dashboards/10417)|...have UniFi Switches
 USG|[11313](https://grafana.com/grafana/dashboards/11313)|[10416](https://grafana.com/grafana/dashboards/10416)|...have a UniFi gateway (UDM-P, UDM, USG, ...)
-UAP|[11314](https://grafana.com/grafana/dashboards/11314)|[10415](https://grafana.com/grafana/dashboards/10416)|...have UniFi Access Points
+UAP|[11314](https://grafana.com/grafana/dashboards/11314)|[10415](https://grafana.com/grafana/dashboards/10415)|...have UniFi Access Points
 Clients|[11315](https://grafana.com/grafana/dashboards/11315)|[10418](https://grafana.com/grafana/dashboards/10418)| ..love nano
 
 #### Dashboard Update Notes
