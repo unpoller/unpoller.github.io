@@ -31,8 +31,6 @@ distribution and documentation support. This project succeeds because of them. T
 &nbsp;
 [![Docker](https://docs.golift.io/integrations/docker.png)](https://cloud.docker.com)
 &nbsp;
-[![Travis-CI](https://docs.golift.io/integrations/travis-ci.png)](https://Travis-CI.com)
-&nbsp;
 [![Homebrew](https://docs.golift.io/integrations/homebrew.png)](https://brew.sh)
 &nbsp;
 [![Go Lift](https://docs.golift.io/integrations/golift.png)](https://golift.io)
