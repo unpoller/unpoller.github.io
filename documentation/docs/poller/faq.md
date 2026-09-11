@@ -43,7 +43,9 @@ available to display the data.
   points only refresh roughly once a minute (or slower), regardless of how often UniFi
   Poller is scraped or how often Prometheus scrapes UniFi Poller. Setting a Prometheus
   `scrape_interval` shorter than the controller's own update rate will not increase the
-  resolution of the underlying data.
+  resolution of the underlying data. Poller's own `prometheus.interval` is the cache
+  refresh period (`0` fetches live on each `/metrics` scrape) and is distinct from
+  Prometheus's `scrape_interval`, which only controls how often Prometheus hits `/metrics`.
 - This matters most for rate-based panels. Prometheus's `rate()` function needs at least
   two real data points inside the range vector you give it; if the range is shorter than
   the controller's update interval, `rate()` can return `0` even though traffic didn't
