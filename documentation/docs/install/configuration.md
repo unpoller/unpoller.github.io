@@ -195,6 +195,7 @@ If you don't use Prometheus, set `disable` to `true`.
 |UP_PROMETHEUS_HTTP_LISTEN     |prometheus.http_listen     |`0.0.0.0:9130`
 |UP_PROMETHEUS_REPORT_ERRORS |    prometheus.report_errors |    `false`
 |UP_PROMETHEUS_BUFFER |    prometheus.buffer     |`50`
+|UP_PROMETHEUS_INTERVAL |    prometheus.interval     |`60s` cache refresh. `0` / `0s` disables the cache so `/metrics` fetches live. Values below 15s warn but are not clamped.
 
 :::tip
 The [Prometheus](../dependencies/prometheus) page has a full explanation of how to configure Poller.
