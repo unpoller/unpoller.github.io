@@ -3533,9 +3533,9 @@ ansi-regex@^5.0.1:
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
 ansi-regex@^6.2.2:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.4.0.tgz#69093d6436d30dbb9b04fe7bdcbcfe16c697d8a1"
-  integrity sha512-KzTVk2tCWAHtYrvvvaP8bJKJq2pVinhLcGEQdtLIYPbmNGNyYe8QwNaTUYQp2J7/vIsUKt5QCqAfUkYyG9DkOw==
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.6.0.tgz#268bc9253164768541ca6bebee112c83be2c67f2"
+  integrity sha512-XZ5apbzreCbXSKwPjJstu8R0zOi247w3XYwWxtwBXgpZrCyc1Ka7p9/xY0A9/diMewmHbEKz+FIraWaEWjlN5g==
 
 ansi-styles@^4.1.0:
   version "4.3.0"
@@ -5651,9 +5651,9 @@ ignore@^5.2.0, ignore@^5.2.4:
   integrity sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==
 
 ignore@^7.0.5:
-  version "7.0.12"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.12.tgz#36048ce2e8d8e0f97fd87863a1cb595ea0a5c69f"
-  integrity sha512-/8UvqAPU9DGTI9k4mxtf49U37Isfwr8Uts96+SBHIkFxPJnHS0Ew4f00sM4Scd8V8EjM0jUNtVDdv1kPdt35lg==
+  version "7.0.17"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.17.tgz#53766c7486ac0b5a1449076bcf081bae0341436a"
+  integrity sha512-0c3zcBRlWmcKhcIQWckzkYncJRv5HHB8O32wO/FcWL8DDXWDJgiEF6SX9ThbTv5h/eZ+xJK+VvDjjQ+cQJhp3Q==
 
 image-size@^2.0.2:
   version "2.0.2"
@@ -6277,24 +6277,24 @@ markdownlint-cli2-formatter-default@0.0.6:
   integrity sha512-VVDGKsq9sgzu378swJ0fcHfSicUnMxnL8gnLm/Q4J/xsNJ4e5bA6lvAz7PCzIl0/No0lHyaWdqVD2jotxOSFMQ==
 
 markdownlint-cli2@^0.24.0:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.24.1.tgz#811f57fa9abcd946f6ed3d9195b7e9c7cf5ba2e5"
-  integrity sha512-nLhes/MIPJQLm+Gmh+3jQEnwMOaalaN0wfCD2qz1247zNZ7R3r2WDHJB191x4hcy6soKAUTybp1bFK7aJGw/WA==
+  version "0.24.2"
+  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.24.2.tgz#2f9dd97a17fd693e86eb1d3894239e27d0731a96"
+  integrity sha512-bgxzhJkgR7t2puRgePHZYVqKzC90etPzxOC+9ZNATjAVJB2zs7EAolfF1inVsrkgYN+ykVIHIxk0WypG2VVLZA==
   dependencies:
     globby "16.2.4"
     js-yaml "5.5.0"
     jsonc-parser "3.3.1"
     jsonpointer "5.0.1"
     markdown-it "15.0.3"
-    markdownlint "0.42.1"
+    markdownlint "0.42.2"
     markdownlint-cli2-formatter-default "0.0.6"
     micromatch "4.0.8"
     smol-toml "1.9.1"
 
-markdownlint@0.42.1:
-  version "0.42.1"
-  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.42.1.tgz#c5c16f10235351cf182933ee691039a1944c1012"
-  integrity sha512-Otolm9JX12iO2NG5cetlKfzGygpiLSlHuqXKxoT6HGhN5HtbxprJPicKZqqCQd88qOvUi/TEs3o1AmcYioVscA==
+markdownlint@0.42.2:
+  version "0.42.2"
+  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.42.2.tgz#aa7e42df3239d0cf95be12684c4f71d81fa39808"
+  integrity sha512-IhlUBVT+kHBX+u3EjEsQdFB4q0Rl0Hx+JsGsvVkonNut1/n8Kv8yXzwk0pazC9uF35JlwMZ+LxV4CQ9YNAbG8w==
   dependencies:
     micromark "4.0.3"
     micromark-core-commonmark "2.0.4"
